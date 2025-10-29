@@ -6,8 +6,9 @@ The dataset represents nominal compensation payments for Romanian public institu
 
 ---
 
-## 🧩 Project Structure
+## Project Structure
 
+```
 │
 ├── data/
 │ ├── ind-nom-table.csv # raw data extracted from PDF
@@ -22,8 +23,9 @@ The dataset represents nominal compensation payments for Romanian public institu
 │ ├── load_data.sql # COPY command
 │
 └── README.md
+```
 
-## 🧠 Process Overview
+## Process Overview
 
 ### 1. Extract
 Raw data exported from a government PDF (indemnizații nominale).
@@ -38,6 +40,7 @@ Raw data exported from a government PDF (indemnizații nominale).
 ### 3. Load (PostgreSQL)
 Created a normalized table:
 
+```
 CREATE TABLE indemnizatii (
     id SERIAL PRIMARY KEY,
     nr_crt TEXT,
@@ -49,9 +52,10 @@ CREATE TABLE indemnizatii (
     suma NUMERIC,
     indemnizatie_variabila NUMERIC
 );
+```
 
 Loaded data using:
-
+```
 \copy indemnizatii(nr_crt, autoritate_tutelar, intreprindere, cui, personal, calitate_membru, suma, indemnizatie_variabila)
 FROM 'data/ind-nom-table-clean.csv'
 DELIMITER ',' CSV HEADER ENCODING 'UTF8';
