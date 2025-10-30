@@ -1,10 +1,13 @@
 import pandas as pd
+import re
 
 # 1. Read CSV with forgiving parser
 df = pd.read_csv('data/ind-nom-table.csv', engine='python', on_bad_lines='skip')
 
 # 2. Clean column names: remove diacritics, lowercase, replace spaces and line breaks
-df.columns = [c.encode('ascii', 'ignore').decode().lower().replace(' ', '_').replace('\r', '_') for c in df.columns]
+df.columns = [c.encode('ascii', 'ignore').decode().lower().replace(' ', '_').replace('\r', '_') 
+              for c in df.columns]
+
 print("Columns after cleaning:", df.columns)
 
 # 3. Drop empty rows and duplicates
@@ -22,18 +25,33 @@ df = df.rename(columns={
     'valoare_indemnizaie_variabila_anual_conform_contract_(brut-lei)*': 'indemnizatie_variabila'
 })
 
-# 5. Replace placeholders with empty strings
+# 5. Clean text cells from embedded line breaks
+for col in df.select_dtypes(include=['object']).columns:
+    df[col] = df[col].astype(str).apply(lambda x: re.sub(r'[\r\n]+', ' ', x.strip()))
+
+# 6. Replace placeholders with empty strings
 df = df.replace(['-', 'N/A', 'n/a', 'null', 'NULL'], '')
 
-# 6. Convert to numeric (invalid = NaN)
-df['suma'] = pd.to_numeric(df['suma'], errors='coerce')
-df['indemnizatie_variabila'] = pd.to_numeric(df['indemnizatie_variabila'], errors='coerce')
+# 7. Clean numeric columns (suma and indemnizatie_variabila)
+for col in ['suma', 'indemnizatie_variabila']:
+    # Keep the original column text (for traceability)
+    df[col] = df[col].astype(str).str.strip()
 
-# 7. Drop completely empty rows or duplcates
+    # Create a parallel numeric-safe column
+    safe_col = f"{col}_num"
+    df[safe_col] = (
+        df[col]
+        .str.replace(r'[\s.,]', '', regex=True)     # remove thousand separators
+        .str.replace(r'[^\d\-]', '', regex=True)    # remove any leftover symbols
+        .replace(['', '-', 'nan', 'NaN'], '0')
+    )
+    df[safe_col] = pd.to_numeric(df[safe_col], errors='coerce').fillna(0)
+
+# 8. Drop completely empty rows or duplcates
 df = df.dropna(how='all').drop_duplicates()
 
-# 8. Preview cleaned data
+# 9. Preview cleaned data
 print(df.head())
 
-# 9. Save cleaned file
+# 10. Save cleaned file
 df.to_csv('data/ind-nom-table-clean.csv', index=False, encoding='utf-8')
