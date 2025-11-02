@@ -59,3 +59,24 @@ Loaded data using:
 \copy indemnizatii(nr_crt, autoritate_tutelar, intreprindere, cui, personal, calitate_membru, suma, indemnizatie_variabila)
 FROM 'data/ind-nom-table-clean.csv'
 DELIMITER ',' CSV HEADER ENCODING 'UTF8';
+```
+
+## Data Cleaning Pipeline Update
+
+This update refactors the **data_clean.py** script to improve consistency and safety in data ingestion:
+
+- All columns are now loaded as **strings (`dtype=str`)**, ensuring blank cells are preserved.
+- Removed the need for `.astype(str)` conversions and `.0` cleanup.
+- Added defensive normalization for column names and empty placeholders.
+- Introduced `run_pipeline.py` to execute all ETL steps sequentially.
+- Added `reload_indemnizatii.py` for automated reloading into PostgreSQL.
+
+## Why this matters
+Using `dtype=str` ensures that Pandas does not automatically infer numeric types, which previously converted missing integers (e.g., `1 → 1.0`).  
+This preserves original formatting and avoids downstream COPY errors in PostgreSQL.
+
+## How to run
+```bash
+python scripts/run_pipeline.py
+python scripts/reload_indemnizatii.py
+```

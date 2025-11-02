@@ -2,11 +2,25 @@ import pandas as pd
 import re
 
 # 1. Read CSV with forgiving parser
-df = pd.read_csv('data/ind-nom-table.csv', engine='python', on_bad_lines='skip')
+df = pd.read_csv(
+    'data/ind-nom-table.csv',
+    dtype=str,
+    keep_default_na=False,
+    na_values=[],
+    engine='python',
+    on_bad_lines='skip'
+)
 
 # 2. Clean column names: remove diacritics, lowercase, replace spaces and line breaks
-df.columns = [c.encode('ascii', 'ignore').decode().lower().replace(' ', '_').replace('\r', '_') 
-              for c in df.columns]
+df.columns = [
+    re.sub(r'_+', '_',  # collapse repeated underscores
+        c.encode('ascii', 'ignore').decode() # remove diacritics
+        .lower()
+        .replace(' ', '_')
+        .replace('\n', '_')
+        .replace('\r', '_')
+        .strip('_'))    # remove /headingtrailing underscore
+        for c in df.columns]
 
 print("Columns after cleaning:", df.columns)
 
@@ -24,6 +38,9 @@ df = df.rename(columns={
     'valoare_indemnizaie_fix_lunar_conform_contract_(brut-lei)*': 'suma',
     'valoare_indemnizaie_variabila_anual_conform_contract_(brut-lei)*': 'indemnizatie_variabila'
 })
+
+if 'nr_crt' in df.columns:
+    df['nr_crt'] = df['nr_crt'].astype(str)
 
 # 5. Clean text cells from embedded line breaks
 for col in df.select_dtypes(include=['object']).columns:
@@ -50,8 +67,18 @@ for col in ['suma', 'indemnizatie_variabila']:
 # 8. Drop completely empty rows or duplcates
 df = df.dropna(how='all').drop_duplicates()
 
-# 9. Preview cleaned data
+# 9. Ensure nr_crt is string-safe
+if 'nr_crt' in df.columns:
+    df['nr_crt'] = (
+        df['nr_crt']
+        .astype(str)
+        .str.replace(r'\.0$', '', regex=True)
+        .str.strip()
+        .replace({'nan': '', 'None': ''})
+    )
+
+# 10. Preview cleaned data
 print(df.head())
 
-# 10. Save cleaned file
+# 11. Save cleaned file
 df.to_csv('data/ind-nom-table-clean.csv', index=False, encoding='utf-8')
