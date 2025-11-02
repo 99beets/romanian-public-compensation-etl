@@ -1,8 +1,19 @@
-"",AUTORITATE PUBLICĂ TUTELARĂ (APT),NUME ÎNTREPRINDERE PUBLICĂ,CUI,"NUME PERSONALCONDUCERE","CALITATE (membru CA/CSdirector/membrudirectorat)","VALOARE INDEMNIZAȚIE FIXĂLUNARĂ CONFORM CONTRACT(Brut-Lei)*","VALOARE INDEMNIZAȚIE VARIABILAANUALĂ CONFORM CONTRACT(Brut-Lei)*"
-1,"AGENTIA NATIONALA PENTRU PESCUIT SIACVACULTURA",PISCICOLA CALARASI,1923799,Chiriac Petronel,Membru CA/CS,"4,455",-
-1,"AGENTIA NATIONALA PENTRU PESCUIT SIACVACULTURA",PISCICOLA CALARASI,1923799,Avramescu Roxana,Membru CA/CS,"4,050",-
-1,"AGENTIA NATIONALA PENTRU PESCUIT SIACVACULTURA",PISCICOLA CALARASI,1923799,Ghita Daniel,Membru CA/CS,-,-
-1,"AGENTIA NATIONALA PENTRU PESCUIT SIACVACULTURA",PISCICOLA CALARASI,1923799,Ghita Daniel,Director/directorat,"1 2,820",-
+"",AUTORITATE PUBLICĂ TUTELARĂ (APT),NUME ÎNTREPRINDERE PUBLICĂ,CUI,"NUME PERSONAL
+CONDUCERE","CALITATE (membru CA/CS
+director/membru
+directorat)","VALOARE INDEMNIZAȚIE FIXĂ
+LUNARĂ CONFORM CONTRACT
+(Brut-Lei)*","VALOARE INDEMNIZAȚIE VARIABILA
+ANUALĂ CONFORM CONTRACT
+(Brut-Lei)*"
+1,"AGENTIA NATIONALA PENTRU PESCUIT SI
+ACVACULTURA",PISCICOLA CALARASI,1923799,Chiriac Petronel,Membru CA/CS,"4,455",-
+1,"AGENTIA NATIONALA PENTRU PESCUIT SI
+ACVACULTURA",PISCICOLA CALARASI,1923799,Avramescu Roxana,Membru CA/CS,"4,050",-
+1,"AGENTIA NATIONALA PENTRU PESCUIT SI
+ACVACULTURA",PISCICOLA CALARASI,1923799,Ghita Daniel,Membru CA/CS,-,-
+1,"AGENTIA NATIONALA PENTRU PESCUIT SI
+ACVACULTURA",PISCICOLA CALARASI,1923799,Ghita Daniel,Director/directorat,"1 2,820",-
 2,MINISTERUL SANATATII,ANTIBIOTICE,1973096,Ionut Sebastian Iavor,Membru CA/CS,"3 1,530",-
 2,MINISTERUL SANATATII,ANTIBIOTICE,1973096,Laura Cristina Stanislav Bogdan,Membru CA/CS,"3 1,530",-
 2,MINISTERUL SANATATII,ANTIBIOTICE,1973096,Corina Luminița Vulpeș,Membru CA/CS,"3 1,530",-
@@ -15,7 +26,7 @@
 3,MINISTERUL SANATATII,CN UNIFARM,11653560,Danut Cristian Popa,Membru CA/CS,"1 0,301",-
 3,MINISTERUL SANATATII,CN UNIFARM,11653560,Monica Patricia Amarie,Membru CA/CS,"1 0,301",-
 3,MINISTERUL SANATATII,CN UNIFARM,11653560,Laurentiu Constantin Tudose,Membru CA/CS,"1 0,301",-
-MINISTERUL SANATATII,CN UNIFARM,11653560,Catalin Lungu,Membru CA/CS,"1 0,301",-,
+"",MINISTERUL SANATATII,CN UNIFARM,11653560,Catalin Lungu,Membru CA/CS,"1 0,301",-,
 "",MINISTERUL SANATATII,CN UNIFARM,11653560,Zaharia Viorela,Membru CA/CS,"1 0,301",-
 3,MINISTERUL SANATATII,CN UNIFARM,11653560,Alina Sanda Costea,Membru CA/CS,"1 0,301",-
 3,MINISTERUL SANATATII,CN UNIFARM,11653560,Dobre Adrian Marius,Membru CA/CS,-,-
@@ -26,32 +37,58 @@ MINISTERUL SANATATII,CN UNIFARM,11653560,Catalin Lungu,Membru CA/CS,"1 0,301",-,
 4,CAMERA DEPUTATILOR,REGIA AUTONOMĂ MONITORUL OFICIAL,427282,Turtureanu Ana,Membru CA/CS,"1 5,716",-
 4,CAMERA DEPUTATILOR,REGIA AUTONOMĂ MONITORUL OFICIAL,427282,Costescu Adriana,Membru CA/CS,"4 7,100",-
 4,CAMERA DEPUTATILOR,REGIA AUTONOMĂ MONITORUL OFICIAL,427282,Costescu Adriana,Director/directorat,"4 7,100",-
-5,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELORSTATULUI",SOCIETATEA DE STRATEGIE PENTRU PIAȚA DE GROS,8359779,Teleasa Ion-Adrian,Membru CA/CS,150,"1,800"
-5,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELORSTATULUI",SOCIETATEA DE STRATEGIE PENTRU PIAȚA DE GROS,8359779,Iancu Lorena,Membru CA/CS,150,"1,800"
-5,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELORSTATULUI",SOCIETATEA DE STRATEGIE PENTRU PIAȚA DE GROS,8359779,Druga Marian,Membru CA/CS,,
-5,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELORSTATULUI",SOCIETATEA DE STRATEGIE PENTRU PIAȚA DE GROS,8359779,Druga Marian,Director/directorat,150,"1,800"
-6,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELORSTATULUI",AGROMEC ICLOD,7638244,Insolventa/Diverse,Insolventa/Diverse,Insolventa/Diverse,litigiu
-7,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELORSTATULUI",CRIZANTEMA COM,361358,Insolventa/Diverse,Insolventa/Diverse,Insolventa/Diverse,dizolvare
-8,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELORSTATULUI",AGROMEC MOLDOVA NOUA,1074251,Insolventa/Diverse,Insolventa/Diverse,Insolventa/Diverse,nu mai aplica OUG109
-9,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELORSTATULUI",ACTIVE CONEXE,31029694,Bruma Vasile,Membru CA/CS,"4,071","48,852"
-"","AUTORITATEA PENTRU ADMINISTRAREA ACTIVELORSTATULUI",ACTIVE CONEXE,31029694,Dumitru Alin - Nicolae,Membru CA/CS,"4,071","48,852"
-9,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELORSTATULUI",ACTIVE CONEXE,31029694,Ilie Mihai,Membru CA/CS,"4,071","48,852"
-9,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELORSTATULUI",ACTIVE CONEXE,31029694,Vintilescu Daniela,Membru CA/CS,"4,071","48,852"
-9,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELORSTATULUI",ACTIVE CONEXE,31029694,Bivol Daniel,Director/directorat,"17,093","205,116"
-9,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELORSTATULUI",ACTIVE CONEXE,31029694,Karstensen Irina Elena,Director/directorat,"14,050","168,600"
-10,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELORSTATULUI",ARCADIA 2000,11369861,Alexandrescu Florin-Cristian,Membru CA/CS,"2,359","28,308"
-10,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELORSTATULUI",ARCADIA 2000,11369861,Bruma Vasile,Membru CA/CS,"2,359","28,308"
-10,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELORSTATULUI",ARCADIA 2000,11369861,Serban Ionut,Membru CA/CS,"2,359","28,308"
-10,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELORSTATULUI",ARCADIA 2000,11369861,Stanciu Tiberiu,Membru CA/CS,"2,359","28,308"
-10,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELORSTATULUI",ARCADIA 2000,11369861,Petcu Sorin,Membru CA/CS,-,-
-10,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELORSTATULUI",ARCADIA 2000,11369861,Petcu Sorin,Director/directorat,"6,837","82,044"
-11,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELORSTATULUI",EUROTEST,360557,Topor Elena-Daniela,Membru CA/CS,"2,769","33,228"
-11,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELORSTATULUI",EUROTEST,360557,Pana Traian,Membru CA/CS,"2,769","33,228"
-11,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELORSTATULUI",EUROTEST,360557,Stanciu Tiberiu,Membru CA/CS,"2,769","33,228"
-11,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELORSTATULUI",EUROTEST,360557,Ionescu Dumitru-Viorel,Director/directorat,"18,700","224,400"
-12,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELORSTATULUI",RADIOACTIV MINERAL MAGURELE,16695222,Suta Ion,Membru CA/CS,"5,128","61,536"
-12,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELORSTATULUI",RADIOACTIV MINERAL MAGURELE,16695222,Danda-Zavoian Camelia,Membru CA/CS,"5,128","61,536"
-12,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELORSTATULUI",RADIOACTIV MINERAL MAGURELE,16695222,Popescu Adrian,Membru CA/CS,"5,128","61,536"
+5,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELOR
+STATULUI",SOCIETATEA DE STRATEGIE PENTRU PIAȚA DE GROS,8359779,Teleasa Ion-Adrian,Membru CA/CS,150,"1,800"
+5,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELOR
+STATULUI",SOCIETATEA DE STRATEGIE PENTRU PIAȚA DE GROS,8359779,Iancu Lorena,Membru CA/CS,150,"1,800"
+5,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELOR
+STATULUI",SOCIETATEA DE STRATEGIE PENTRU PIAȚA DE GROS,8359779,Druga Marian,Membru CA/CS,,
+5,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELOR
+STATULUI",SOCIETATEA DE STRATEGIE PENTRU PIAȚA DE GROS,8359779,Druga Marian,Director/directorat,150,"1,800"
+6,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELOR
+STATULUI",AGROMEC ICLOD,7638244,Insolventa/Diverse,Insolventa/Diverse,Insolventa/Diverse,litigiu
+7,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELOR
+STATULUI",CRIZANTEMA COM,361358,Insolventa/Diverse,Insolventa/Diverse,Insolventa/Diverse,dizolvare
+8,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELOR
+STATULUI",AGROMEC MOLDOVA NOUA,1074251,Insolventa/Diverse,Insolventa/Diverse,Insolventa/Diverse,nu mai aplica OUG109
+9,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELOR
+STATULUI",ACTIVE CONEXE,31029694,Bruma Vasile,Membru CA/CS,"4,071","48,852"
+"","AUTORITATEA PENTRU ADMINISTRAREA ACTIVELOR
+STATULUI",ACTIVE CONEXE,31029694,Dumitru Alin - Nicolae,Membru CA/CS,"4,071","48,852"
+9,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELOR
+STATULUI",ACTIVE CONEXE,31029694,Ilie Mihai,Membru CA/CS,"4,071","48,852"
+9,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELOR
+STATULUI",ACTIVE CONEXE,31029694,Vintilescu Daniela,Membru CA/CS,"4,071","48,852"
+9,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELOR
+STATULUI",ACTIVE CONEXE,31029694,Bivol Daniel,Director/directorat,"17,093","205,116"
+9,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELOR
+STATULUI",ACTIVE CONEXE,31029694,Karstensen Irina Elena,Director/directorat,"14,050","168,600"
+10,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELOR
+STATULUI",ARCADIA 2000,11369861,Alexandrescu Florin-Cristian,Membru CA/CS,"2,359","28,308"
+10,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELOR
+STATULUI",ARCADIA 2000,11369861,Bruma Vasile,Membru CA/CS,"2,359","28,308"
+10,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELOR
+STATULUI",ARCADIA 2000,11369861,Serban Ionut,Membru CA/CS,"2,359","28,308"
+10,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELOR
+STATULUI",ARCADIA 2000,11369861,Stanciu Tiberiu,Membru CA/CS,"2,359","28,308"
+10,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELOR
+STATULUI",ARCADIA 2000,11369861,Petcu Sorin,Membru CA/CS,-,-
+10,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELOR
+STATULUI",ARCADIA 2000,11369861,Petcu Sorin,Director/directorat,"6,837","82,044"
+11,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELOR
+STATULUI",EUROTEST,360557,Topor Elena-Daniela,Membru CA/CS,"2,769","33,228"
+11,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELOR
+STATULUI",EUROTEST,360557,Pana Traian,Membru CA/CS,"2,769","33,228"
+11,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELOR
+STATULUI",EUROTEST,360557,Stanciu Tiberiu,Membru CA/CS,"2,769","33,228"
+11,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELOR
+STATULUI",EUROTEST,360557,Ionescu Dumitru-Viorel,Director/directorat,"18,700","224,400"
+12,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELOR
+STATULUI",RADIOACTIV MINERAL MAGURELE,16695222,Suta Ion,Membru CA/CS,"5,128","61,536"
+12,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELOR
+STATULUI",RADIOACTIV MINERAL MAGURELE,16695222,Danda-Zavoian Camelia,Membru CA/CS,"5,128","61,536"
+12,"AUTORITATEA PENTRU ADMINISTRAREA ACTIVELOR
+STATULUI",RADIOACTIV MINERAL MAGURELE,16695222,Popescu Adrian,Membru CA/CS,"5,128","61,536"
 "",AUTORITATEA PENTRU ADMINISTRAREA ACTIVELOR,,,,,,,
 12,,RADIOACTIV MINERAL MAGURELE,16695222,Cazacu Emilian,Director/directorat,"24,350",,"292,200"
 "",STATULUI,,,,,,,
@@ -120,11 +157,16 @@ MINISTERUL SANATATII,CN UNIFARM,11653560,Catalin Lungu,Membru CA/CS,"1 0,301",-,
 20,MINISTERUL FINANTELOR,COMPANIA NAȚIONALĂ ”IMPRIMERIA NAȚIONALĂ”,2779625,Balazs - Leszai Orsolya,Membru CA/CS,"13,350",-
 20,MINISTERUL FINANTELOR,COMPANIA NAȚIONALĂ ”IMPRIMERIA NAȚIONALĂ”,2779625,Sorin Toader,Director/directorat,"40,946",-
 20,MINISTERUL FINANTELOR,COMPANIA NAȚIONALĂ ”IMPRIMERIA NAȚIONALĂ”,2779625,Nicolae Tudor,Director/directorat,"39,446",-
-21,MINISTERUL FINANTELOR,"FONDUL NAȚIONAL DE GARANTARE A CREDITELOR PENTRUINTREPRINDERILE MICI ȘI MIJLOCII",14367083,7 Poziții Vacante În Ca,Membru CA/CS,"12,946",-
-21,MINISTERUL FINANTELOR,"FONDUL NAȚIONAL DE GARANTARE A CREDITELOR PENTRUINTREPRINDERILE MICI ȘI MIJLOCII",14367083,Vacant,Membru CA/CS,"19,246",
-21,MINISTERUL FINANTELOR,"FONDUL NAȚIONAL DE GARANTARE A CREDITELOR PENTRUINTREPRINDERILE MICI ȘI MIJLOCII",14367083,Cătălin Leonte,Director/directorat,"45,968",-
-21,MINISTERUL FINANTELOR,"FONDUL NAȚIONAL DE GARANTARE A CREDITELOR PENTRUINTREPRINDERILE MICI ȘI MIJLOCII",14367083,Daniel-Ionuț Stavre,Director/directorat,"33,199",-
-"",MINISTERUL FINANTELOR,"FONDUL NAȚIONAL DE GARANTARE A CREDITELOR PENTRUINTREPRINDERILE MICI ȘI MIJLOCII",14367083,Cosmin-Silviu Baiu,Director/directorat,"21,800",-
+21,MINISTERUL FINANTELOR,"FONDUL NAȚIONAL DE GARANTARE A CREDITELOR PENTRU
+INTREPRINDERILE MICI ȘI MIJLOCII",14367083,7 Poziții Vacante În Ca,Membru CA/CS,"12,946",-
+21,MINISTERUL FINANTELOR,"FONDUL NAȚIONAL DE GARANTARE A CREDITELOR PENTRU
+INTREPRINDERILE MICI ȘI MIJLOCII",14367083,Vacant,Membru CA/CS,"19,246",
+21,MINISTERUL FINANTELOR,"FONDUL NAȚIONAL DE GARANTARE A CREDITELOR PENTRU
+INTREPRINDERILE MICI ȘI MIJLOCII",14367083,Cătălin Leonte,Director/directorat,"45,968",-
+21,MINISTERUL FINANTELOR,"FONDUL NAȚIONAL DE GARANTARE A CREDITELOR PENTRU
+INTREPRINDERILE MICI ȘI MIJLOCII",14367083,Daniel-Ionuț Stavre,Director/directorat,"33,199",-
+"",MINISTERUL FINANTELOR,"FONDUL NAȚIONAL DE GARANTARE A CREDITELOR PENTRU
+INTREPRINDERILE MICI ȘI MIJLOCII",14367083,Cosmin-Silviu Baiu,Director/directorat,"21,800",-
 22,MINISTERUL FINANTELOR,FONDUL ROMÂN DE CONTRAGARANTARE,26308846,Crăciun Rada Cosmina,Membru CA/CS,"12,600",-
 22,MINISTERUL FINANTELOR,FONDUL ROMÂN DE CONTRAGARANTARE,26308846,Stănică Nicolae Cristian,Membru CA/CS,"18,900",-
 22,MINISTERUL FINANTELOR,FONDUL ROMÂN DE CONTRAGARANTARE,26308846,Gurguiatu Elena,Membru CA/CS,"12,600",-
@@ -134,14 +176,21 @@ MINISTERUL SANATATII,CN UNIFARM,11653560,Catalin Lungu,Membru CA/CS,"1 0,301",-,
 22,MINISTERUL FINANTELOR,FONDUL ROMÂN DE CONTRAGARANTARE,26308846,Varga Csaba,Membru CA/CS,"12,600",-
 22,MINISTERUL FINANTELOR,FONDUL ROMÂN DE CONTRAGARANTARE,26308846,Andreea Laura Săndulescu,D  i r e  c  t o  r /  d  i r e  c  t o  r a  t,"26,460",-
 22,MINISTERUL FINANTELOR,FONDUL ROMÂN DE CONTRAGARANTARE,26308846,Andreea - Magdalena Surcel,Director/directorat,"25,200",-
-23,MINISTERUL FINANTELOR,"FONDUL LOCAL DE GARANTARE FOCȘANI IFN SA- FilialaFNGCIMM",18265884,Marioara Nițu,Membru CA/CS,"2,300",-
-23,MINISTERUL FINANTELOR,"FONDUL LOCAL DE GARANTARE FOCȘANI IFN SA- FilialaFNGCIMM",18265884,Sterica Fudulea,Membru CA/CS,"2,300",-
-23,MINISTERUL FINANTELOR,"FONDUL LOCAL DE GARANTARE FOCȘANI IFN SA- FilialaFNGCIMM",18265884,Mirela Gavrilaș,Membru CA/CS,"2,300",-
-23,MINISTERUL FINANTELOR,"FONDUL LOCAL DE GARANTARE FOCȘANI IFN SA- FilialaFNGCIMM",18265884,Ionica Burla,Director/directorat,"15,342",-
-23,MINISTERUL FINANTELOR,"FONDUL LOCAL DE GARANTARE FOCȘANI IFN SA- FilialaFNGCIMM",18265884,Ovidiu Mihai Munteanu,Director/directorat,"10,100",-
+23,MINISTERUL FINANTELOR,"FONDUL LOCAL DE GARANTARE FOCȘANI IFN SA- Filiala
+FNGCIMM",18265884,Marioara Nițu,Membru CA/CS,"2,300",-
+23,MINISTERUL FINANTELOR,"FONDUL LOCAL DE GARANTARE FOCȘANI IFN SA- Filiala
+FNGCIMM",18265884,Sterica Fudulea,Membru CA/CS,"2,300",-
+23,MINISTERUL FINANTELOR,"FONDUL LOCAL DE GARANTARE FOCȘANI IFN SA- Filiala
+FNGCIMM",18265884,Mirela Gavrilaș,Membru CA/CS,"2,300",-
+23,MINISTERUL FINANTELOR,"FONDUL LOCAL DE GARANTARE FOCȘANI IFN SA- Filiala
+FNGCIMM",18265884,Ionica Burla,Director/directorat,"15,342",-
+23,MINISTERUL FINANTELOR,"FONDUL LOCAL DE GARANTARE FOCȘANI IFN SA- Filiala
+FNGCIMM",18265884,Ovidiu Mihai Munteanu,Director/directorat,"10,100",-
 24,MINISTERUL FINANTELOR,FONDUL DE GARANTARE A CREDITULUI RURAL - IFN SA,5439903,Insolventa/Diverse,,,
-25,SECRETARIATUL GENERAL AL GUVERNULUI,"Societatea Naţională de Transport Gaze NaturaleTRANSGAZ",13068733,Minea Nicolae,Membru CA/CS,"17,674",-
-25,SECRETARIATUL GENERAL AL GUVERNULUI,"Societatea Naţională de Transport Gaze NaturaleTRANSGAZ",13068733,Von Derenthall Ilinca,Membru CA/CS,"17,674",-
+25,SECRETARIATUL GENERAL AL GUVERNULUI,"Societatea Naţională de Transport Gaze Naturale
+TRANSGAZ",13068733,Minea Nicolae,Membru CA/CS,"17,674",-
+25,SECRETARIATUL GENERAL AL GUVERNULUI,"Societatea Naţională de Transport Gaze Naturale
+TRANSGAZ",13068733,Von Derenthall Ilinca,Membru CA/CS,"17,674",-
 "",,Societatea Naţională de Transport Gaze Naturale,,,,,,
 25,SECRETARIATUL GENERAL AL GUVERNULUI,,13068733,Hamza Adina-Lăcramioara,Membru CA/CS,"17,674",-,
 "",,TRANSGAZ,,,,,,
@@ -196,30 +245,50 @@ MINISTERUL SANATATII,CN UNIFARM,11653560,Catalin Lungu,Membru CA/CS,"1 0,301",-,
 "",,Societatea Comercială Operatorul Pieței de Energie,,,,,,
 27,SECRETARIATUL GENERAL AL GUVERNULUI,,13278352,Cristian Paraschiv,Membru CA/CS,"7,930",,
 "",,Electrică și de Gaze Naturale din România OPCOM,,,,,,
-"",SECRETARIATUL GENERAL AL GUVERNULUI,"Societatea Comercială Operatorul Pieței de EnergieElectrică și de Gaze Naturale din România OPCOM",13278352,Veronica Soare,Membru CA/CS,"7,930",
-27,SECRETARIATUL GENERAL AL GUVERNULUI,"Societatea Comercială Operatorul Pieței de EnergieElectrică și de Gaze Naturale din România OPCOM",13278352,Alin Ene,Membru CA/CS,"7,930",
-27,SECRETARIATUL GENERAL AL GUVERNULUI,"Societatea Comercială Operatorul Pieței de EnergieElectrică și de Gaze Naturale din România OPCOM",13278352,Teodor Cojocaru,Membru CA/CS,"7,930",
-27,SECRETARIATUL GENERAL AL GUVERNULUI,"Societatea Comercială Operatorul Pieței de EnergieElectrică și de Gaze Naturale din România OPCOM",13278352,Cristina Șetran,Director/directorat,"5 5,883",
+"",SECRETARIATUL GENERAL AL GUVERNULUI,"Societatea Comercială Operatorul Pieței de Energie
+Electrică și de Gaze Naturale din România OPCOM",13278352,Veronica Soare,Membru CA/CS,"7,930",
+27,SECRETARIATUL GENERAL AL GUVERNULUI,"Societatea Comercială Operatorul Pieței de Energie
+Electrică și de Gaze Naturale din România OPCOM",13278352,Alin Ene,Membru CA/CS,"7,930",
+27,SECRETARIATUL GENERAL AL GUVERNULUI,"Societatea Comercială Operatorul Pieței de Energie
+Electrică și de Gaze Naturale din România OPCOM",13278352,Teodor Cojocaru,Membru CA/CS,"7,930",
+27,SECRETARIATUL GENERAL AL GUVERNULUI,"Societatea Comercială Operatorul Pieței de Energie
+Electrică și de Gaze Naturale din România OPCOM",13278352,Cristina Șetran,Director/directorat,"5 5,883",
 28,SECRETARIATUL GENERAL AL GUVERNULUI,Societatea de Mentenanță a Rețelei de Transport SMART,14232728,Raluca Cristina Ispir,Membru CA/CS,"1 6,000",
 28,SECRETARIATUL GENERAL AL GUVERNULUI,Societatea de Mentenanță a Rețelei de Transport SMART,14232728,Gheorghe Bolintineanu,Membru CA/CS,"1 6,000",
 28,SECRETARIATUL GENERAL AL GUVERNULUI,Societatea de Mentenanță a Rețelei de Transport SMART,14232728,Decebal Băescu,Membru CA/CS,"1 6,000",
 28,SECRETARIATUL GENERAL AL GUVERNULUI,Societatea de Mentenanță a Rețelei de Transport SMART,14232728,Ion Bucur,Membru CA/CS,"1 6,000",
 28,SECRETARIATUL GENERAL AL GUVERNULUI,Societatea de Mentenanță a Rețelei de Transport SMART,14232728,Adrian-Cristian Constantin,Membru CA/CS,"1 6,000",
 28,SECRETARIATUL GENERAL AL GUVERNULUI,Societatea de Mentenanță a Rețelei de Transport SMART,14232728,Gheorghe Bolintineanu,Director/directorat,"5 2,656",
-29,SECRETARIATUL GENERAL AL GUVERNULUI,"Societatea pentru Servicii de Telecomunicaţii şiTehnologia Informaţiei în Reţele Electrice de TransportTELETRANS",15061510,Victor Andrei Dimitriu,Membru CA/CS,"1 6,000",
-29,SECRETARIATUL GENERAL AL GUVERNULUI,"Societatea pentru Servicii de Telecomunicaţii şiTehnologia Informaţiei în Reţele Electrice de TransportTELETRANS",15061510,Decebal Băescu,Membru CA/CS,"1 6,000",
-29,SECRETARIATUL GENERAL AL GUVERNULUI,"Societatea pentru Servicii de Telecomunicaţii şiTehnologia Informaţiei în Reţele Electrice de TransportTELETRANS",15061510,Liviu Călin Butnariu,Membru CA/CS,"1 6,000",
-29,SECRETARIATUL GENERAL AL GUVERNULUI,"Societatea pentru Servicii de Telecomunicaţii şiTehnologia Informaţiei în Reţele Electrice de TransportTELETRANS",15061510,Băescu Decebal,Director/directorat,"6 7,956",
-29,SECRETARIATUL GENERAL AL GUVERNULUI,"Societatea pentru Servicii de Telecomunicaţii şiTehnologia Informaţiei în Reţele Electrice de TransportTELETRANS",15061510,Mârza Florin Nicolae,Director/directorat,"6 2,293",
+29,SECRETARIATUL GENERAL AL GUVERNULUI,"Societatea pentru Servicii de Telecomunicaţii şi
+Tehnologia Informaţiei în Reţele Electrice de Transport
+TELETRANS",15061510,Victor Andrei Dimitriu,Membru CA/CS,"1 6,000",
+29,SECRETARIATUL GENERAL AL GUVERNULUI,"Societatea pentru Servicii de Telecomunicaţii şi
+Tehnologia Informaţiei în Reţele Electrice de Transport
+TELETRANS",15061510,Decebal Băescu,Membru CA/CS,"1 6,000",
+29,SECRETARIATUL GENERAL AL GUVERNULUI,"Societatea pentru Servicii de Telecomunicaţii şi
+Tehnologia Informaţiei în Reţele Electrice de Transport
+TELETRANS",15061510,Liviu Călin Butnariu,Membru CA/CS,"1 6,000",
+29,SECRETARIATUL GENERAL AL GUVERNULUI,"Societatea pentru Servicii de Telecomunicaţii şi
+Tehnologia Informaţiei în Reţele Electrice de Transport
+TELETRANS",15061510,Băescu Decebal,Director/directorat,"6 7,956",
+29,SECRETARIATUL GENERAL AL GUVERNULUI,"Societatea pentru Servicii de Telecomunicaţii şi
+Tehnologia Informaţiei în Reţele Electrice de Transport
+TELETRANS",15061510,Mârza Florin Nicolae,Director/directorat,"6 2,293",
 30,SECRETARIATUL GENERAL AL GUVERNULUI,FORMENERG,14529126,Alia Mekkaoui,Membru CA/CS,"3,900",
 30,SECRETARIATUL GENERAL AL GUVERNULUI,FORMENERG,14529126,Vasile-Marius Morariu,Membru CA/CS,"3,900",
 30,SECRETARIATUL GENERAL AL GUVERNULUI,FORMENERG,14529126,Daniel Balaci,Membru CA/CS,"3,900",
-"",SECRETARIATUL GENERAL AL GUVERNULUI,"Regia Autonomă Administrația Patrimoniului Protocoluluide Stat (R.A.-A.P.P.S.)",2351555,Crîngaşu Daniela,Membru CA/CS,"20,512",
-31,SECRETARIATUL GENERAL AL GUVERNULUI,"Regia Autonomă Administrația Patrimoniului Protocoluluide Stat (R.A.-A.P.P.S.)",2351555,Condrea Dragos,Membru CA/CS,"20,512",
-31,SECRETARIATUL GENERAL AL GUVERNULUI,"Regia Autonomă Administrația Patrimoniului Protocoluluide Stat (R.A.-A.P.P.S.)",2351555,Dragota Laura Raluca Alina,Membru CA/CS,"20,512",
-31,SECRETARIATUL GENERAL AL GUVERNULUI,"Regia Autonomă Administrația Patrimoniului Protocoluluide Stat (R.A.-A.P.P.S.)",2351555,Mitu Anca,Membru CA/CS,"20,512",
-31,SECRETARIATUL GENERAL AL GUVERNULUI,"Regia Autonomă Administrația Patrimoniului Protocoluluide Stat (R.A.-A.P.P.S.)",2351555,Grăjdan Marius,Membru CA/CS,-,
-31,SECRETARIATUL GENERAL AL GUVERNULUI,"Regia Autonomă Administrația Patrimoniului Protocoluluide Stat (R.A.-A.P.P.S.)",2351555,Grăjdan Marius,Director/directorat,"41,027",
+"",SECRETARIATUL GENERAL AL GUVERNULUI,"Regia Autonomă Administrația Patrimoniului Protocolului
+de Stat (R.A.-A.P.P.S.)",2351555,Crîngaşu Daniela,Membru CA/CS,"20,512",
+31,SECRETARIATUL GENERAL AL GUVERNULUI,"Regia Autonomă Administrația Patrimoniului Protocolului
+de Stat (R.A.-A.P.P.S.)",2351555,Condrea Dragos,Membru CA/CS,"20,512",
+31,SECRETARIATUL GENERAL AL GUVERNULUI,"Regia Autonomă Administrația Patrimoniului Protocolului
+de Stat (R.A.-A.P.P.S.)",2351555,Dragota Laura Raluca Alina,Membru CA/CS,"20,512",
+31,SECRETARIATUL GENERAL AL GUVERNULUI,"Regia Autonomă Administrația Patrimoniului Protocolului
+de Stat (R.A.-A.P.P.S.)",2351555,Mitu Anca,Membru CA/CS,"20,512",
+31,SECRETARIATUL GENERAL AL GUVERNULUI,"Regia Autonomă Administrația Patrimoniului Protocolului
+de Stat (R.A.-A.P.P.S.)",2351555,Grăjdan Marius,Membru CA/CS,-,
+31,SECRETARIATUL GENERAL AL GUVERNULUI,"Regia Autonomă Administrația Patrimoniului Protocolului
+de Stat (R.A.-A.P.P.S.)",2351555,Grăjdan Marius,Director/directorat,"41,027",
 32,SECRETARIATUL GENERAL AL GUVERNULUI,TRANSPORT ROMANIA HIDROGEN S.R.L.,50346389,Insolventa/Diverse,Insolventa/Diverse,Intrerupere activitate,Intrerupere activitate
 33,"MINISTERUL MEDIULUI, APELOR SI PADURILOR",Administrația Națională de Meteorologie RA,11672708,Teodor Dulceata,Membru CA/CS,"8,700",-
 33,"MINISTERUL MEDIULUI, APELOR SI PADURILOR",Administrația Națională de Meteorologie RA,11672708,Bruma Vasile,Membru CA/CS,"8,700",-
@@ -239,32 +308,46 @@ MINISTERUL SANATATII,CN UNIFARM,11653560,Catalin Lungu,Membru CA/CS,"1 0,301",-,
 35,Administratia Nationala Apele Romane,EXPLOATARE SISTEM ZONAL PRAHOVA,18856244,Adam Relu,Membru CA/CS,"1 4,832",-
 35,Administratia Nationala Apele Romane,EXPLOATARE SISTEM ZONAL PRAHOVA,18856244,Banciu Ionuț-Sorin,Membru CA/CS,"1 4,832",-
 35,Administratia Nationala Apele Romane,EXPLOATARE SISTEM ZONAL PRAHOVA,18856244,Dănilă Alin-Mihael,Membru CA/CS,"1 4,832",-
-35,Administratia Nationala Apele Romane,EXPLOATARE SISTEM ZONAL PRAHOVA,18856244,"Dragomir OanaSilvia",Membru CA/CS,"1 4,832",-
+35,Administratia Nationala Apele Romane,EXPLOATARE SISTEM ZONAL PRAHOVA,18856244,"Dragomir Oana
+Silvia",Membru CA/CS,"1 4,832",-
 35,Administratia Nationala Apele Romane,EXPLOATARE SISTEM ZONAL PRAHOVA,18856244,Molnar Ervin,Membru CA/CS,"1 4,832",-
 35,Administratia Nationala Apele Romane,EXPLOATARE SISTEM ZONAL PRAHOVA,18856244,Popescu Elena,Membru CA/CS,"1 4,832",-
-35,Administratia Nationala Apele Romane,EXPLOATARE SISTEM ZONAL PRAHOVA,18856244,"Ștefan ValentinLaurențiu",Membru CA/CS,"1 4,832",-
-35,Administratia Nationala Apele Romane,EXPLOATARE SISTEM ZONAL PRAHOVA,18856244,"Chițescu ȘtefanBogdan",Director/directorat,"3 4,149",-
+35,Administratia Nationala Apele Romane,EXPLOATARE SISTEM ZONAL PRAHOVA,18856244,"Ștefan Valentin
+Laurențiu",Membru CA/CS,"1 4,832",-
+35,Administratia Nationala Apele Romane,EXPLOATARE SISTEM ZONAL PRAHOVA,18856244,"Chițescu Ștefan
+Bogdan",Director/directorat,"3 4,149",-
 35,Administratia Nationala Apele Romane,EXPLOATARE SISTEM ZONAL PRAHOVA,18856244,Hodorog Gabriela,Director/directorat,"2 6,000",-
 36,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Societatea TELECOMUNICAȚII CFR,15034095,Bălan Jean Florin,Membru CA/CS,"1 1,457",-
 36,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Societatea TELECOMUNICAȚII CFR,15034095,Mureșan Claudiu Marinel,Membru CA/CS,"1 1,457",-
 36,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Societatea TELECOMUNICAȚII CFR,15034095,Ardelean Felix Corneliu,Membru CA/CS,"1 1,457",-
 36,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Societatea TELECOMUNICAȚII CFR,15034095,Timiș Iuliana Adriana,Director/directorat,"3 3,977",-
 36,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Societatea TELECOMUNICAȚII CFR,15034095,Simion Melania Oana,Director/directorat,"2 4,000",-
-"",MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională de Transporturi Aeriene Române -TAROM",477647,Bârcă Iuliana Cristina,Membru CA/CS,"2 4,148",
-37,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională de Transporturi Aeriene Române -TAROM",477647,Boagiu Anca Daniela,Membru CA/CS,"2 4,148",
-37,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională de Transporturi Aeriene Române -TAROM",477647,Săsărman Monica,Membru CA/CS,"2 4,148",
-37,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională de Transporturi Aeriene Române -TAROM",477647,Marcu Mirel Alexandru,Membru CA/CS,"2 4,148",
-37,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională de Transporturi Aeriene Române -TAROM",477647,Ursu Mihăiță,Membru CA/CS,"2 4,148",
-37,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională de Transporturi Aeriene Române -TAROM",477647,Idolu Iulian Daniel,Membru CA/CS,"2 4,148",
-37,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională de Transporturi Aeriene Române -TAROM",477647,Iordache Costin Ionuț,Director/directorat,"3 7,000",
-37,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională de Transporturi Aeriene Române -TAROM",477647,Narcis Obeadă,Director/directorat,"3 6,131",
-37,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională de Transporturi Aeriene Române -TAROM",477647,Farcaș Dorian,Director/directorat,"3 6,131",
+"",MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională de Transporturi Aeriene Române -
+TAROM",477647,Bârcă Iuliana Cristina,Membru CA/CS,"2 4,148",
+37,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională de Transporturi Aeriene Române -
+TAROM",477647,Boagiu Anca Daniela,Membru CA/CS,"2 4,148",
+37,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională de Transporturi Aeriene Române -
+TAROM",477647,Săsărman Monica,Membru CA/CS,"2 4,148",
+37,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională de Transporturi Aeriene Române -
+TAROM",477647,Marcu Mirel Alexandru,Membru CA/CS,"2 4,148",
+37,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională de Transporturi Aeriene Române -
+TAROM",477647,Ursu Mihăiță,Membru CA/CS,"2 4,148",
+37,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională de Transporturi Aeriene Române -
+TAROM",477647,Idolu Iulian Daniel,Membru CA/CS,"2 4,148",
+37,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională de Transporturi Aeriene Române -
+TAROM",477647,Iordache Costin Ionuț,Director/directorat,"3 7,000",
+37,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională de Transporturi Aeriene Române -
+TAROM",477647,Narcis Obeadă,Director/directorat,"3 6,131",
+37,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională de Transporturi Aeriene Române -
+TAROM",477647,Farcaș Dorian,Director/directorat,"3 6,131",
 38,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Compania Națională Aeroporturi București,26490194,Mihălțan Cosmin Florin,Membru CA/CS,"6 9,840",
 38,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Compania Națională Aeroporturi București,26490194,Bunduc Constantin Gabriel,Membru CA/CS,"6 9,840",
 38,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Compania Națională Aeroporturi București,26490194,Bârchi Elena Mirela,Membru CA/CS,"6 9,840",
 38,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Compania Națională Aeroporturi București,26490194,Bachide Eduard,Membru CA/CS,"6 9,840",
 38,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Compania Națională Aeroporturi București,26490194,Bumbac Georgeta,Membru CA/CS,"6 9,840",
-38,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Compania Națională Aeroporturi București,26490194,"Diaconu Cătălin -Reprezentant FondulProprietatea",Membru CA/CS,"6 9,840",
+38,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Compania Națională Aeroporturi București,26490194,"Diaconu Cătălin -
+Reprezentant Fondul
+Proprietatea",Membru CA/CS,"6 9,840",
 38,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Compania Națională Aeroporturi București,26490194,Bulgaru Gabriel,Director/directorat,"6 9,723",
 39,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Societatea Grup Exploatare şi Întreţinere Palat C.F.R.,14893410,Olteanu Adrian,Membru CA/CS,"6,978",-
 39,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Societatea Grup Exploatare şi Întreţinere Palat C.F.R.,14893410,Barbu Nelu Vasile,Membru CA/CS,"6,978",-
@@ -272,17 +355,28 @@ MINISTERUL SANATATII,CN UNIFARM,11653560,Catalin Lungu,Membru CA/CS,"1 0,301",-,
 39,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Societatea Grup Exploatare şi Întreţinere Palat C.F.R.,14893410,Turmac George Adrian,Membru CA/CS,"6,978",-
 39,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Societatea Grup Exploatare şi Întreţinere Palat C.F.R.,14893410,Purcăreață Valentin,Membru CA/CS,"6,978",-
 39,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Societatea Grup Exploatare şi Întreţinere Palat C.F.R.,14893410,Săcăreanu Vlad,Director/directorat,"2 8,000",-
-40,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor DunăriiFluviale Giurgiu",1284717,Măroiu Marian,Director/directorat,"2 9,000",
-40,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor DunăriiFluviale Giurgiu",1284717,Năvală Steluța Petronela,Director/directorat,"2 4,000",
-40,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor DunăriiFluviale Giurgiu",1284717,Lixandru Valentin Ștefan,Director/directorat,"1 4,060",
-40,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor DunăriiFluviale Giurgiu",1284717,Cojocaru Nicu Alexandru,Director/directorat,"1 4,060",
-40,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor DunăriiFluviale Giurgiu",1284717,Oprea Manuel- Florin,Membru CA/CS,"5,100",
-40,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor DunăriiFluviale Giurgiu",1284717,Nemțescu Cristian Constantin,Membru CA/CS,"5,100",
-40,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor DunăriiFluviale Giurgiu",1284717,Simion Lucian Eduard,Membru CA/CS,"5,100",
-40,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor DunăriiFluviale Giurgiu",1284717,Haschka Luiza Mihaela,Membru CA/CS,"5,100",
-40,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor DunăriiFluviale Giurgiu",1284717,Basangiac Constantin,Membru CA/CS,"5,100",
-40,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor DunăriiFluviale Giurgiu",1284717,Popescu Mitică,Membru CA/CS,"5,100",
-40,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor DunăriiFluviale Giurgiu",1284717,Costea Ionuț,Membru CA/CS,"5,100",
+40,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor Dunării
+Fluviale Giurgiu",1284717,Măroiu Marian,Director/directorat,"2 9,000",
+40,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor Dunării
+Fluviale Giurgiu",1284717,Năvală Steluța Petronela,Director/directorat,"2 4,000",
+40,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor Dunării
+Fluviale Giurgiu",1284717,Lixandru Valentin Ștefan,Director/directorat,"1 4,060",
+40,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor Dunării
+Fluviale Giurgiu",1284717,Cojocaru Nicu Alexandru,Director/directorat,"1 4,060",
+40,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor Dunării
+Fluviale Giurgiu",1284717,Oprea Manuel- Florin,Membru CA/CS,"5,100",
+40,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor Dunării
+Fluviale Giurgiu",1284717,Nemțescu Cristian Constantin,Membru CA/CS,"5,100",
+40,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor Dunării
+Fluviale Giurgiu",1284717,Simion Lucian Eduard,Membru CA/CS,"5,100",
+40,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor Dunării
+Fluviale Giurgiu",1284717,Haschka Luiza Mihaela,Membru CA/CS,"5,100",
+40,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor Dunării
+Fluviale Giurgiu",1284717,Basangiac Constantin,Membru CA/CS,"5,100",
+40,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor Dunării
+Fluviale Giurgiu",1284717,Popescu Mitică,Membru CA/CS,"5,100",
+40,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor Dunării
+Fluviale Giurgiu",1284717,Costea Ionuț,Membru CA/CS,"5,100",
 41,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Compania Națională Administratia Canalelor Navigabile,11087755,Bumbac Georgeta,Membru CA/CS,"1 2,212",-
 41,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Compania Națională Administratia Canalelor Navigabile,11087755,Voicu Ion Laurențiu,Membru CA/CS,"1 2,212",-
 41,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Compania Națională Administratia Canalelor Navigabile,11087755,Cheța Voicu,Membru CA/CS,"1 2,212",-
@@ -388,34 +482,56 @@ MINISTERUL SANATATII,CN UNIFARM,11653560,Catalin Lungu,Membru CA/CS,"1 0,301",-,
 "",,"Societatea Comerciala de Reparatii Locomotive ""CFR",,,,,,
 45,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,,14257595,Grosariu Oana,Director/directorat,"3 0,000",-,
 "",,"SCRL"" BRASOV",,,,,,
-"",MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Naţională de Transport Feroviar de Marfă ""CFRMarfă""",11054537,Diaconescu Radu,Membru CA/CS,"2,790",-
-46,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Naţională de Transport Feroviar de Marfă ""CFRMarfă""",11054537,Krall Mazilu Ion,Membru CA/CS,"2,790",-
-46,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Naţională de Transport Feroviar de Marfă ""CFRMarfă""",11054537,Șerbănescu Valentina,Membru CA/CS,"2,790",-
-46,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Naţională de Transport Feroviar de Marfă ""CFRMarfă""",11054537,Anoaica Dragoș,Membru CA/CS,"2,790",-
-46,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Naţională de Transport Feroviar de Marfă ""CFRMarfă""",11054537,Constantin Violeta,Membru CA/CS,"2,790",-
+"",MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Naţională de Transport Feroviar de Marfă ""CFR
+Marfă""",11054537,Diaconescu Radu,Membru CA/CS,"2,790",-
+46,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Naţională de Transport Feroviar de Marfă ""CFR
+Marfă""",11054537,Krall Mazilu Ion,Membru CA/CS,"2,790",-
+46,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Naţională de Transport Feroviar de Marfă ""CFR
+Marfă""",11054537,Șerbănescu Valentina,Membru CA/CS,"2,790",-
+46,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Naţională de Transport Feroviar de Marfă ""CFR
+Marfă""",11054537,Anoaica Dragoș,Membru CA/CS,"2,790",-
+46,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Naţională de Transport Feroviar de Marfă ""CFR
+Marfă""",11054537,Constantin Violeta,Membru CA/CS,"2,790",-
 47,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,ROFERSPED,9825567,Munteanu Ștefaniță,Membru CA/CS,"5,128",-
 47,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,ROFERSPED,9825567,Tănăsuică Nicolae - Mugurel,Membru CA/CS,"5,128",-
 47,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,ROFERSPED,9825567,Godja - Tătar Renata,Membru CA/CS,"5,128",-
 47,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,ROFERSPED,9825567,Costea Ionuț,Membru CA/CS,"5,128",-
 47,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,ROFERSPED,9825567,Matei Răzvan - Marian,Membru CA/CS,"5,128",-
 47,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,ROFERSPED,9825567,Batalu Sorin - Gabriel,Director/directorat,"1 8,804",-
-48,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor DunăriiMaritime SA - Galați",11776466,Girla Laura Daniela,Membru CA/CS,"5,700",-
-48,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor DunăriiMaritime SA - Galați",11776466,Branza Vladut,Membru CA/CS,"5,700",-
-48,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor DunăriiMaritime SA - Galați",11776466,Apostol Roman Picu,Membru CA/CS,"5,700",-
-48,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor DunăriiMaritime SA - Galați",11776466,Mirica Cristian,Membru CA/CS,"5,700",-
-48,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor DunăriiMaritime SA - Galați",11776466,Vasilache Nicusor,Membru CA/CS,"5,700",-
-48,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor DunăriiMaritime SA - Galați",11776466,Munteanu Cristian Eugen,Membru CA/CS,"5,700",-
-48,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor DunăriiMaritime SA - Galați",11776466,Fatu Simona,Membru CA/CS,"5,700",-
-"",MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor DunăriiMaritime SA - Galați",11776466,Costea Marcela Daniela,Director/directorat,"3 7,176",-
-49,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Națională Aeroportul Internațional MihailKogalniceanu - Constanța",11212645,Ardelean Felix-Corneliu,Membru CA/CS,"2 3,280",-
-49,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Națională Aeroportul Internațional MihailKogalniceanu - Constanța",11212645,Fatu Simona -Carmen,Membru CA/CS,"2 3,280",-
-49,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Națională Aeroportul Internațional MihailKogalniceanu - Constanța",11212645,Mihu Stefan,Membru CA/CS,"2 3,280",-
-49,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Națională Aeroportul Internațional MihailKogalniceanu - Constanța",11212645,Monea Gabriel,Membru CA/CS,"2 3,280",-
-49,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Națională Aeroportul Internațional MihailKogalniceanu - Constanța",11212645,Teseleanu George,Membru CA/CS,"2 3,280",-
-49,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Națională Aeroportul Internațional MihailKogalniceanu - Constanța",11212645,Artagea Bogdan - Ionut,Director/directorat,"2 3,280",-
-49,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Națională Aeroportul Internațional MihailKogalniceanu - Constanța",11212645,Acatrinei Horia - Mihail,Director/directorat,"2 3,280",-
-49,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Națională Aeroportul Internațional MihailKogalniceanu - Constanța",11212645,Artagea Bogdan - Ionut,Director/directorat,"6 9,840",-
-49,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Națională Aeroportul Internațional MihailKogalniceanu - Constanța",11212645,Acatrinei Horia - Mihail,Director/directorat,"6 9,374",-
+48,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor Dunării
+Maritime SA - Galați",11776466,Girla Laura Daniela,Membru CA/CS,"5,700",-
+48,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor Dunării
+Maritime SA - Galați",11776466,Branza Vladut,Membru CA/CS,"5,700",-
+48,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor Dunării
+Maritime SA - Galați",11776466,Apostol Roman Picu,Membru CA/CS,"5,700",-
+48,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor Dunării
+Maritime SA - Galați",11776466,Mirica Cristian,Membru CA/CS,"5,700",-
+48,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor Dunării
+Maritime SA - Galați",11776466,Vasilache Nicusor,Membru CA/CS,"5,700",-
+48,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor Dunării
+Maritime SA - Galați",11776466,Munteanu Cristian Eugen,Membru CA/CS,"5,700",-
+48,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor Dunării
+Maritime SA - Galați",11776466,Fatu Simona,Membru CA/CS,"5,700",-
+"",MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională Administrația Porturilor Dunării
+Maritime SA - Galați",11776466,Costea Marcela Daniela,Director/directorat,"3 7,176",-
+49,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Națională Aeroportul Internațional Mihail
+Kogalniceanu - Constanța",11212645,Ardelean Felix-Corneliu,Membru CA/CS,"2 3,280",-
+49,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Națională Aeroportul Internațional Mihail
+Kogalniceanu - Constanța",11212645,Fatu Simona -Carmen,Membru CA/CS,"2 3,280",-
+49,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Națională Aeroportul Internațional Mihail
+Kogalniceanu - Constanța",11212645,Mihu Stefan,Membru CA/CS,"2 3,280",-
+49,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Națională Aeroportul Internațional Mihail
+Kogalniceanu - Constanța",11212645,Monea Gabriel,Membru CA/CS,"2 3,280",-
+49,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Națională Aeroportul Internațional Mihail
+Kogalniceanu - Constanța",11212645,Teseleanu George,Membru CA/CS,"2 3,280",-
+49,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Națională Aeroportul Internațional Mihail
+Kogalniceanu - Constanța",11212645,Artagea Bogdan - Ionut,Director/directorat,"2 3,280",-
+49,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Națională Aeroportul Internațional Mihail
+Kogalniceanu - Constanța",11212645,Acatrinei Horia - Mihail,Director/directorat,"2 3,280",-
+49,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Națională Aeroportul Internațional Mihail
+Kogalniceanu - Constanța",11212645,Artagea Bogdan - Ionut,Director/directorat,"6 9,840",-
+49,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Națională Aeroportul Internațional Mihail
+Kogalniceanu - Constanța",11212645,Acatrinei Horia - Mihail,Director/directorat,"6 9,374",-
 50,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Compania Nationala de Investitii Rutiere,36727850,Bogdan Pascu,Membru CA/CS,"8,591",-
 50,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Compania Nationala de Investitii Rutiere,36727850,Stefan Ionita,Membru CA/CS,"8,591",-
 50,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Compania Nationala de Investitii Rutiere,36727850,Catalin Urtoi,Membru CA/CS,"8,591",-
@@ -467,12 +583,18 @@ MINISTERUL SANATATII,CN UNIFARM,11653560,Catalin Lungu,Membru CA/CS,"1 0,301",-,
 53,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Regia Autonomă REGISTRUL AUTO ROMÂN,1590236,Costa Cosmin-Lascuț,Membru CA/CS,"2 9,538",-,
 53,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Regia Autonomă REGISTRUL AUTO ROMÂN,1590236,Alecu Mihai,Director/directorat,"6 2,076",,"62,076"
 "",MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Regia Autonomă REGISTRUL AUTO ROMÂN,1590236,Alina Mihaela Niță,Director/directorat,"6 2,076","62,076"
-54,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Regia Autonomă Administrația Fluvială a Dunării de JosGalați",1644670,Ivan Angela Stela,Membru CA/CS,"1 1,000",-
-54,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Regia Autonomă Administrația Fluvială a Dunării de JosGalați",1644670,Dumitru Dorian,Membru CA/CS,"1 1,000",-
-54,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Regia Autonomă Administrația Fluvială a Dunării de JosGalați",1644670,Voicu Ion Laurențiu,Membru CA/CS,"1 1,000",-
-54,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Regia Autonomă Administrația Fluvială a Dunării de JosGalați",1644670,Marin Romeo,Membru CA/CS,"1 1,000",-
-54,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Regia Autonomă Administrația Fluvială a Dunării de JosGalați",1644670,Ivan Angela Stela,Director/directorat,"3 6,000",-
-54,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Regia Autonomă Administrația Fluvială a Dunării de JosGalați",1644670,Tănase Felicia,Director/directorat,"3 4,200",-
+54,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Regia Autonomă Administrația Fluvială a Dunării de Jos
+Galați",1644670,Ivan Angela Stela,Membru CA/CS,"1 1,000",-
+54,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Regia Autonomă Administrația Fluvială a Dunării de Jos
+Galați",1644670,Dumitru Dorian,Membru CA/CS,"1 1,000",-
+54,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Regia Autonomă Administrația Fluvială a Dunării de Jos
+Galați",1644670,Voicu Ion Laurențiu,Membru CA/CS,"1 1,000",-
+54,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Regia Autonomă Administrația Fluvială a Dunării de Jos
+Galați",1644670,Marin Romeo,Membru CA/CS,"1 1,000",-
+54,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Regia Autonomă Administrația Fluvială a Dunării de Jos
+Galați",1644670,Ivan Angela Stela,Director/directorat,"3 6,000",-
+54,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Regia Autonomă Administrația Fluvială a Dunării de Jos
+Galați",1644670,Tănase Felicia,Director/directorat,"3 4,200",-
 55,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Regia Autonomă Autoritatea Aeronautică Civilă Română,5205651,Stoica Nicolae Octavian,Director/directorat,55428/110856,"110,856"
 55,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Regia Autonomă Autoritatea Aeronautică Civilă Română,5205651,Stoica Nicolae Octavian,Membru CA/CS,-,-
 55,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Regia Autonomă Autoritatea Aeronautică Civilă Română,5205651,Neacsu Mihai,Membru CA/CS,"5 2,890",
@@ -490,13 +612,20 @@ MINISTERUL SANATATII,CN UNIFARM,11653560,Catalin Lungu,Membru CA/CS,"1 0,301",-,
 56,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională de Căi Ferate ""C.F.R.""",11054529,Zamfir Marian,Membru CA/CS,"24,393","73,179"
 56,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională de Căi Ferate ""C.F.R.""",11054529,Simu - Alexandru Ion,Director/directorat,"50,322","1 50,966"
 56,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Națională de Căi Ferate ""C.F.R.""",11054529,Mantescu Iulian Florin,Director/directorat,"33,548","1 00,644"
-57,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Comercială de Transport cu Metroul Bucureşti""Metrorex""",13863739,Preoteasa Traian,Membru CA/CS,"5,345","16,035"
-57,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Comercială de Transport cu Metroul Bucureşti""Metrorex""",13863739,Szentes Iosif,Membru CA/CS,"5,345","16,035"
-57,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Comercială de Transport cu Metroul Bucureşti""Metrorex""",13863739,Voicu Vasile Dorin,Membru CA/CS,"5,345",-
-57,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Comercială de Transport cu Metroul Bucureşti""Metrorex""",13863739,Petre Mariana,Membru CA/CS,"5,345","16,035"
-57,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Comercială de Transport cu Metroul Bucureşti""Metrorex""",13863739,Popa Gabriel,Membru CA/CS,"5,345","16,035"
-57,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Comercială de Transport cu Metroul Bucureşti""Metrorex""",13863739,Miclaus Mariana,Director/directorat,"30,000","90,000"
-57,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Comercială de Transport cu Metroul Bucureşti""Metrorex""",13863739,Diaconu Ioana,Director/directorat,"28,000","84,000"
+57,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Comercială de Transport cu Metroul Bucureşti
+""Metrorex""",13863739,Preoteasa Traian,Membru CA/CS,"5,345","16,035"
+57,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Comercială de Transport cu Metroul Bucureşti
+""Metrorex""",13863739,Szentes Iosif,Membru CA/CS,"5,345","16,035"
+57,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Comercială de Transport cu Metroul Bucureşti
+""Metrorex""",13863739,Voicu Vasile Dorin,Membru CA/CS,"5,345",-
+57,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Comercială de Transport cu Metroul Bucureşti
+""Metrorex""",13863739,Petre Mariana,Membru CA/CS,"5,345","16,035"
+57,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Comercială de Transport cu Metroul Bucureşti
+""Metrorex""",13863739,Popa Gabriel,Membru CA/CS,"5,345","16,035"
+57,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Comercială de Transport cu Metroul Bucureşti
+""Metrorex""",13863739,Miclaus Mariana,Director/directorat,"30,000","90,000"
+57,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Societatea Comercială de Transport cu Metroul Bucureşti
+""Metrorex""",13863739,Diaconu Ioana,Director/directorat,"28,000","84,000"
 58,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Societatea Tipografică „Filaret”,14547106,Radu Claudia Carmen,Membru CA/CS,"5,015",-
 58,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Societatea Tipografică „Filaret”,14547106,Timiș Iuliana Adriana,Membru CA/CS,"5,015",-
 58,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Societatea Tipografică „Filaret”,14547106,Pop Ioan,Membru CA/CS,"5,015",-
@@ -525,13 +654,20 @@ MINISTERUL SANATATII,CN UNIFARM,11653560,Catalin Lungu,Membru CA/CS,"1 0,301",-,
 61,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Societatea Carpatica Feroviar România,50826310,Nuncă Otilia Florentina,Membru CA/CS,"1 4,636",-
 61,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Societatea Carpatica Feroviar România,50826310,Budescu Gabriel,Membru CA/CS,"1 4,636",-
 61,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,Societatea Carpatica Feroviar România,50826310,Apostolache Daniel,Director/directorat,"4 5,846",-
-62,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Nationala Administratia Porturilor MaritimeConstanta",11062831,Teodorescu Mihai,Membru CA/CS,"1 0,636",-
-62,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Nationala Administratia Porturilor MaritimeConstanta",11062831,Catană Dan Alexandru,Membru CA/CS,"1 0,636",-
-62,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Nationala Administratia Porturilor MaritimeConstanta",11062831,Vlad Elena,Membru CA/CS,"1 0,636",-
-62,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Nationala Administratia Porturilor MaritimeConstanta",11062831,Diaconu Cătălin,Membru CA/CS,"1 0,636",-
-62,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Nationala Administratia Porturilor MaritimeConstanta",11062831,Nancu Dumitru,Director/directorat,"4 2,988",-
-62,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Nationala Administratia Porturilor MaritimeConstanta",11062831,Mihai Teodorescu,Director/directorat,"6 1,688",-
-63,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"SOCIETATEA DE ADMINISTRARE ACTIVE FEROVIARE""S.A.A.F."" SA",11059950,Insolventa/Diverse,Insolventa/Diverse,Insolventa/Diverse,insolventa
+62,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Nationala Administratia Porturilor Maritime
+Constanta",11062831,Teodorescu Mihai,Membru CA/CS,"1 0,636",-
+62,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Nationala Administratia Porturilor Maritime
+Constanta",11062831,Catană Dan Alexandru,Membru CA/CS,"1 0,636",-
+62,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Nationala Administratia Porturilor Maritime
+Constanta",11062831,Vlad Elena,Membru CA/CS,"1 0,636",-
+62,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Nationala Administratia Porturilor Maritime
+Constanta",11062831,Diaconu Cătălin,Membru CA/CS,"1 0,636",-
+62,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Nationala Administratia Porturilor Maritime
+Constanta",11062831,Nancu Dumitru,Director/directorat,"4 2,988",-
+62,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"Compania Nationala Administratia Porturilor Maritime
+Constanta",11062831,Mihai Teodorescu,Director/directorat,"6 1,688",-
+63,MINISTERUL TRANSPORTURILOR SI INFRASTRUCTURII,"SOCIETATEA DE ADMINISTRARE ACTIVE FEROVIARE
+""S.A.A.F."" SA",11059950,Insolventa/Diverse,Insolventa/Diverse,Insolventa/Diverse,insolventa
 64,MINISTERUL ENERGIEI,NUCLEARELECTRICA,10874881,Nitulescu Casian,Membru CA/CS,"1 7,926",-
 64,MINISTERUL ENERGIEI,NUCLEARELECTRICA,10874881,Cazan Laurentiu Nicolae,Membru CA/CS,"1 7,926",-
 64,MINISTERUL ENERGIEI,NUCLEARELECTRICA,10874881,Petrica Nicolescu,Membru CA/CS,"1 7,926",-
@@ -549,12 +685,18 @@ MINISTERUL SANATATII,CN UNIFARM,11653560,Catalin Lungu,Membru CA/CS,"1 0,301",-,
 65,MINISTERUL ENERGIEI,ENERGONUCLEAR,25344972,Havris Constantin Alexandru,Director/directorat,"6 8,388",-
 65,MINISTERUL ENERGIEI,ENERGONUCLEAR,25344972,Marciulescu Alexandru,Director/directorat,"6 4,200",-
 65,MINISTERUL ENERGIEI,ENERGONUCLEAR,25344972,Dascalu Vasile,Director/directorat,"5 8,800",-
-66,MINISTERUL ENERGIEI,"Fabrica de Prelucrare a Concentratelor de UraniuFeldioara",44958790,Bacaintan Cristina,Membru CA/CS,"9,000",-
-66,MINISTERUL ENERGIEI,"Fabrica de Prelucrare a Concentratelor de UraniuFeldioara",44958790,Vlasceanu Silvia,Membru CA/CS,"9,000",-
-66,MINISTERUL ENERGIEI,"Fabrica de Prelucrare a Concentratelor de UraniuFeldioara",44958790,Dobre Raluca,Membru CA/CS,"9,000",-
-66,MINISTERUL ENERGIEI,"Fabrica de Prelucrare a Concentratelor de UraniuFeldioara",44958790,Foghis Adrian George,Membru CA/CS,"9,000",-
-66,MINISTERUL ENERGIEI,"Fabrica de Prelucrare a Concentratelor de UraniuFeldioara",44958790,Vacant,,,
-66,MINISTERUL ENERGIEI,"Fabrica de Prelucrare a Concentratelor de UraniuFeldioara",44958790,Maracineanu Gelu Agafiel,Director/directorat,"5 5,398",-
+66,MINISTERUL ENERGIEI,"Fabrica de Prelucrare a Concentratelor de Uraniu
+Feldioara",44958790,Bacaintan Cristina,Membru CA/CS,"9,000",-
+66,MINISTERUL ENERGIEI,"Fabrica de Prelucrare a Concentratelor de Uraniu
+Feldioara",44958790,Vlasceanu Silvia,Membru CA/CS,"9,000",-
+66,MINISTERUL ENERGIEI,"Fabrica de Prelucrare a Concentratelor de Uraniu
+Feldioara",44958790,Dobre Raluca,Membru CA/CS,"9,000",-
+66,MINISTERUL ENERGIEI,"Fabrica de Prelucrare a Concentratelor de Uraniu
+Feldioara",44958790,Foghis Adrian George,Membru CA/CS,"9,000",-
+66,MINISTERUL ENERGIEI,"Fabrica de Prelucrare a Concentratelor de Uraniu
+Feldioara",44958790,Vacant,,,
+66,MINISTERUL ENERGIEI,"Fabrica de Prelucrare a Concentratelor de Uraniu
+Feldioara",44958790,Maracineanu Gelu Agafiel,Director/directorat,"5 5,398",-
 67,MINISTERUL ENERGIEI,Nuclearelectrica Serv,45374854,Dobrica Anca Ioana,Membru CA/CS,"1 3,722",-
 "",MINISTERUL ENERGIEI,Nuclearelectrica Serv,45374854,Dolha Mircea,Membru CA/CS,"1 3,722",-
 67,MINISTERUL ENERGIEI,Nuclearelectrica Serv,45374854,Roibu Dragos Stefan,Membru CA/CS,-,-
@@ -571,7 +713,8 @@ MINISTERUL SANATATII,CN UNIFARM,11653560,Catalin Lungu,Membru CA/CS,"1 0,301",-,
 68,MINISTERUL ENERGIEI,S.N.G.N. ROMGAZ,14056826,Popescu Răzvan,Director/directorat,"8 5,644","2,055,456"
 68,MINISTERUL ENERGIEI,S.N.G.N. ROMGAZ,14056826,Jude Aristotel Marius,Director/directorat,"8 5,644","2,055,456"
 68,MINISTERUL ENERGIEI,S.N.G.N. ROMGAZ,14056826,Trâmbițaș Gabriela,Director/directorat,"7 1,370","856,440"
-69,MINISTERUL ENERGIEI,DEPOGAZ,34915261,"Stănescu Nicolae BogdanCodruț",Membru CA/CS,"2 2,378","268,535"
+69,MINISTERUL ENERGIEI,DEPOGAZ,34915261,"Stănescu Nicolae Bogdan
+Codruț",Membru CA/CS,"2 2,378","268,535"
 69,MINISTERUL ENERGIEI,DEPOGAZ,34915261,Țărîndă Ileana,Membru CA/CS,"2 2,378","268,535"
 69,MINISTERUL ENERGIEI,DEPOGAZ,34915261,Lazăr George,Membru CA/CS,"2 2,378","268,535"
 "",MINISTERUL ENERGIEI,DEPOGAZ,34915261,Vasile Anna-Maria,Membru CA/CS,"2 2,378","268,535"
@@ -602,7 +745,8 @@ MINISTERUL SANATATII,CN UNIFARM,11653560,Catalin Lungu,Membru CA/CS,"1 0,301",-,
 73,MINISTERUL ENERGIEI,OIL TERMINAL,2410163,Ungur Ramona,Membru CA/CS,"1 6,533","198,396"
 73,MINISTERUL ENERGIEI,OIL TERMINAL,2410163,Teseleanu George,Membru CA/CS,"1 6,533","198,396"
 73,MINISTERUL ENERGIEI,OIL TERMINAL,2410163,Misa George-Silvian,Membru CA/CS,"1 6,533","198,396"
-73,MINISTERUL ENERGIEI,OIL TERMINAL,2410163,"Stan Olteanu ManuelaPetronela",Membru CA/CS,"1 6,533",-
+73,MINISTERUL ENERGIEI,OIL TERMINAL,2410163,"Stan Olteanu Manuela
+Petronela",Membru CA/CS,"1 6,533",-
 73,MINISTERUL ENERGIEI,OIL TERMINAL,2410163,Bodu Sebastian-Valentin,Membru CA/CS,"1 6,533","198,396"
 73,MINISTERUL ENERGIEI,OIL TERMINAL,2410163,Ciutureanu Viorel Sorin,Director/directorat,"5 1,000","612,000"
 73,MINISTERUL ENERGIEI,OIL TERMINAL,2410163,Frangu Adriana,Director/directorat,"50,000","600,000"
@@ -617,15 +761,24 @@ MINISTERUL SANATATII,CN UNIFARM,11653560,Catalin Lungu,Membru CA/CS,"1 0,301",-,
 74,MINISTERUL ENERGIEI,CONPET,1350020,Dumitrache Mihaela Anamaria,Director/directorat,"5 5,530","666,360"
 74,MINISTERUL ENERGIEI,CONPET,1350020,Necșulescu Radu – Florentin,Director/directorat,"5 5,530","666,360"
 74,MINISTERUL ENERGIEI,CONPET,1350020,Toader Sanda,Director/directorat,"5 5,530","666,360"
-75,MINISTERUL ENERGIEI,"SOCIETATEA DE ADMINISTRARE A PARTICIPAȚIILOR ÎNENERGIE (S.A.P.E. S.A.)",33134190,Nancu Dumitru,Membru CA/CS,"2 3,359",-
-75,MINISTERUL ENERGIEI,"SOCIETATEA DE ADMINISTRARE A PARTICIPAȚIILOR ÎNENERGIE (S.A.P.E. S.A.)",33134190,Vădan Laura Eugenia,Membru CA/CS,"2 3,359",-
-75,MINISTERUL ENERGIEI,"SOCIETATEA DE ADMINISTRARE A PARTICIPAȚIILOR ÎNENERGIE (S.A.P.E. S.A.)",33134190,Neagu Alina Cristina,Membru CA/CS,"2 3,359",-
-75,MINISTERUL ENERGIEI,"SOCIETATEA DE ADMINISTRARE A PARTICIPAȚIILOR ÎNENERGIE (S.A.P.E. S.A.)",33134190,Bodu Sebastian,Membru CA/CS,"2 3,359",-
-75,MINISTERUL ENERGIEI,"SOCIETATEA DE ADMINISTRARE A PARTICIPAȚIILOR ÎNENERGIE (S.A.P.E. S.A.)",33134190,Deaconu Alexandru Stefan,Membru CA/CS,"2 3,359",-
-75,MINISTERUL ENERGIEI,"SOCIETATEA DE ADMINISTRARE A PARTICIPAȚIILOR ÎNENERGIE (S.A.P.E. S.A.)",33134190,Foghiș Adrian,Director/directorat,"4 5,356",-
-75,MINISTERUL ENERGIEI,"SOCIETATEA DE ADMINISTRARE A PARTICIPAȚIILOR ÎNENERGIE (S.A.P.E. S.A.)",33134190,Andrei Jean Vasile,Director/directorat,"4 5,356",-
-75,MINISTERUL ENERGIEI,"SOCIETATEA DE ADMINISTRARE A PARTICIPAȚIILOR ÎNENERGIE (S.A.P.E. S.A.)",33134190,Chiriță Sorin,Director/directorat,"4 5,356","272,136"
-75,MINISTERUL ENERGIEI,"SOCIETATEA DE ADMINISTRARE A PARTICIPAȚIILOR ÎNENERGIE (S.A.P.E. S.A.)",33134190,Pîrvulescu Bogdan,Director/directorat,"4 5,356","272,136"
+75,MINISTERUL ENERGIEI,"SOCIETATEA DE ADMINISTRARE A PARTICIPAȚIILOR ÎN
+ENERGIE (S.A.P.E. S.A.)",33134190,Nancu Dumitru,Membru CA/CS,"2 3,359",-
+75,MINISTERUL ENERGIEI,"SOCIETATEA DE ADMINISTRARE A PARTICIPAȚIILOR ÎN
+ENERGIE (S.A.P.E. S.A.)",33134190,Vădan Laura Eugenia,Membru CA/CS,"2 3,359",-
+75,MINISTERUL ENERGIEI,"SOCIETATEA DE ADMINISTRARE A PARTICIPAȚIILOR ÎN
+ENERGIE (S.A.P.E. S.A.)",33134190,Neagu Alina Cristina,Membru CA/CS,"2 3,359",-
+75,MINISTERUL ENERGIEI,"SOCIETATEA DE ADMINISTRARE A PARTICIPAȚIILOR ÎN
+ENERGIE (S.A.P.E. S.A.)",33134190,Bodu Sebastian,Membru CA/CS,"2 3,359",-
+75,MINISTERUL ENERGIEI,"SOCIETATEA DE ADMINISTRARE A PARTICIPAȚIILOR ÎN
+ENERGIE (S.A.P.E. S.A.)",33134190,Deaconu Alexandru Stefan,Membru CA/CS,"2 3,359",-
+75,MINISTERUL ENERGIEI,"SOCIETATEA DE ADMINISTRARE A PARTICIPAȚIILOR ÎN
+ENERGIE (S.A.P.E. S.A.)",33134190,Foghiș Adrian,Director/directorat,"4 5,356",-
+75,MINISTERUL ENERGIEI,"SOCIETATEA DE ADMINISTRARE A PARTICIPAȚIILOR ÎN
+ENERGIE (S.A.P.E. S.A.)",33134190,Andrei Jean Vasile,Director/directorat,"4 5,356",-
+75,MINISTERUL ENERGIEI,"SOCIETATEA DE ADMINISTRARE A PARTICIPAȚIILOR ÎN
+ENERGIE (S.A.P.E. S.A.)",33134190,Chiriță Sorin,Director/directorat,"4 5,356","272,136"
+75,MINISTERUL ENERGIEI,"SOCIETATEA DE ADMINISTRARE A PARTICIPAȚIILOR ÎN
+ENERGIE (S.A.P.E. S.A.)",33134190,Pîrvulescu Bogdan,Director/directorat,"4 5,356","272,136"
 76,MINISTERUL ENERGIEI,TITAN POWER,40817209,Marian Luiza,Membru CA/CS,"1 6,500","198,000"
 76,MINISTERUL ENERGIEI,TITAN POWER,40817209,Georgescu Ionel,Membru CA/CS,"1 6,500","198,000"
 "",MINISTERUL ENERGIEI,TITAN POWER,40817209,Ionescu Mirela,Membru CA/CS,"1 6,500","198,000"
@@ -658,22 +811,45 @@ MINISTERUL SANATATII,CN UNIFARM,11653560,Catalin Lungu,Membru CA/CS,"1 0,301",-,
 80,MINISTERUL ENERGIEI,CCGT POWER IȘALNIȚA,48790613,Stoenac Dragoș-Marian,Membru CA/CS,"1 2,000",-
 80,MINISTERUL ENERGIEI,CCGT POWER IȘALNIȚA,48790613,Vintilă Mihai-Adrian,Director/directorat,"2 5,641",-
 80,MINISTERUL ENERGIEI,CCGT POWER IȘALNIȚA,48790613,Costescu Olga,Director/directorat,"2 3,932",-
-81,MINISTERUL ENERGIEI,"REGIA AUTONOMĂ TEHNOLOGII PENTRU ENERGIANUCLEARĂ  (R.A.T.E.N. S.A.)",32306920,Ducu Marian - Cătălin,Membru CA/CS,-,-
-81,MINISTERUL ENERGIEI,"REGIA AUTONOMĂ TEHNOLOGII PENTRU ENERGIANUCLEARĂ  (R.A.T.E.N. S.A.)",32306920,Uta Ion Octavian,Membru CA/CS,-,-
-81,MINISTERUL ENERGIEI,"REGIA AUTONOMĂ TEHNOLOGII PENTRU ENERGIANUCLEARĂ  (R.A.T.E.N. S.A.)",32306920,Trancotă Daniela,Membru CA/CS,"1 1,883",-
-81,MINISTERUL ENERGIEI,"REGIA AUTONOMĂ TEHNOLOGII PENTRU ENERGIANUCLEARĂ  (R.A.T.E.N. S.A.)",32306920,Fulgernicolae,Membru CA/CS,"1 1,883",-
-81,MINISTERUL ENERGIEI,"REGIA AUTONOMĂ TEHNOLOGII PENTRU ENERGIANUCLEARĂ  (R.A.T.E.N. S.A.)",32306920,Mișa Ionuț,Membru CA/CS,"1 1,883",-
-81,MINISTERUL ENERGIEI,"REGIA AUTONOMĂ TEHNOLOGII PENTRU ENERGIANUCLEARĂ  (R.A.T.E.N. S.A.)",32306920,Bărîcă Gheorghe,Membru CA/CS,"1 1,883",-
-"",MINISTERUL ENERGIEI,"REGIA AUTONOMĂ TEHNOLOGII PENTRU ENERGIANUCLEARĂ  (R.A.T.E.N. S.A.)",32306920,Ioniță Gheorghe,Membru CA/CS,"1 1,883",-
-81,MINISTERUL ENERGIEI,"REGIA AUTONOMĂ TEHNOLOGII PENTRU ENERGIANUCLEARĂ  (R.A.T.E.N. S.A.)",32306920,Ută Ion Octavian,Director/directorat,"6 4,519",-
-81,MINISTERUL ENERGIEI,"REGIA AUTONOMĂ TEHNOLOGII PENTRU ENERGIANUCLEARĂ  (R.A.T.E.N. S.A.)",32306920,Ducu Marian - Cătălin,Director/directorat,"5 9,142",-
-81,MINISTERUL ENERGIEI,"REGIA AUTONOMĂ TEHNOLOGII PENTRU ENERGIANUCLEARĂ  (R.A.T.E.N. S.A.)",32306920,Apostoliceanu Sorin,Director/directorat,"5 3,765",-
-82,MINISTERUL ENERGIEI,"COMPANIA NAȚIONALĂ PENTRU CONTROLUL CAZANELOR,INSTALAȚIILOR DE RIDICAT ȘI RECIPIENTELOR SUBPRESIUNE (C.N.C.I.R. S.A.)",27787860,"Stan -Olteanu ManuelaPetronela",Membru CA/CS,"2 3,130",-
-82,MINISTERUL ENERGIEI,"COMPANIA NAȚIONALĂ PENTRU CONTROLUL CAZANELOR,INSTALAȚIILOR DE RIDICAT ȘI RECIPIENTELOR SUBPRESIUNE (C.N.C.I.R. S.A.)",27787860,Doloiu Maria Roberta,Membru CA/CS,"2 3,130",-
-82,MINISTERUL ENERGIEI,"COMPANIA NAȚIONALĂ PENTRU CONTROLUL CAZANELOR,INSTALAȚIILOR DE RIDICAT ȘI RECIPIENTELOR SUBPRESIUNE (C.N.C.I.R. S.A.)",27787860,Pagu Angelica,Membru CA/CS,"2 3,130",-
-82,MINISTERUL ENERGIEI,"COMPANIA NAȚIONALĂ PENTRU CONTROLUL CAZANELOR,INSTALAȚIILOR DE RIDICAT ȘI RECIPIENTELOR SUBPRESIUNE (C.N.C.I.R. S.A.)",27787860,Anton Cristian Ioan,Membru CA/CS,"2 3,130",-
-82,MINISTERUL ENERGIEI,"COMPANIA NAȚIONALĂ PENTRU CONTROLUL CAZANELOR,INSTALAȚIILOR DE RIDICAT ȘI RECIPIENTELOR SUBPRESIUNE (C.N.C.I.R. S.A.)",27787860,Vacant,Membru CA/CS,,
-82,MINISTERUL ENERGIEI,"COMPANIA NAȚIONALĂ PENTRU CONTROLUL CAZANELOR,INSTALAȚIILOR DE RIDICAT ȘI RECIPIENTELOR SUBPRESIUNE (C.N.C.I.R. S.A.)",27787860,Raicu Ionica,Director/directorat,"58,521",-
+81,MINISTERUL ENERGIEI,"REGIA AUTONOMĂ TEHNOLOGII PENTRU ENERGIA
+NUCLEARĂ  (R.A.T.E.N. S.A.)",32306920,Ducu Marian - Cătălin,Membru CA/CS,-,-
+81,MINISTERUL ENERGIEI,"REGIA AUTONOMĂ TEHNOLOGII PENTRU ENERGIA
+NUCLEARĂ  (R.A.T.E.N. S.A.)",32306920,Uta Ion Octavian,Membru CA/CS,-,-
+81,MINISTERUL ENERGIEI,"REGIA AUTONOMĂ TEHNOLOGII PENTRU ENERGIA
+NUCLEARĂ  (R.A.T.E.N. S.A.)",32306920,Trancotă Daniela,Membru CA/CS,"1 1,883",-
+81,MINISTERUL ENERGIEI,"REGIA AUTONOMĂ TEHNOLOGII PENTRU ENERGIA
+NUCLEARĂ  (R.A.T.E.N. S.A.)",32306920,Fulgernicolae,Membru CA/CS,"1 1,883",-
+81,MINISTERUL ENERGIEI,"REGIA AUTONOMĂ TEHNOLOGII PENTRU ENERGIA
+NUCLEARĂ  (R.A.T.E.N. S.A.)",32306920,Mișa Ionuț,Membru CA/CS,"1 1,883",-
+81,MINISTERUL ENERGIEI,"REGIA AUTONOMĂ TEHNOLOGII PENTRU ENERGIA
+NUCLEARĂ  (R.A.T.E.N. S.A.)",32306920,Bărîcă Gheorghe,Membru CA/CS,"1 1,883",-
+"",MINISTERUL ENERGIEI,"REGIA AUTONOMĂ TEHNOLOGII PENTRU ENERGIA
+NUCLEARĂ  (R.A.T.E.N. S.A.)",32306920,Ioniță Gheorghe,Membru CA/CS,"1 1,883",-
+81,MINISTERUL ENERGIEI,"REGIA AUTONOMĂ TEHNOLOGII PENTRU ENERGIA
+NUCLEARĂ  (R.A.T.E.N. S.A.)",32306920,Ută Ion Octavian,Director/directorat,"6 4,519",-
+81,MINISTERUL ENERGIEI,"REGIA AUTONOMĂ TEHNOLOGII PENTRU ENERGIA
+NUCLEARĂ  (R.A.T.E.N. S.A.)",32306920,Ducu Marian - Cătălin,Director/directorat,"5 9,142",-
+81,MINISTERUL ENERGIEI,"REGIA AUTONOMĂ TEHNOLOGII PENTRU ENERGIA
+NUCLEARĂ  (R.A.T.E.N. S.A.)",32306920,Apostoliceanu Sorin,Director/directorat,"5 3,765",-
+82,MINISTERUL ENERGIEI,"COMPANIA NAȚIONALĂ PENTRU CONTROLUL CAZANELOR,
+INSTALAȚIILOR DE RIDICAT ȘI RECIPIENTELOR SUB
+PRESIUNE (C.N.C.I.R. S.A.)",27787860,"Stan -Olteanu Manuela
+Petronela",Membru CA/CS,"2 3,130",-
+82,MINISTERUL ENERGIEI,"COMPANIA NAȚIONALĂ PENTRU CONTROLUL CAZANELOR,
+INSTALAȚIILOR DE RIDICAT ȘI RECIPIENTELOR SUB
+PRESIUNE (C.N.C.I.R. S.A.)",27787860,Doloiu Maria Roberta,Membru CA/CS,"2 3,130",-
+82,MINISTERUL ENERGIEI,"COMPANIA NAȚIONALĂ PENTRU CONTROLUL CAZANELOR,
+INSTALAȚIILOR DE RIDICAT ȘI RECIPIENTELOR SUB
+PRESIUNE (C.N.C.I.R. S.A.)",27787860,Pagu Angelica,Membru CA/CS,"2 3,130",-
+82,MINISTERUL ENERGIEI,"COMPANIA NAȚIONALĂ PENTRU CONTROLUL CAZANELOR,
+INSTALAȚIILOR DE RIDICAT ȘI RECIPIENTELOR SUB
+PRESIUNE (C.N.C.I.R. S.A.)",27787860,Anton Cristian Ioan,Membru CA/CS,"2 3,130",-
+82,MINISTERUL ENERGIEI,"COMPANIA NAȚIONALĂ PENTRU CONTROLUL CAZANELOR,
+INSTALAȚIILOR DE RIDICAT ȘI RECIPIENTELOR SUB
+PRESIUNE (C.N.C.I.R. S.A.)",27787860,Vacant,Membru CA/CS,,
+82,MINISTERUL ENERGIEI,"COMPANIA NAȚIONALĂ PENTRU CONTROLUL CAZANELOR,
+INSTALAȚIILOR DE RIDICAT ȘI RECIPIENTELOR SUB
+PRESIUNE (C.N.C.I.R. S.A.)",27787860,Raicu Ionica,Director/directorat,"58,521",-
 83,MINISTERUL ENERGIEI,ELECTROCENTRALE GRUP,31028788,Marinescu Dan- Constantin,Membru CA/CS,"2 4,032","288,384"
 83,MINISTERUL ENERGIEI,ELECTROCENTRALE GRUP,31028788,Scarlat Dan- Florin,Membru CA/CS,"2 4,032","288,384"
 83,MINISTERUL ENERGIEI,ELECTROCENTRALE GRUP,31028788,Chirita Sorin,Membru CA/CS,"2 4,032","288,384"
@@ -707,10 +883,19 @@ MINISTERUL SANATATII,CN UNIFARM,11653560,Catalin Lungu,Membru CA/CS,"1 0,301",-,
 87,MINISTERUL ENERGIEI,MIDIA GREEN ENERGY,14325363,Utekov Yedil,Membru CA/CS,"3 7,821",-
 87,MINISTERUL ENERGIEI,MIDIA GREEN ENERGY,14325363,Suleimanov Albert,Membru CA/CS,"3 7,821",-
 87,MINISTERUL ENERGIEI,MIDIA GREEN ENERGY,14325363,Turgay Chemal,Director/directorat,"5 0,429",-
-88,MINISTERUL ENERGIEI,"INSTITUTUL DE CERCETARE ȘTIINȚIFICĂ, INGINERIETEHNOLOGICĂ ȘI PROIECTARE MINE PE LIGNIT(I.C.S.I.T.P.M.L. S.A.)",3730549,"UngureanuAdriana Lorena",Membru CA/CS,"4,662",-
-88,MINISTERUL ENERGIEI,"INSTITUTUL DE CERCETARE ȘTIINȚIFICĂ, INGINERIETEHNOLOGICĂ ȘI PROIECTARE MINE PE LIGNIT(I.C.S.I.T.P.M.L. S.A.)",3730549,Niculaita Nicolae,Membru CA/CS,"4,662",-
-88,MINISTERUL ENERGIEI,"INSTITUTUL DE CERCETARE ȘTIINȚIFICĂ, INGINERIETEHNOLOGICĂ ȘI PROIECTARE MINE PE LIGNIT(I.C.S.I.T.P.M.L. S.A.)",3730549,Vacant,Membru CA/CS,,-
-88,MINISTERUL ENERGIEI,"INSTITUTUL DE CERCETARE ȘTIINȚIFICĂ, INGINERIETEHNOLOGICĂ ȘI PROIECTARE MINE PE LIGNIT(I.C.S.I.T.P.M.L. S.A.)",3730549,,Director/directorat,"15,000",-
+88,MINISTERUL ENERGIEI,"INSTITUTUL DE CERCETARE ȘTIINȚIFICĂ, INGINERIE
+TEHNOLOGICĂ ȘI PROIECTARE MINE PE LIGNIT
+(I.C.S.I.T.P.M.L. S.A.)",3730549,"Ungureanu
+Adriana Lorena",Membru CA/CS,"4,662",-
+88,MINISTERUL ENERGIEI,"INSTITUTUL DE CERCETARE ȘTIINȚIFICĂ, INGINERIE
+TEHNOLOGICĂ ȘI PROIECTARE MINE PE LIGNIT
+(I.C.S.I.T.P.M.L. S.A.)",3730549,Niculaita Nicolae,Membru CA/CS,"4,662",-
+88,MINISTERUL ENERGIEI,"INSTITUTUL DE CERCETARE ȘTIINȚIFICĂ, INGINERIE
+TEHNOLOGICĂ ȘI PROIECTARE MINE PE LIGNIT
+(I.C.S.I.T.P.M.L. S.A.)",3730549,Vacant,Membru CA/CS,,-
+88,MINISTERUL ENERGIEI,"INSTITUTUL DE CERCETARE ȘTIINȚIFICĂ, INGINERIE
+TEHNOLOGICĂ ȘI PROIECTARE MINE PE LIGNIT
+(I.C.S.I.T.P.M.L. S.A.)",3730549,,Director/directorat,"15,000",-
 89,MINISTERUL APARARII NATIONALE,Compania Națională ROMTEHNICA,472771,Bachide Eduard,Membru CA/CS,"10,370",-
 89,MINISTERUL APARARII NATIONALE,Compania Națională ROMTEHNICA,472771,Mișa Ionuț,Membru CA/CS,"10,370",-
 89,MINISTERUL APARARII NATIONALE,Compania Națională ROMTEHNICA,472771,Vacant,Vacant,-,Nu a fost stabilită
@@ -818,96 +1003,190 @@ MINISTERUL SANATATII,CN UNIFARM,11653560,Catalin Lungu,Membru CA/CS,"1 0,301",-,
 "","MINISTERUL ECONOMIEI, DIGITALIZARII,",,,,,,,
 97,,TELEGONDOLA-MAMAIA,15551423,Sârbu Anca,Membru CA/CS,"3,070",-,
 "",ANTREPRENORIATULUI SI TURISMULUI,,,,,,,
-"","MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",TELEGONDOLA-MAMAIA,15551423,Costache Laurențiu,Membru CA/CS,"3,070",-
-97,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",TELEGONDOLA-MAMAIA,15551423,Filip Cosmin,Membru CA/CS,"3,070",-
-98,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",NEPTUN-OLIMP,2423562,Florin Aurel Neghină,Membru CA/CS,"1,500",-
-98,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",NEPTUN-OLIMP,2423562,Ioana Dumitrache,Membru CA/CS,"1,500",-
-98,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",NEPTUN-OLIMP,2423562,Constantin Marian Mihai,Membru CA/CS,"1,500",-
-98,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",NEPTUN-OLIMP,2423562,Florin Dănuț Buzatu,Membru CA/CS,"1,500",-
-98,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",NEPTUN-OLIMP,2423562,Victor Alexandru Frunză,Membru CA/CS,"1,500",-
-98,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",NEPTUN-OLIMP,2423562,Dima Lascu,Director/directorat,"1 2,000",-
-99,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",CENTRUL NAȚIONAL DE ÎNVĂȚĂMÂNT TURISTIC,24979799,Avram Valentin-Gabriel,Director/directorat,"1 1,500",-
-99,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",CENTRUL NAȚIONAL DE ÎNVĂȚĂMÂNT TURISTIC,24979799,Baciună Diana-Ștefana,Membru CA/CS,"6,071",-
-99,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",CENTRUL NAȚIONAL DE ÎNVĂȚĂMÂNT TURISTIC,24979799,Butacu Simona-Valentina,Membru CA/CS,"6,071",-
-99,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",CENTRUL NAȚIONAL DE ÎNVĂȚĂMÂNT TURISTIC,24979799,Cozma Vasile-Felix,Membru CA/CS,"6,071",-
-99,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",CENTRUL NAȚIONAL DE ÎNVĂȚĂMÂNT TURISTIC,24979799,Pîrjol Emil-Răzvan,Membru CA/CS,"6,071",-
-99,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",CENTRUL NAȚIONAL DE ÎNVĂȚĂMÂNT TURISTIC,24979799,Sloată Florentina,Membru CA/CS,"6,071",-
-100,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",SOCIETATEA NAȚIONALĂ PLAFAR,11945506,Vacant,Membru CA/CS,,
-100,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",SOCIETATEA NAȚIONALĂ PLAFAR,11945506,Haschka Luiza Mihaela,Membru CA/CS,"3,692",-
-100,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",SOCIETATEA NAȚIONALĂ PLAFAR,11945506,Ciobotaru Iuliana,Membru CA/CS,"3,692",-
-100,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",SOCIETATEA NAȚIONALĂ PLAFAR,11945506,Hnatec Teodor Gabriel,Membru CA/CS,"3,692",-
-"","MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",SOCIETATEA NAȚIONALĂ PLAFAR,11945506,Vacant,Membru CA/CS,"3,692",-
-100,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",SOCIETATEA NAȚIONALĂ PLAFAR,11945506,Bratu Elena,Director/directorat,"2 0,500",-
-100,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",SOCIETATEA NAȚIONALĂ PLAFAR,11945506,Bratu Elena *,Director/directorat,"1 3,430",-
-100,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",SOCIETATEA NAȚIONALĂ PLAFAR,11945506,Dan Marta Florina,Director/directorat,"1 1,111",-
-100,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",SOCIETATEA NAȚIONALĂ PLAFAR,11945506,Vacant*,Director/directorat,,
-101,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",IOR,340312,Oancea Daniel,Director/directorat,"20000 + 2,000 (spor doctorat)",-
-101,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",IOR,340312,Radu Floarea,Director/directorat,"1 8,300",-
-101,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",IOR,340312,"Hrimiuc-Zăiceanu Ana Maria(P)",Membru CA/CS,"5,203",-
-101,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",IOR,340312,Cândea-Biela Ana-Maria,Membru CA/CS,"5,203",-
-101,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",IOR,340312,Cojanu Ștefan,Membru CA/CS,"5,203",-
-101,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",IOR,340312,Udroiu Ion,Membru CA/CS,"5,203",-
-102,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",IAR,1132930,Tudor Alexandru Duțu,Membru CA/CS,"4,720",Nu e cazul
-102,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",IAR,1132930,Bogdan Costaș,Membru CA/CS,"4,720",Nu e cazul
-102,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",IAR,1132930,Cristina Gabriela Dragomir,Membru CA/CS,"4,720",Nu e cazul
-102,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",IAR,1132930,Alexandra - Cristiana Vasile,Membru CA/CS,"4,720",Nu e cazul
-102,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",IAR,1132930,"Constantin Alexie - Cotan -Bodolan",Membru CA/CS,"4,720",Nu e cazul
-102,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",IAR,1132930,Marian - Iulian Rasaliu,Director/directorat,"46,393",Nu e cazul
-102,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",IAR,1132930,Ion Dumitrescu,Director/directorat,"49,500","0-12 salarii în funcție de indicatori cf.CIM"
-"","MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",ȘANTIERUL NAVAL MANGALIA,14325290,Răzvan Marian Pîrcălăbescu,Membru CA/CS,"1 5,500",-
-103,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",ȘANTIERUL NAVAL MANGALIA,14325290,Radu Cristian Albu,Membru CA/CS,"1 5,500",-
-103,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",ȘANTIERUL NAVAL MANGALIA,14325290,Marius Irinel Ion,Membru CA/CS,"1 5,500",-
-103,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",ȘANTIERUL NAVAL MANGALIA,14325290,Călin Sergiu Cărăguț,Director/directorat,"1 2,500",-
-103,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",ȘANTIERUL NAVAL MANGALIA,14325290,Mihaela Tudor,Director/directorat,"9,000",-
-103,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",ȘANTIERUL NAVAL MANGALIA,14325290,Radu Milea,Director/directorat,"8,052",-
-104,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",ȘANTIERUL NAVAL 2 MAI,2413593,Brezoi Constantin-George,Membru CA/CS,"3,500",-
-104,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",ȘANTIERUL NAVAL 2 MAI,2413593,Șușnea Florentina,Membru CA/CS,"3,500",-
-104,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",ȘANTIERUL NAVAL 2 MAI,2413593,Neacșu Nicolae-Ovidiu,Membru CA/CS,"3,500",-
-104,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",ȘANTIERUL NAVAL 2 MAI,2413593,Vacant,Director/directorat,"1 2,054",-
-105,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ ORĂȘTIE,15657042,Stelian Nicolae Manolescu,Director/directorat,"1 1,305",-
-105,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ ORĂȘTIE,15657042,Elena Ecaterina Stanoiu,Membru CA/CS,"2,900",-
-105,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ ORĂȘTIE,15657042,Monica Aureliana Petcu,Membru CA/CS,"2,900",-
-105,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ ORĂȘTIE,15657042,Mihai George Roventa,Membru CA/CS,"2,900",-
-106,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",CN ROMARM,13554423,"Alexie-Cotan-BodolanConstantin",Membru CA/CS,"1 9,950",-
-106,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",CN ROMARM,13554423,Butunoi Ionel-Daniel,Membru CA/CS,"1 9,950",-
-106,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",CN ROMARM,13554423,Costas Bogdan,Membru CA/CS,"1 9,950",-
-106,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",CN ROMARM,13554423,Gorun Laurentiu-Nicusor,Membru CA/CS,"1 9,950",-
-"","MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",CN ROMARM,13554423,Stan Mihail-Dan,Membru CA/CS,"1 9,950",-
-106,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",CN ROMARM,13554423,Vladoiu Luis,Director/directorat,"2 7,700",-
-106,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",CN ROMARM,13554423,Micu Florentina,Director/directorat,"23,228",-
-107,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ CUGIR,1769224,Trifan Mircea Augustin,Director/directorat,"3 9,700",-
-107,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ CUGIR,1769224,Ciulea Nicușor,Director/directorat,"2 3,820",-
-107,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ CUGIR,1769224,Stan Adriana Florina,Membru CA/CS,"1 5,500",-
-107,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ CUGIR,1769224,Puricescu Dănuț,Membru CA/CS,"1 5,500",-
-107,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ CUGIR,1769224,Ciutrilă Cristian - Ioan,Membru CA/CS,"1 5,500",-
-108,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ BUCUREȘTI,14423850,Rafiu Mihai,Director/directorat,"3 5,730",-
-108,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ BUCUREȘTI,14423850,Rusu Ruxandra-Mădălina,Director/directorat,"3 1,760",-
-108,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ BUCUREȘTI,14423850,Bardaș Maria-Mihaela,Membru CA/CS,"1 5,500",-
-108,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ BUCUREȘTI,14423850,Puricescu Dănuț,Membru CA/CS,"1 5,500",-
-108,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ BUCUREȘTI,14423850,Chiriță Dumitru,Membru CA/CS,"1 5,500",-
-109,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA AUTOMECANICA MORENI,938970,Oprea Alexandru,Director/directorat,"1 3,593",-
-109,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA AUTOMECANICA MORENI,938970,Nițoiu Gabriela,Director/directorat,"1 2,753",-
-109,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA AUTOMECANICA MORENI,938970,Mischie Dumitru,Membru CA/CS,"2,700",-
-109,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA AUTOMECANICA MORENI,938970,Popa Ioana,Membru CA/CS,"2,700",-
-109,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA AUTOMECANICA MORENI,938970,Stan Anca Maria,Membru CA/CS,"2,700",-
-"","MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",ELECTROMECANICA PLOIEȘTI,14361269,Enache Vasile,Director/directorat,"2 2,159",-
-110,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",ELECTROMECANICA PLOIEȘTI,14361269,Alexandra Vișan,Membru CA/CS,"3,300",-
-110,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",ELECTROMECANICA PLOIEȘTI,14361269,Florin Dobre,Membru CA/CS,"3,300",-
-110,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",ELECTROMECANICA PLOIEȘTI,14361269,Emanuel Remus Bădulescu,Membru CA/CS,"3,300",-
-111,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",CARFIL,13945863,Răzvan Marian Pîrcălăbescu,Membru CA/CS,"1 5,500",-
-"","MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",CARFIL,13945863,Dumitru Marin,Membru CA/CS,"1 5,500",-
-"","MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",CARFIL,13945863,Claudia Florea,Membru CA/CS,"1 5,500",-
-"","MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",CARFIL,13945863,Vacant,Director/directorat,-,-
-"","MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",CARFIL,13945863,Fara Nume,Director/directorat,"23,050",-
-"","MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",CARFIL,13945863,Fara Nume,Director/directorat,"2 2,000",
-112,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",TOHAN,13652413,Iacob Cosmin Constantin,Director/directorat,"1 8,000",-
-112,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",TOHAN,13652413,Baciu Cristina,Director/directorat,"1 5,732",-
-112,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",TOHAN,13652413,Tantau Mircea Petru,Membru CA/CS,"2,100",-
-112,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",TOHAN,13652413,Visan Alexandra,Membru CA/CS,"2,100",-
-112,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",TOHAN,13652413,Guzun Alexandru,Membru CA/CS,"2,100",-
-113,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",PIROCHIM VICTORIA,14469423,Stan Adriana - Florina,Membru CA/CS,"1,700",
-113,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",PIROCHIM VICTORIA,14469423,Radu Gabriel,Membru CA/CS,"1,700",
-113,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",PIROCHIM VICTORIA,14469423,Sava Marius - Cristian,Membru CA/CS,"1,700",
+"","MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",TELEGONDOLA-MAMAIA,15551423,Costache Laurențiu,Membru CA/CS,"3,070",-
+97,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",TELEGONDOLA-MAMAIA,15551423,Filip Cosmin,Membru CA/CS,"3,070",-
+98,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",NEPTUN-OLIMP,2423562,Florin Aurel Neghină,Membru CA/CS,"1,500",-
+98,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",NEPTUN-OLIMP,2423562,Ioana Dumitrache,Membru CA/CS,"1,500",-
+98,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",NEPTUN-OLIMP,2423562,Constantin Marian Mihai,Membru CA/CS,"1,500",-
+98,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",NEPTUN-OLIMP,2423562,Florin Dănuț Buzatu,Membru CA/CS,"1,500",-
+98,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",NEPTUN-OLIMP,2423562,Victor Alexandru Frunză,Membru CA/CS,"1,500",-
+98,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",NEPTUN-OLIMP,2423562,Dima Lascu,Director/directorat,"1 2,000",-
+99,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",CENTRUL NAȚIONAL DE ÎNVĂȚĂMÂNT TURISTIC,24979799,Avram Valentin-Gabriel,Director/directorat,"1 1,500",-
+99,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",CENTRUL NAȚIONAL DE ÎNVĂȚĂMÂNT TURISTIC,24979799,Baciună Diana-Ștefana,Membru CA/CS,"6,071",-
+99,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",CENTRUL NAȚIONAL DE ÎNVĂȚĂMÂNT TURISTIC,24979799,Butacu Simona-Valentina,Membru CA/CS,"6,071",-
+99,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",CENTRUL NAȚIONAL DE ÎNVĂȚĂMÂNT TURISTIC,24979799,Cozma Vasile-Felix,Membru CA/CS,"6,071",-
+99,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",CENTRUL NAȚIONAL DE ÎNVĂȚĂMÂNT TURISTIC,24979799,Pîrjol Emil-Răzvan,Membru CA/CS,"6,071",-
+99,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",CENTRUL NAȚIONAL DE ÎNVĂȚĂMÂNT TURISTIC,24979799,Sloată Florentina,Membru CA/CS,"6,071",-
+100,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",SOCIETATEA NAȚIONALĂ PLAFAR,11945506,Vacant,Membru CA/CS,,
+100,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",SOCIETATEA NAȚIONALĂ PLAFAR,11945506,Haschka Luiza Mihaela,Membru CA/CS,"3,692",-
+100,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",SOCIETATEA NAȚIONALĂ PLAFAR,11945506,Ciobotaru Iuliana,Membru CA/CS,"3,692",-
+100,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",SOCIETATEA NAȚIONALĂ PLAFAR,11945506,Hnatec Teodor Gabriel,Membru CA/CS,"3,692",-
+"","MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",SOCIETATEA NAȚIONALĂ PLAFAR,11945506,Vacant,Membru CA/CS,"3,692",-
+100,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",SOCIETATEA NAȚIONALĂ PLAFAR,11945506,Bratu Elena,Director/directorat,"2 0,500",-
+100,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",SOCIETATEA NAȚIONALĂ PLAFAR,11945506,Bratu Elena *,Director/directorat,"1 3,430",-
+100,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",SOCIETATEA NAȚIONALĂ PLAFAR,11945506,Dan Marta Florina,Director/directorat,"1 1,111",-
+100,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",SOCIETATEA NAȚIONALĂ PLAFAR,11945506,Vacant*,Director/directorat,,
+101,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",IOR,340312,Oancea Daniel,Director/directorat,"20000 + 2,000 (spor doctorat)",-
+101,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",IOR,340312,Radu Floarea,Director/directorat,"1 8,300",-
+101,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",IOR,340312,"Hrimiuc-Zăiceanu Ana Maria
+(P)",Membru CA/CS,"5,203",-
+101,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",IOR,340312,Cândea-Biela Ana-Maria,Membru CA/CS,"5,203",-
+101,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",IOR,340312,Cojanu Ștefan,Membru CA/CS,"5,203",-
+101,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",IOR,340312,Udroiu Ion,Membru CA/CS,"5,203",-
+102,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",IAR,1132930,Tudor Alexandru Duțu,Membru CA/CS,"4,720",Nu e cazul
+102,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",IAR,1132930,Bogdan Costaș,Membru CA/CS,"4,720",Nu e cazul
+102,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",IAR,1132930,Cristina Gabriela Dragomir,Membru CA/CS,"4,720",Nu e cazul
+102,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",IAR,1132930,Alexandra - Cristiana Vasile,Membru CA/CS,"4,720",Nu e cazul
+102,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",IAR,1132930,"Constantin Alexie - Cotan -
+Bodolan",Membru CA/CS,"4,720",Nu e cazul
+102,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",IAR,1132930,Marian - Iulian Rasaliu,Director/directorat,"46,393",Nu e cazul
+102,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",IAR,1132930,Ion Dumitrescu,Director/directorat,"49,500","0-12 salarii în funcție de indicatori cf.
+CIM"
+"","MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",ȘANTIERUL NAVAL MANGALIA,14325290,Răzvan Marian Pîrcălăbescu,Membru CA/CS,"1 5,500",-
+103,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",ȘANTIERUL NAVAL MANGALIA,14325290,Radu Cristian Albu,Membru CA/CS,"1 5,500",-
+103,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",ȘANTIERUL NAVAL MANGALIA,14325290,Marius Irinel Ion,Membru CA/CS,"1 5,500",-
+103,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",ȘANTIERUL NAVAL MANGALIA,14325290,Călin Sergiu Cărăguț,Director/directorat,"1 2,500",-
+103,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",ȘANTIERUL NAVAL MANGALIA,14325290,Mihaela Tudor,Director/directorat,"9,000",-
+103,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",ȘANTIERUL NAVAL MANGALIA,14325290,Radu Milea,Director/directorat,"8,052",-
+104,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",ȘANTIERUL NAVAL 2 MAI,2413593,Brezoi Constantin-George,Membru CA/CS,"3,500",-
+104,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",ȘANTIERUL NAVAL 2 MAI,2413593,Șușnea Florentina,Membru CA/CS,"3,500",-
+104,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",ȘANTIERUL NAVAL 2 MAI,2413593,Neacșu Nicolae-Ovidiu,Membru CA/CS,"3,500",-
+104,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",ȘANTIERUL NAVAL 2 MAI,2413593,Vacant,Director/directorat,"1 2,054",-
+105,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ ORĂȘTIE,15657042,Stelian Nicolae Manolescu,Director/directorat,"1 1,305",-
+105,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ ORĂȘTIE,15657042,Elena Ecaterina Stanoiu,Membru CA/CS,"2,900",-
+105,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ ORĂȘTIE,15657042,Monica Aureliana Petcu,Membru CA/CS,"2,900",-
+105,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ ORĂȘTIE,15657042,Mihai George Roventa,Membru CA/CS,"2,900",-
+106,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",CN ROMARM,13554423,"Alexie-Cotan-Bodolan
+Constantin",Membru CA/CS,"1 9,950",-
+106,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",CN ROMARM,13554423,Butunoi Ionel-Daniel,Membru CA/CS,"1 9,950",-
+106,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",CN ROMARM,13554423,Costas Bogdan,Membru CA/CS,"1 9,950",-
+106,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",CN ROMARM,13554423,Gorun Laurentiu-Nicusor,Membru CA/CS,"1 9,950",-
+"","MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",CN ROMARM,13554423,Stan Mihail-Dan,Membru CA/CS,"1 9,950",-
+106,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",CN ROMARM,13554423,Vladoiu Luis,Director/directorat,"2 7,700",-
+106,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",CN ROMARM,13554423,Micu Florentina,Director/directorat,"23,228",-
+107,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ CUGIR,1769224,Trifan Mircea Augustin,Director/directorat,"3 9,700",-
+107,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ CUGIR,1769224,Ciulea Nicușor,Director/directorat,"2 3,820",-
+107,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ CUGIR,1769224,Stan Adriana Florina,Membru CA/CS,"1 5,500",-
+107,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ CUGIR,1769224,Puricescu Dănuț,Membru CA/CS,"1 5,500",-
+107,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ CUGIR,1769224,Ciutrilă Cristian - Ioan,Membru CA/CS,"1 5,500",-
+108,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ BUCUREȘTI,14423850,Rafiu Mihai,Director/directorat,"3 5,730",-
+108,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ BUCUREȘTI,14423850,Rusu Ruxandra-Mădălina,Director/directorat,"3 1,760",-
+108,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ BUCUREȘTI,14423850,Bardaș Maria-Mihaela,Membru CA/CS,"1 5,500",-
+108,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ BUCUREȘTI,14423850,Puricescu Dănuț,Membru CA/CS,"1 5,500",-
+108,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ BUCUREȘTI,14423850,Chiriță Dumitru,Membru CA/CS,"1 5,500",-
+109,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA AUTOMECANICA MORENI,938970,Oprea Alexandru,Director/directorat,"1 3,593",-
+109,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA AUTOMECANICA MORENI,938970,Nițoiu Gabriela,Director/directorat,"1 2,753",-
+109,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA AUTOMECANICA MORENI,938970,Mischie Dumitru,Membru CA/CS,"2,700",-
+109,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA AUTOMECANICA MORENI,938970,Popa Ioana,Membru CA/CS,"2,700",-
+109,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA AUTOMECANICA MORENI,938970,Stan Anca Maria,Membru CA/CS,"2,700",-
+"","MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",ELECTROMECANICA PLOIEȘTI,14361269,Enache Vasile,Director/directorat,"2 2,159",-
+110,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",ELECTROMECANICA PLOIEȘTI,14361269,Alexandra Vișan,Membru CA/CS,"3,300",-
+110,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",ELECTROMECANICA PLOIEȘTI,14361269,Florin Dobre,Membru CA/CS,"3,300",-
+110,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",ELECTROMECANICA PLOIEȘTI,14361269,Emanuel Remus Bădulescu,Membru CA/CS,"3,300",-
+111,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",CARFIL,13945863,Răzvan Marian Pîrcălăbescu,Membru CA/CS,"1 5,500",-
+"","MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",CARFIL,13945863,Dumitru Marin,Membru CA/CS,"1 5,500",-
+"","MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",CARFIL,13945863,Claudia Florea,Membru CA/CS,"1 5,500",-
+"","MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",CARFIL,13945863,Vacant,Director/directorat,-,-
+"","MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",CARFIL,13945863,Fara Nume,Director/directorat,"23,050",-
+"","MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",CARFIL,13945863,Fara Nume,Director/directorat,"2 2,000",
+112,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",TOHAN,13652413,Iacob Cosmin Constantin,Director/directorat,"1 8,000",-
+112,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",TOHAN,13652413,Baciu Cristina,Director/directorat,"1 5,732",-
+112,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",TOHAN,13652413,Tantau Mircea Petru,Membru CA/CS,"2,100",-
+112,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",TOHAN,13652413,Visan Alexandra,Membru CA/CS,"2,100",-
+112,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",TOHAN,13652413,Guzun Alexandru,Membru CA/CS,"2,100",-
+113,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",PIROCHIM VICTORIA,14469423,Stan Adriana - Florina,Membru CA/CS,"1,700",
+113,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",PIROCHIM VICTORIA,14469423,Radu Gabriel,Membru CA/CS,"1,700",
+113,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",PIROCHIM VICTORIA,14469423,Sava Marius - Cristian,Membru CA/CS,"1,700",
 "","MINISTERUL ECONOMIEI, DIGITALIZARII,",,,,,,,
 113,,PIROCHIM VICTORIA,14469423,Bârsan Ioan,Director/directorat,"2 0,000",,
 "",ANTREPRENORIATULUI SI TURISMULUI,,,,,,,
@@ -962,42 +1241,80 @@ MINISTERUL SANATATII,CN UNIFARM,11653560,Catalin Lungu,Membru CA/CS,"1 0,301",-,
 "","MINISTERUL ECONOMIEI, DIGITALIZARII,",,,,,,,
 117,,UZINA MECANICĂ MIJA,2978636,Cecilia Sandela Banciu,Membru CA/CS,"9,800",-,
 "",ANTREPRENORIATULUI SI TURISMULUI,,,,,,,
-"","MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ MIJA,2978636,Radu Nicolae Toader,Membru CA/CS,"9,800",-
-117,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ MIJA,2978636,Gheorghe Voican,Director/directorat,"2 1,000",-
-118,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ PLOPENI,13741804,Butunoi Ionel Daniel,Membru CA/CS,"2,350",-
-118,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ PLOPENI,13741804,Năstase Cornelia,Membru CA/CS,"2,350",-
-118,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ PLOPENI,13741804,Vasile Dumitru Cătălin,Membru CA/CS,"2,350",-
-118,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ PLOPENI,13741804,Pîrvu Tiberiu Alexandru,Director/directorat,"19,740",-
-118,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ PLOPENI,13741804,Duță Mariana,Director/directorat,"18,500",-
-119,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",METROM,14531223,Brie Olimpiu Mihail,Membru CA/CS,"2,911",-
-119,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",METROM,14531223,Teodorescu Carmen Areta,Membru CA/CS,"2,911",-
-119,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",METROM,14531223,Tudose Mariana,Membru CA/CS,"2,911",-
-119,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",METROM,14531223,Chifelea Marin,Director/directorat,"10,500",-
-119,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",METROM,14531223,Stan Aurica,Director/directorat,"10,350",-
-120,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA DE PRODUSE SPECIALE DRAGOMIREȘTI,3180070,Danciu Gabriela Cătălina,Membru CA/CS,"1 5,500",-
-120,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA DE PRODUSE SPECIALE DRAGOMIREȘTI,3180070,Florea Elena Claudia,Membru CA/CS,"1 5,500",-
-120,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA DE PRODUSE SPECIALE DRAGOMIREȘTI,3180070,Hlistei Mureșan Adrian,Membru CA/CS,"1 5,500",-
-120,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA DE PRODUSE SPECIALE DRAGOMIREȘTI,3180070,Tocan Constantin,Director/directorat,"4 7,640",-
-120,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA DE PRODUSE SPECIALE DRAGOMIREȘTI,3180070,Rotaru Elena,Director/directorat,"2 0,591",-
-121,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ SADU,14373832,Neacșu Ovidiu,Director/directorat,"1 5,000",-
-"","MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ SADU,14373832,Cotigă Mihaela,Membru CA/CS,"3,100",-
-121,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ SADU,14373832,Năstase Cornelia,Membru CA/CS,"3,100",-
-121,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ SADU,14373832,Mischie Dumitru,Membru CA/CS,"3,100",-
-122,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",BĂIȚA,14322197,Alexandru Cristian Vasilescu,Membru CA/CS,"3,728",-
-122,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",BĂIȚA,14322197,Marius Irinel Ion,Membru CA/CS,"3,728",-
-122,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",BĂIȚA,14322197,Ion Spânu,Membru CA/CS,"3,728",-
-122,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",BĂIȚA,14322197,Cecilia Sandela Banciu,Director/directorat,"1 5,530",-
-122,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",BĂIȚA,14322197,Anita Violeta Indrei,Director/directorat,"9,875",-
-122,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",BĂIȚA,14322197,Florin Dobra,Director/directorat,"9,875",-
-123,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",CUPRUMIN,11551757,Adrian Ovidiu Duicu,Membru CA/CS,"1 9,950",-
-123,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",CUPRUMIN,11551757,Marcel Radu,Membru CA/CS,"1 9,950",-
-123,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",CUPRUMIN,11551757,Bogdan Ștefan Chițescu,Membru CA/CS,"1 9,950",-
-123,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",CUPRUMIN,11551757,Radu Claudiu Roșca,Membru CA/CS,"1 9,950",-
-123,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",CUPRUMIN,11551757,Iulia Fabian-Mărincean,Membru CA/CS,"1 9,950",-
-123,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",CUPRUMIN,11551757,Mircea Goia,Director/directorat,"4 9,269",-
-123,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",CUPRUMIN,11551757,Elisabeta Cioară,Director/directorat,"3 9,415",-
-124,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI","COMPANIA NATIONALA A CUPRULUI AURULUI SI FIERULUIMINVEST",2117946,Radu Marcel,ADMINISTRATOR SPECIAL,"2,982",-
-124,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI","COMPANIA NATIONALA A CUPRULUI AURULUI SI FIERULUIMINVEST",2117946,Duicu Adrian Ovidiu,Membru CA/CS,"2,982",-
+"","MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ MIJA,2978636,Radu Nicolae Toader,Membru CA/CS,"9,800",-
+117,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ MIJA,2978636,Gheorghe Voican,Director/directorat,"2 1,000",-
+118,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ PLOPENI,13741804,Butunoi Ionel Daniel,Membru CA/CS,"2,350",-
+118,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ PLOPENI,13741804,Năstase Cornelia,Membru CA/CS,"2,350",-
+118,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ PLOPENI,13741804,Vasile Dumitru Cătălin,Membru CA/CS,"2,350",-
+118,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ PLOPENI,13741804,Pîrvu Tiberiu Alexandru,Director/directorat,"19,740",-
+118,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ PLOPENI,13741804,Duță Mariana,Director/directorat,"18,500",-
+119,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",METROM,14531223,Brie Olimpiu Mihail,Membru CA/CS,"2,911",-
+119,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",METROM,14531223,Teodorescu Carmen Areta,Membru CA/CS,"2,911",-
+119,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",METROM,14531223,Tudose Mariana,Membru CA/CS,"2,911",-
+119,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",METROM,14531223,Chifelea Marin,Director/directorat,"10,500",-
+119,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",METROM,14531223,Stan Aurica,Director/directorat,"10,350",-
+120,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA DE PRODUSE SPECIALE DRAGOMIREȘTI,3180070,Danciu Gabriela Cătălina,Membru CA/CS,"1 5,500",-
+120,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA DE PRODUSE SPECIALE DRAGOMIREȘTI,3180070,Florea Elena Claudia,Membru CA/CS,"1 5,500",-
+120,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA DE PRODUSE SPECIALE DRAGOMIREȘTI,3180070,Hlistei Mureșan Adrian,Membru CA/CS,"1 5,500",-
+120,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA DE PRODUSE SPECIALE DRAGOMIREȘTI,3180070,Tocan Constantin,Director/directorat,"4 7,640",-
+120,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA DE PRODUSE SPECIALE DRAGOMIREȘTI,3180070,Rotaru Elena,Director/directorat,"2 0,591",-
+121,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ SADU,14373832,Neacșu Ovidiu,Director/directorat,"1 5,000",-
+"","MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ SADU,14373832,Cotigă Mihaela,Membru CA/CS,"3,100",-
+121,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ SADU,14373832,Năstase Cornelia,Membru CA/CS,"3,100",-
+121,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",UZINA MECANICĂ SADU,14373832,Mischie Dumitru,Membru CA/CS,"3,100",-
+122,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",BĂIȚA,14322197,Alexandru Cristian Vasilescu,Membru CA/CS,"3,728",-
+122,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",BĂIȚA,14322197,Marius Irinel Ion,Membru CA/CS,"3,728",-
+122,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",BĂIȚA,14322197,Ion Spânu,Membru CA/CS,"3,728",-
+122,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",BĂIȚA,14322197,Cecilia Sandela Banciu,Director/directorat,"1 5,530",-
+122,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",BĂIȚA,14322197,Anita Violeta Indrei,Director/directorat,"9,875",-
+122,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",BĂIȚA,14322197,Florin Dobra,Director/directorat,"9,875",-
+123,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",CUPRUMIN,11551757,Adrian Ovidiu Duicu,Membru CA/CS,"1 9,950",-
+123,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",CUPRUMIN,11551757,Marcel Radu,Membru CA/CS,"1 9,950",-
+123,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",CUPRUMIN,11551757,Bogdan Ștefan Chițescu,Membru CA/CS,"1 9,950",-
+123,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",CUPRUMIN,11551757,Radu Claudiu Roșca,Membru CA/CS,"1 9,950",-
+123,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",CUPRUMIN,11551757,Iulia Fabian-Mărincean,Membru CA/CS,"1 9,950",-
+123,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",CUPRUMIN,11551757,Mircea Goia,Director/directorat,"4 9,269",-
+123,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",CUPRUMIN,11551757,Elisabeta Cioară,Director/directorat,"3 9,415",-
+124,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI","COMPANIA NATIONALA A CUPRULUI AURULUI SI FIERULUI
+MINVEST",2117946,Radu Marcel,ADMINISTRATOR SPECIAL,"2,982",-
+124,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI","COMPANIA NATIONALA A CUPRULUI AURULUI SI FIERULUI
+MINVEST",2117946,Duicu Adrian Ovidiu,Membru CA/CS,"2,982",-
 "","MINISTERUL ECONOMIEI, DIGITALIZARII,",COMPANIA NATIONALA A CUPRULUI AURULUI SI FIERULUI,,,,,,
 124,,,2117946,Ardelian Nelu,Membru CA/CS,"2,982",-,
 "",ANTREPRENORIATULUI SI TURISMULUI,MINVEST,,,,,,
@@ -1115,24 +1432,42 @@ MINISTERUL SANATATII,CN UNIFARM,11653560,Catalin Lungu,Membru CA/CS,"1 0,301",-,
 "","MINISTERUL ECONOMIEI, DIGITALIZARII,",,,,,,,
 130,,AVIOANE CRAIOVA,2326144,Iulian Diaconu,Membru CA/CS,"4,645",-,
 "",ANTREPRENORIATULUI SI TURISMULUI,,,,,,,
-"","MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",AVIOANE CRAIOVA,2326144,Andra Teodora Dina,Membru CA/CS,"4,645",-
-130,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",AVIOANE CRAIOVA,2326144,Oana Elena Nemțeanu,Membru CA/CS,"4,645",-
-130,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",AVIOANE CRAIOVA,2326144,Simona Smărăndache,Membru CA/CS,"4,645",-
-130,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",AVIOANE CRAIOVA,2326144,Nicu Fălcoi,Membru CA/CS,"4,645",-
-130,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",AVIOANE CRAIOVA,2326144,Claudia Gasparini,Membru CA/CS,"4,645",-
-130,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",AVIOANE CRAIOVA,2326144,Iulia Dudu,Membru CA/CS,"4,645",-
-130,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",AVIOANE CRAIOVA,2326144,Monica Roșca,Membru CA/CS,"4,645",-
-130,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",AVIOANE CRAIOVA,2326144,Bogdan Lucian Crăciunaș,Membru CA/CS,"4,645",-
-130,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",AVIOANE CRAIOVA,2326144,Victor Munteanu,Director/directorat,"2 4,723",-
-130,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",AVIOANE CRAIOVA,2326144,Cristiana Moțățăianu,Director/directorat,"2 4,599",-
-130,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",AVIOANE CRAIOVA,2326144,Verginica Diaconu,Director/directorat,"1 9,494",-
-131,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",ROMFILATELIA,16184414,Popescu Cristina,Director/directorat,"3 8,627",-
-131,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",ROMFILATELIA,16184414,Pavel Laura,Director/directorat,"2 0,000",-
-131,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",ROMFILATELIA,16184414,Munteanu Petronel,Membru CA/CS,"4,273",-
-132,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",INCERTRANS,4282451,Cladoveanu Flavius-Valeriu,Director/directorat,"39,534",-
-132,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",INCERTRANS,4282451,Cladoveanu Flavius-Valeriu,Membru CA/CS,-,
-132,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",INCERTRANS,4282451,Buică Nicușor-Marian,Membru CA/CS,"8,985",
-132,"MINISTERUL ECONOMIEI, DIGITALIZARII,ANTREPRENORIATULUI SI TURISMULUI",INCERTRANS,4282451,Zapciu Miron,Membru CA/CS,-,
+"","MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",AVIOANE CRAIOVA,2326144,Andra Teodora Dina,Membru CA/CS,"4,645",-
+130,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",AVIOANE CRAIOVA,2326144,Oana Elena Nemțeanu,Membru CA/CS,"4,645",-
+130,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",AVIOANE CRAIOVA,2326144,Simona Smărăndache,Membru CA/CS,"4,645",-
+130,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",AVIOANE CRAIOVA,2326144,Nicu Fălcoi,Membru CA/CS,"4,645",-
+130,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",AVIOANE CRAIOVA,2326144,Claudia Gasparini,Membru CA/CS,"4,645",-
+130,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",AVIOANE CRAIOVA,2326144,Iulia Dudu,Membru CA/CS,"4,645",-
+130,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",AVIOANE CRAIOVA,2326144,Monica Roșca,Membru CA/CS,"4,645",-
+130,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",AVIOANE CRAIOVA,2326144,Bogdan Lucian Crăciunaș,Membru CA/CS,"4,645",-
+130,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",AVIOANE CRAIOVA,2326144,Victor Munteanu,Director/directorat,"2 4,723",-
+130,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",AVIOANE CRAIOVA,2326144,Cristiana Moțățăianu,Director/directorat,"2 4,599",-
+130,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",AVIOANE CRAIOVA,2326144,Verginica Diaconu,Director/directorat,"1 9,494",-
+131,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",ROMFILATELIA,16184414,Popescu Cristina,Director/directorat,"3 8,627",-
+131,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",ROMFILATELIA,16184414,Pavel Laura,Director/directorat,"2 0,000",-
+131,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",ROMFILATELIA,16184414,Munteanu Petronel,Membru CA/CS,"4,273",-
+132,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",INCERTRANS,4282451,Cladoveanu Flavius-Valeriu,Director/directorat,"39,534",-
+132,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",INCERTRANS,4282451,Cladoveanu Flavius-Valeriu,Membru CA/CS,-,
+132,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",INCERTRANS,4282451,Buică Nicușor-Marian,Membru CA/CS,"8,985",
+132,"MINISTERUL ECONOMIEI, DIGITALIZARII,
+ANTREPRENORIATULUI SI TURISMULUI",INCERTRANS,4282451,Zapciu Miron,Membru CA/CS,-,
 "","MINISTERUL ECONOMIEI, DIGITALIZARII,",,,,,,,
 132,,INCERTRANS,4282451,Zapciu Miron,Director/directorat,"28,033",,
 "",ANTREPRENORIATULUI SI TURISMULUI,,,,,,,
@@ -1187,15 +1522,29 @@ MINISTERUL SANATATII,CN UNIFARM,11653560,Catalin Lungu,Membru CA/CS,"1 0,301",-,
 "","MINISTERUL MUNCII, FAMILIEI, TINERETULUI ȘI",,,,,,,
 138,,BIROUL DE TURISM PENTRU TINERET (B.T.T.),1573170,Iacob Adrian,Director/directorat,"1 6,872",-,
 "",SOLIDARITĂȚII SOCIALE,,,,,,,
-"","MINISTERUL MUNCII, FAMILIEI, TINERETULUI ȘISOLIDARITĂȚII SOCIALE",B.T.T.PERLA COSTINESTIULUI SA,4475150,Motoc Elena,Membru CA/CS,"4,477",
-139,"MINISTERUL MUNCII, FAMILIEI, TINERETULUI ȘISOLIDARITĂȚII SOCIALE",B.T.T.PERLA COSTINESTIULUI SA,4475150,Dragu Marius-Alexandru,Membru CA/CS,-,
-139,"MINISTERUL MUNCII, FAMILIEI, TINERETULUI ȘISOLIDARITĂȚII SOCIALE",B.T.T.PERLA COSTINESTIULUI SA,4475150,Iacob Adrian,Membru CA/CS,"4,477",
-139,"MINISTERUL MUNCII, FAMILIEI, TINERETULUI ȘISOLIDARITĂȚII SOCIALE",B.T.T.PERLA COSTINESTIULUI SA,4475150,Dragu Marius Alexandru,Director/directorat,"2 0,184",
-140,"MINISTERUL MUNCII, FAMILIEI, TINERETULUI ȘISOLIDARITĂȚII SOCIALE","SOCIETATEA DE TRATAMENT BALNEAR SI RECUPERARE ACAPACITATII DE MUNCA TBRCM SA",15619634,Jugănaru Georgeta,Membru CA/CS,"3,948",
-140,"MINISTERUL MUNCII, FAMILIEI, TINERETULUI ȘISOLIDARITĂȚII SOCIALE","SOCIETATEA DE TRATAMENT BALNEAR SI RECUPERARE ACAPACITATII DE MUNCA TBRCM SA",15619634,Floroian Stelian-Olimpiu,Membru CA/CS,"3,948",
-140,"MINISTERUL MUNCII, FAMILIEI, TINERETULUI ȘISOLIDARITĂȚII SOCIALE","SOCIETATEA DE TRATAMENT BALNEAR SI RECUPERARE ACAPACITATII DE MUNCA TBRCM SA",15619634,Rădulescu Ion-Lucian,Membru CA/CS,-,
-140,"MINISTERUL MUNCII, FAMILIEI, TINERETULUI ȘISOLIDARITĂȚII SOCIALE","SOCIETATEA DE TRATAMENT BALNEAR SI RECUPERARE ACAPACITATII DE MUNCA TBRCM SA",15619634,Popescu Ion,Membru CA/CS,"3,948",
-140,"MINISTERUL MUNCII, FAMILIEI, TINERETULUI ȘISOLIDARITĂȚII SOCIALE","SOCIETATEA DE TRATAMENT BALNEAR SI RECUPERARE ACAPACITATII DE MUNCA TBRCM SA",15619634,Rădulescu Ion-Lucian,Director/directorat,"20,184",
+"","MINISTERUL MUNCII, FAMILIEI, TINERETULUI ȘI
+SOLIDARITĂȚII SOCIALE",B.T.T.PERLA COSTINESTIULUI SA,4475150,Motoc Elena,Membru CA/CS,"4,477",
+139,"MINISTERUL MUNCII, FAMILIEI, TINERETULUI ȘI
+SOLIDARITĂȚII SOCIALE",B.T.T.PERLA COSTINESTIULUI SA,4475150,Dragu Marius-Alexandru,Membru CA/CS,-,
+139,"MINISTERUL MUNCII, FAMILIEI, TINERETULUI ȘI
+SOLIDARITĂȚII SOCIALE",B.T.T.PERLA COSTINESTIULUI SA,4475150,Iacob Adrian,Membru CA/CS,"4,477",
+139,"MINISTERUL MUNCII, FAMILIEI, TINERETULUI ȘI
+SOLIDARITĂȚII SOCIALE",B.T.T.PERLA COSTINESTIULUI SA,4475150,Dragu Marius Alexandru,Director/directorat,"2 0,184",
+140,"MINISTERUL MUNCII, FAMILIEI, TINERETULUI ȘI
+SOLIDARITĂȚII SOCIALE","SOCIETATEA DE TRATAMENT BALNEAR SI RECUPERARE A
+CAPACITATII DE MUNCA TBRCM SA",15619634,Jugănaru Georgeta,Membru CA/CS,"3,948",
+140,"MINISTERUL MUNCII, FAMILIEI, TINERETULUI ȘI
+SOLIDARITĂȚII SOCIALE","SOCIETATEA DE TRATAMENT BALNEAR SI RECUPERARE A
+CAPACITATII DE MUNCA TBRCM SA",15619634,Floroian Stelian-Olimpiu,Membru CA/CS,"3,948",
+140,"MINISTERUL MUNCII, FAMILIEI, TINERETULUI ȘI
+SOLIDARITĂȚII SOCIALE","SOCIETATEA DE TRATAMENT BALNEAR SI RECUPERARE A
+CAPACITATII DE MUNCA TBRCM SA",15619634,Rădulescu Ion-Lucian,Membru CA/CS,-,
+140,"MINISTERUL MUNCII, FAMILIEI, TINERETULUI ȘI
+SOLIDARITĂȚII SOCIALE","SOCIETATEA DE TRATAMENT BALNEAR SI RECUPERARE A
+CAPACITATII DE MUNCA TBRCM SA",15619634,Popescu Ion,Membru CA/CS,"3,948",
+140,"MINISTERUL MUNCII, FAMILIEI, TINERETULUI ȘI
+SOLIDARITĂȚII SOCIALE","SOCIETATEA DE TRATAMENT BALNEAR SI RECUPERARE A
+CAPACITATII DE MUNCA TBRCM SA",15619634,Rădulescu Ion-Lucian,Director/directorat,"20,184",
 141,MINISTERUL EDUCATIEI,EDITURA DIDACTICĂ ŞI PEDAGOGICĂ,1589983,Adam Mariana,Membru CA/CS,"1,900",
 141,MINISTERUL EDUCATIEI,EDITURA DIDACTICĂ ŞI PEDAGOGICĂ,1589983,Grosu Darie George,Membru CA/CS,"1,900",
 141,MINISTERUL EDUCATIEI,EDITURA DIDACTICĂ ŞI PEDAGOGICĂ,1589983,Toma Mirela Gabriela,Membru CA/CS,"1,900",
