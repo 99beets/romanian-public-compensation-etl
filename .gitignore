@@ -1,5 +1,6 @@
 # Ignore intermediate and large CSV outputs
 data/ind-nom-table-clean.csv
+data/ind-nom-table-enriched.csv
 
 # Ignore local environment and config
 *.pyc

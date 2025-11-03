@@ -30,7 +30,7 @@ df = df.dropna(how='all').drop_duplicates()
 # 4. Rename columns to shorter names
 df = df.rename(columns={
     'unnamed_0': 'nr_crt',
-    'autoritate_public_tutelar_(apt)': 'autoritate_tutelar',
+    'autoritate_public_tutelar_(apt)': 'autoritate_tutelara',
     'nume_ntreprindere_public':'intreprindere',
     'cui': 'cui',
     'nume_personal_conducere': 'personal',

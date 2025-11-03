@@ -19,7 +19,7 @@ truncate_sql = "TRUNCATE TABLE indemnizatii;"
 copy_sql = f"""
 COPY indemnizatii (
 nr_crt, 
-autoritate_tutelar, 
+autoritate_tutelara, 
 intreprindere, 
 cui, 
 personal, 
