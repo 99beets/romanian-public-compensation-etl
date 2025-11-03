@@ -1,4 +1,3 @@
-# run_pipeline.py
 import subprocess
 import sys
 from pathlib import Path

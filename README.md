@@ -11,17 +11,17 @@ The dataset represents nominal compensation payments for Romanian public institu
 ```
 │
 ├── data/
-│ ├── ind-nom-table.csv # raw data extracted from PDF
-│ ├── ind-nom-table-clean.csv # cleaned data (UTF-8, consistent schema)
+│ ├── ind-nom-table.csv
+│ ├── ind-nom-table-clean.csv 
 │
 ├── scripts/
-│ ├── data_clean.py # cleaning and preprocessing script
-│ ├── column_count_script.py # column validation helper
-│
-├── PostgreSQL/
-│ ├── create_table.sql # schema definition
-│ ├── load_data.sql # COPY command
-│
+│ ├── data_clean.py
+│ ├── column_count_script.py
+│ ├── validate_and_export.py
+│ ├── reload_indemnizatii.py
+│ ├── run_pipeline.py
+│ └── data_enrich.py 
+│ 
 └── README.md
 ```
 
@@ -79,4 +79,21 @@ This preserves original formatting and avoids downstream COPY errors in PostgreS
 ```bash
 python scripts/run_pipeline.py
 python scripts/reload_indemnizatii.py
+```
+
+### 4. Data Enrichment
+
+Added a new script data_enrich.py for data consistency.
+
+- Identifies rows with missing nr_crt values.
+
+- Uses the cui (unique company identifier) to infer and fill missing sequence numbers.
+
+- Keeps both nr_crt (original) and nr_crt_inferred (filled) columns side-by-side for transparency.
+
+File: scripts/data_clean.py
+
+## How to run
+```bash
+python scripts/data_enrich.py
 ```

@@ -2,13 +2,13 @@ import pandas as pd
 import csv
 
 path = r'C:/data-eng-practice/postgresql/sql-indemnizatii-nominale/data/ind-nom-table-clean.csv'
-df = pd.read_csv(path, on_bad_lines='skip', encoding='utf-8')
+df = pd.read_csv(path, dtype=str, on_bad_lines='skip', encoding='utf-8')
 
 print(f"Loaded {len(df)} rows and {len(df.columns)} columns.\n")
 
 # Validate with csv.reader (raw file check)
 print("Checking for inconsistent row lengths in raw CSV")
-with open(path, encoding='utf=-8') as f:
+with open(path, encoding='utf-8') as f:
     reader = csv.reader(f)
     for i, row in enumerate(reader, start=1):
         if len(row) != len(df.columns):
