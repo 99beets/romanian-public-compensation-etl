@@ -70,6 +70,9 @@ This update refactors the **data_clean.py** script to improve consistency and sa
 - Added defensive normalization for column names and empty placeholders.
 - Introduced `run_pipeline.py` to execute all ETL steps sequentially.
 - Added `reload_indemnizatii.py` for automated reloading into PostgreSQL.
+- Cleaned formatting in compensation fields to remove spacing artifacts from PDF extraction
+- Kept commas in the display columns ('suma', 'indemnizatie_variabila') for readability.
+- Converted numeric fields ('suma_num', 'indemnizatie_variabila_num') to integers.
 
 ## Why this matters
 Using `dtype=str` ensures that Pandas does not automatically infer numeric types, which previously converted missing integers (e.g., `1 → 1.0`).  

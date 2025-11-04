@@ -51,8 +51,14 @@ df = df.replace(['-', 'N/A', 'n/a', 'null', 'NULL'], '')
 
 # 7. Clean numeric columns (suma and indemnizatie_variabila)
 for col in ['suma', 'indemnizatie_variabila']:
-    # Keep the original column text (for traceability)
-    df[col] = df[col].astype(str).str.strip()
+    # Keep the original column text (for traceability) and remove spaces inside numbers
+    df[col] = (
+        df[col]
+        .astype(str)
+        .str.replace(r'(?<=\d)\s+(?=\d)', '', regex=True)
+        .str.strip()
+               
+    )
 
     # Create a parallel numeric-safe column
     safe_col = f"{col}_num"
@@ -62,7 +68,7 @@ for col in ['suma', 'indemnizatie_variabila']:
         .str.replace(r'[^\d\-]', '', regex=True)    # remove any leftover symbols
         .replace(['', '-', 'nan', 'NaN'], '0')
     )
-    df[safe_col] = pd.to_numeric(df[safe_col], errors='coerce').fillna(0)
+    df[safe_col] = pd.to_numeric(df[safe_col], errors='coerce').fillna(0).astype(int)
 
 # 8. Drop completely empty rows or duplcates
 df = df.dropna(how='all').drop_duplicates()
