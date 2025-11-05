@@ -22,6 +22,13 @@ The dataset represents nominal compensation payments for Romanian public institu
 │ ├── run_pipeline.py
 │ └── data_enrich.py 
 │ 
+├── sql/queries/
+│ ├── avg_compensation_by_role.sql
+│ ├── missing_nr_crt_review.sql
+│ ├── personnel_total_comp.sql
+│ ├── top_10_directors_by_total_compensation.sql
+│ └── top_companies_by_total_compensation.sql
+│
 └── README.md
 ```
 
@@ -78,11 +85,11 @@ This update refactors the **data_clean.py** script to improve consistency and sa
 Using `dtype=str` ensures that Pandas does not automatically infer numeric types, which previously converted missing integers (e.g., `1 → 1.0`).  
 This preserves original formatting and avoids downstream COPY errors in PostgreSQL.
 
-## How to run
-```bash
-python scripts/run_pipeline.py
-python scripts/reload_indemnizatii.py
-```
+    ## How to run
+    ```bash
+    python scripts/run_pipeline.py
+    python scripts/reload_indemnizatii.py
+    ```
 
 ### 4. Data Enrichment
 
@@ -96,7 +103,11 @@ Added a new script data_enrich.py for data consistency.
 
 File: scripts/data_clean.py
 
-## How to run
-```bash
-python scripts/data_enrich.py
-```
+    ## How to run
+    ```bash
+    python scripts/data_enrich.py
+    ```
+### 5. Analysis (PostgreSQL SQL Queries)
+
+A new 'sql/queries/' directory has been created, to provide several analytical views on the dataset.
+These SQL scripts calculate totals, rankings, and averages across insitutions, personnel, and companies.
