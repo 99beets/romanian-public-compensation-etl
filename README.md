@@ -20,6 +20,7 @@ The dataset represents nominal compensation payments for Romanian public institu
 │ ├── validate_and_export.py
 │ ├── reload_indemnizatii.py
 │ ├── run_pipeline.py
+│ ├── comp_normalize_base.py
 │ └── data_enrich.py 
 │ 
 ├── sql/queries/
@@ -103,10 +104,28 @@ Added a new script data_enrich.py for data consistency.
 
 File: scripts/data_clean.py
 
-    ## How to run
+    Run:
     ```bash
     python scripts/data_enrich.py
     ```
+### 4.1 Monthly Base Salary Extraction (`suma_base_num`)
+
+Some salary entries contain multiple numbers, such as `23316/46632`.  
+In these cases, the first value represents the base monthly compensation.
+
+A new script has been added to extract this value:
+
+This script creates a new column:
+
+| Column             | Meaning                                        |
+|--------------------|------------------------------------------------|
+| `suma_base_num`    | Monthly base salary interpreted from `suma`    |
+
+    Run:
+    ```bash
+    python scripts/comp_normalize_base.py
+    ```
+
 ### 5. Analysis (PostgreSQL SQL Queries)
 
 A new 'sql/queries/' directory has been created, to provide several analytical views on the dataset.
