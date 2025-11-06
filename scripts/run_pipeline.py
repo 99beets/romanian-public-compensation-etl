@@ -5,7 +5,8 @@ from pathlib import Path
 SCRIPTS = [
     "data_clean.py",
     "column_count_script.py",
-    "validate_and_export.py"
+    "validate_and_export.py",
+    "comp_normalize_base.py"
 ]
 
 base = Path(__file__).parent
