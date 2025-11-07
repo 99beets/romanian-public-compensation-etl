@@ -11,8 +11,7 @@ The dataset represents nominal compensation payments for Romanian public institu
 ```
 │
 ├── data/
-│ ├── ind-nom-table.csv
-│ ├── ind-nom-table-clean.csv 
+│ └── ind-nom-table.csv
 │
 ├── scripts/
 │ ├── data_clean.py
@@ -52,7 +51,7 @@ Created a normalized table:
 CREATE TABLE indemnizatii (
     id SERIAL PRIMARY KEY,
     nr_crt TEXT,
-    autoritate_tutelar TEXT,
+    autoritate_tutelara TEXT,
     intreprindere TEXT,
     cui TEXT,
     personal TEXT,
@@ -110,10 +109,10 @@ File: scripts/data_clean.py
     ```
 ### 4.1 Monthly Base Salary Extraction (`suma_base_num`)
 
-Some salary entries contain multiple numbers, such as `23316/46632`.  
-In these cases, the first value represents the base monthly compensation.
+Some salary entries contain multiple numbers, such as `23316/46632` or '71000+71000 62,560'.  
+In these cases, the **first number** represents the base monthly compensation.
 
-A new script has been added to extract this value:
+A new script ('comp_normalize_base.py') has been added to extract this information and create a new column:
 
 This script creates a new column:
 
