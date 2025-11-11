@@ -34,7 +34,7 @@ df = df.rename(columns={
     'nume_ntreprindere_public':'intreprindere',
     'cui': 'cui',
     'nume_personal_conducere': 'personal',
-    'calitate_(membru_ca/cs_director/membru_directorat)': 'calitate',
+    'calitate_(membru_ca/cs_director/membru_directorat)': 'calitate_membru',
     'valoare_indemnizaie_fix_lunar_conform_contract_(brut-lei)*': 'suma',
     'valoare_indemnizaie_variabila_anual_conform_contract_(brut-lei)*': 'indemnizatie_variabila'
 })
