@@ -9,33 +9,56 @@ The dataset represents nominal compensation payments for Romanian public institu
 ## Project Structure
 
 ```
+scripts/
 │
-├── data/
-│ └── ind-nom-table.csv
+├── clean/                             # Stage 1 — Data Cleaning & Validation
+│   ├── data_clean.py                  # Normalizes, de-duplicates, fixes column names
+│   ├── data_enrich.py                 # Infers missing 'nr_crt' values from 'cui'
+│   ├── validate_and_export.py         # Checks consistency, prepares CSV for PostgreSQL
+│   ├── reload_indemnizatii_clean.py   # Reloads clean data into Postgres (TRUNCATE + COPY)
+│   └── run_pipeline_clean.py          # Orchestrates entire cleaning workflow
 │
-├── scripts/
-│ ├── data_clean.py
-│ ├── column_count_script.py
-│ ├── validate_and_export.py
-│ ├── reload_indemnizatii.py
-│ ├── run_pipeline.py
-│ ├── comp_normalize_base.py
-│ └── data_enrich.py 
-│ 
-├── sql/queries/
-│ ├── avg_compensation_by_role.sql
-│ ├── missing_nr_crt_review.sql
-│ ├── personnel_total_comp.sql
-│ ├── top_10_directors_by_total_compensation.sql
-│ └── top_companies_by_total_compensation.sql
+├── enriched/                          # Stage 2 — Enrichment and inferring
+│   ├── comp_normalize_base.py         # Extracts base/extra/total compensation fields
+│   ├── reload_indemnizatii_enriched.py# Loads enriched dataset into Postgres
+│   └── run_pipeline_enriched.py       # Full pipeline
 │
-└── README.md
+└── tools/
+    └── column_count_script.py         # (Legacy helper, kept for debugging)
+
+sql/
+│
+├── schema/                            # Database structure definitions
+│   ├── create_table_indemnizatii_clean.sql
+│   └── create_table_indemnizatii_enriched.sql
+│
+└── queries/                           # Analytical & reporting SQL scripts
+    ├── clean/
+    │   ├── avg_compensation_by_role.sql
+    │   ├── personnel_total_comp.sql
+    │   ├── top_10_directors_by_total_compensation.sql
+    │   └── top_companies_by_total_compensation.sql
+    │
+    └── enriched/
+        ├── avg_compensation_by_role_enriched.sql
+        ├── personnel_total_comp_enriched.sql
+        ├── top_10_directors_by_total_compensation.sql
+        └── top_companies_by_total_compensation.sql
+
+README.md
+.gitignore
 ```
 
-## Process Overview
+## Pipeline Overview
 
 ### 1. Extract
 Raw data exported from a government PDF (indemnizații nominale).
+The ETL workflow is now split into **two modular pipelines** for flexibility:
+```
+| **Clean** | `scripts/clean/` | Standardizes raw data, normalizes text, validates structure, and produces `ind-nom-table-clean.csv`. |
+| **Enriched** | `scripts/enriched/` | Builds on the clean output, deriving new columns like `suma_base_num`, `suma_extra_num`, and `suma_total_num`, producing `ind-nom-table-enriched.csv`. |
+```
+Each pipeline can run independently
 
 ### 2. Transform (Python)
 - Removed malformed rows using `pandas.read_csv(..., on_bad_lines='skip')`
@@ -73,6 +96,8 @@ DELIMITER ',' CSV HEADER ENCODING 'UTF8';
 This update refactors the **data_clean.py** script to improve consistency and safety in data ingestion:
 
 - All columns are now loaded as **strings (`dtype=str`)**, ensuring blank cells are preserved.
+Using `dtype=str` ensures that Pandas does not automatically infer numeric types, which previously converted missing integers (e.g., `1 → 1.0`).  
+This preserves original formatting and avoids downstream COPY errors in PostgreSQL.
 - Removed the need for `.astype(str)` conversions and `.0` cleanup.
 - Added defensive normalization for column names and empty placeholders.
 - Introduced `run_pipeline.py` to execute all ETL steps sequentially.
@@ -80,15 +105,20 @@ This update refactors the **data_clean.py** script to improve consistency and sa
 - Cleaned formatting in compensation fields to remove spacing artifacts from PDF extraction
 - Kept commas in the display columns ('suma', 'indemnizatie_variabila') for readability.
 - Converted numeric fields ('suma_num', 'indemnizatie_variabila_num') to integers.
-
-## Why this matters
-Using `dtype=str` ensures that Pandas does not automatically infer numeric types, which previously converted missing integers (e.g., `1 → 1.0`).  
-This preserves original formatting and avoids downstream COPY errors in PostgreSQL.
+Both `reload_indemnizatii_clean.py` and `reload_indemnizatii_enriched.py` now include:
+- A **safe reload mechanism** that uses `TRUNCATE TABLE ... RESTART IDENTITY;` to reset the auto-incrementing primary key each time the table is refreshed.
+- Clean exception handling and automatic connection closure.
+- A consistent `copy_expert()` pattern for high-volume CSV imports.
 
     ## How to run
     ```bash
     python scripts/run_pipeline.py
     python scripts/reload_indemnizatii.py
+    ```
+    or
+    ```bash
+    python scripts/run_pipeline_enriched.py
+    python scripts/reload_indemnizatii_enriched.py
     ```
 
 ### 4. Data Enrichment
