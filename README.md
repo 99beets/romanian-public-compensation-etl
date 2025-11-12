@@ -159,3 +159,40 @@ This script creates a new column:
 
 A new 'sql/queries/' directory has been created, to provide several analytical views on the dataset.
 These SQL scripts calculate totals, rankings, and averages across insitutions, personnel, and companies.
+
+### Data Source and Use Disclaimer
+
+This project uses publicly available data published by the Autoritatea pentru Monitorizarea și Evaluarea Performanțelor Întreprinderilor Publice (AMEPIP), Romania.
+
+Original dataset:
+https://amepip.gov.ro/wp-content/uploads/2025/08/Situatia-indemnizatiilor-nominale-IP-centrale-august-2025.pdf
+
+The data is used strictly for educational and non-commercial purposes as part of a personal data engineering portfolio.
+All personal information appearing in the dataset originates from official public disclosures made in accordance with Romanian transparency laws (Law no. 544/2001).
+
+No attempt is made to alter, interpret, or republish personal data beyond its original context.
+
+## Infrastructure (Terraform + AWS Integration)
+
+### Objective
+This new stage introduces a **cloud-deployable infrastructure layer** using **Terraform** and **AWS**, preparing the pipeline for serverless orchestration and future dbt integration.
+
+### Overview
+The Terraform configuration in `infra/terraform/` provisions:
+
+**S3 (artifacts & logs)**         | Stores ETL artifacts, Lambda ZIPs, and logs with versioning and encryption. 
+**IAM Role & Policies**           | Provides least-privilege access for Lambda to write logs and read/write to S3. 
+**Lambda Function (Python 3.12)** | Serverless compute entrypoint to run data processing, orchestration, or dbt jobs. 
+**Terraform Providers**           | Uses AWS, random, and archive providers (for packaging Python source into a ZIP). 
+
+### Current Status
+- Terraform scaffolding complete: providers, IAM, S3, Lambda configuration, and variable definitions.
+- Region: `eu-north-1` (Stockholm) — chosen for cost efficiency.
+- Lambda packaging set up with `archive_file` for automatic ZIP generation.
+- Deployment not yet applied (`terraform apply` pending).
+
+### Next Steps
+1. Initialize Terraform (`terraform init`) and validate (`terraform validate`).
+2. Apply the infrastructure (`terraform apply`) once tested.
+3. Add dbt integration for cloud-based transformations.
+4. Extend CI/CD pipeline to automate Terraform plan and dbt runs.
