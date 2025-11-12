@@ -159,3 +159,15 @@ This script creates a new column:
 
 A new 'sql/queries/' directory has been created, to provide several analytical views on the dataset.
 These SQL scripts calculate totals, rankings, and averages across insitutions, personnel, and companies.
+
+### Data Source and Use Disclaimer
+
+This project uses publicly available data published by the Autoritatea pentru Monitorizarea și Evaluarea Performanțelor Întreprinderilor Publice (AMEPIP), Romania.
+
+Original dataset:
+https://amepip.gov.ro/wp-content/uploads/2025/08/Situatia-indemnizatiilor-nominale-IP-centrale-august-2025.pdf
+
+The data is used strictly for educational and non-commercial purposes as part of a personal data engineering portfolio.
+All personal information appearing in the dataset originates from official public disclosures made in accordance with Romanian transparency laws (Law no. 544/2001).
+
+No attempt is made to alter, interpret, or republish personal data beyond its original context.
