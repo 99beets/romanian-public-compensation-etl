@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: public
+    schema: "{{ var('public') }}"
+    database: "{{ var('indemnizatii') }}"
+    tables: 
+      - name: indemnizatii
+        identifier: indemnizatii
+        description: "Main PostgreSQL table containing cleaned and enriched compensation data from AMEPIP."

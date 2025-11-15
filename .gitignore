@@ -12,3 +12,24 @@ __pycache__/
 # Ignore OS metadata
 .DS_Store
 Thumbs.db
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.zip
+
+# dbt build artifacts
+target/
+dbt_packages/
+logs/
+
+# Local PostgreSQL dumps or temp data
+*.sql~
+*.dump
+*.backup
+
+# System or editor backups
+*~
+.idea/

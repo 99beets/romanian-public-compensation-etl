@@ -196,3 +196,22 @@ The Terraform configuration in `infra/terraform/` provisions:
 2. Apply the infrastructure (`terraform apply`) once tested.
 3. Add dbt integration for cloud-based transformations.
 4. Extend CI/CD pipeline to automate Terraform plan and dbt runs.
+
+---
+
+## Local Git Hooks
+
+This project includes a pre-commit hook under `.githooks/pre-commit` that automatically checks and formats Terraform code before committing.
+
+### What it does
+- Blocks accidental commits of:
+  - `.terraform/` directories
+  - Terraform state or plan files (`*.tfstate`, `*.tfplan`)
+  - Large files (>50 MB)
+- Automatically runs `terraform fmt -recursive` on changed `.tf` files
+
+### Enabling the hook
+Run this once after cloning the repository:
+```bash
+git config core.hooksPath .githooks
+```

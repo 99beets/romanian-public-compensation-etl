@@ -4,8 +4,8 @@
 # Blocks commits of unwanted files or >50MB objects
 
 # 1. Block Terraform local artifacts
-for pattern in ".terraform" "*.tfstate" "*.tfstate.*" "*.tfplan" "*.zip"; do
-    if git diff --cached --name-only | grep -q "$pattern"; then
+for pattern in ".terraform/" ".terraform" "*.tfstate" "*.tfstate.*" "*.tfplan" "*.zip"; do
+    if git diff --cached --name-only | grep -F -q "$pattern"; then
         echo "Commit blocked: Terraform local/state/zip files detected ($pattern)"
         echo "Please add them to .gitignore if needed."
         exit 1
@@ -30,7 +30,7 @@ if [ -n "$large_files" ]; then
 fi
 
 # 3. Run terraform fmt automatically if relevant files changed
-if git diff --chached --name-only | grep -E '\.tf$' >/dev/null 2>&1; then
+if git diff --cached --name-only | grep -E '\.tf$' >/dev/null 2>&1; then
     echo "Running terraform fmt..."
     terraform fmt -recursive >/dev/null 2>&1
     git add *.tf >/dev/null 2>&1
