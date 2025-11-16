@@ -1,0 +1,35 @@
+# Ignore intermediate and large CSV outputs
+data/ind-nom-table-clean.csv
+data/ind-nom-table-enriched.csv
+
+# Ignore local environment and config
+*.pyc
+__pycache__/
+.env
+.vscode/
+*.log
+
+# Ignore OS metadata
+.DS_Store
+Thumbs.db
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.zip
+
+# dbt build artifacts
+target/
+dbt_packages/
+logs/
+
+# Local PostgreSQL dumps or temp data
+*.sql~
+*.dump
+*.backup
+
+# System or editor backups
+*~
+.idea/

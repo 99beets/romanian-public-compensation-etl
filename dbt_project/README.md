@@ -1,15 +1,73 @@
-Welcome to your new dbt project!
+# dbt Integration — Romanian Public Compensation ETL
 
-### Using the starter project
+This directory contains the **dbt (Data Build Tool)** transformation layer for the
+Romanian Public Compensation ETL project.
 
-Try running the following commands:
-- dbt run
-- dbt test
+---
+
+## Overview
+
+The dbt project connects to the local **PostgreSQL** database `indemnizatii`
+and builds analytical models and views used for data exploration, validation,
+and future cloud deployment (AWS Lambda + S3 + Terraform).
+
+---
+
+## Structure
+
+models/
+├── source/
+│   └── sources.yml
+└── warehouse/
+    ├── mean_compensation_by_institution.yml
+    ├── mean_compensation_by_institution.sql
+    ├── avg_compensation_by_institution.sql
+    └── schema/avg_compensation_by_institution.yml
+
+DBT Enhancements (Data Validation & Utility Macros)
+
+The dbt project has been extended with two key open-source packages that bring powerful testing and transformation utilities:
+
+1. dbt-labs/dbt_utils
+
+A core companion package created by the dbt Labs team.
+It adds helper macros for:
+
+Common SQL transformations (e.g., safe unions, pivoting, surrogate keys)
+
+Easier joins and column operations
+
+Generic testing (e.g., unique combinations, relationships, equal row counts)
+
+Reusable logic for cross-database portability
+
+Example usage:
+
+{{ dbt_utils.surrogate_key(['cui', 'nr_crt']) }}
 
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+Creates a deterministic hash-based key from multiple columns.
+
+2. metaplane/dbt_expectations (formerly calogica/dbt_expectations)
+
+Inspired by Great Expectations, this package provides declarative data quality tests — directly in YAML.
+
+You can express assertions like:
+
+tests:
+  - dbt_expectations.expect_column_values_to_be_between:
+      min_value: 0
+      max_value: 999999
+
+
+Other examples include:
+
+expect_column_values_to_not_be_null
+
+expect_table_row_count_to_be_between
+
+expect_column_values_to_match_regex
+
+expect_row_values_to_have_recent_timestamp
+
+This makes dbt projects far more self-documenting and data-quality–driven.

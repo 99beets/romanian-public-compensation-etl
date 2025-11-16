@@ -1,7 +1,7 @@
 WITH 
 
 source_indemnizatii AS (
-    SELECT * FROM {{ source('public', 'indemnizatii') }}
+    SELECT * FROM {{ ref('stg_indemnizatii') }}
 ),
 
 avg_compensation_by_institution AS (

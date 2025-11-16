@@ -30,10 +30,17 @@ if [ -n "$large_files" ]; then
 fi
 
 # 3. Run terraform fmt automatically if relevant files changed
-if git diff --cached --name-only | grep -E '\.tf$' >/dev/null 2>&1; then
-    echo "Running terraform fmt..."
-    terraform fmt -recursive >/dev/null 2>&1
-    git add *.tf >/dev/null 2>&1
+changed_tf_dirs=$(git diff --cached --name-only | grep '\.tf$' | xargs -r dirname | sort -u)
+
+if [ -n "$changed_tf_dirs" ]; then
+    echo "Running terraform fmt in changed Terraform directories."
+    for dir in $changed_tf_dirs; do
+        if [ -d "$dir" ]; then
+            terraform fmt -recursive "$dir" >/dev/null 2>&1
+        fi
+    done
+    # Re-staged formatted files so they're included in the commit
+    git add $(git diff --name-only)
 fi
 
 echo "Pre-commit check passed."

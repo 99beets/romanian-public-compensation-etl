@@ -17,6 +17,10 @@ clean-targets:
 models:
   dbt_project:
     +materialized: view
+  staging:
+    +materialized: view
+  warehouse:
+    +materialized: view
 
 vars:
   public: "public"

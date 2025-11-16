@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: mean_compensation_by_institution
+    description: >
+      Analytical model calculating the mean total compensation per public
+      enterprise (`intreprindere`), along with its supervising authority and
+      employee count.  
+      Built from the cleaned and standardized staging model `stg_indemnizatii`.
+
+    columns:
+      - name: intreprindere
+        description: >
+          Supervising authority (e.g., MINISTERUL SĂNĂTĂȚII, MINISTERUL ENERGIEI).  
+          Uppercased for consistency across reporting layers.
+        tests:
+          - not_null
+
+      - name: autoritate_tutelara
+        description: >
+          Supervising authority responsible for the enterprise.  
+          Included for hierarchical grouping and reporting.
+        tests:
+          - not_null
+
+      - name: mean_total_compensation
+        description: Mean compensation amount per institution.
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 999999
+
+      - name: employee_count
+        description: Count of distinct employees per institution.
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 1
+              max_value: 999999

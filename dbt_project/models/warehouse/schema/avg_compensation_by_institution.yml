@@ -3,76 +3,26 @@ version: 2
 models:
   - name: avg_compensation_by_institution
     description: >
-      Cleaned and enriched Romanian public compensation data.
-      Containts extracted salary compensation information for public enterprises,
-      as published by AMEPIP (Romania). Numeric columns are standardized for analytics.
+      Analytical model aggregating the average total compensation by each
+      supervising authority (`autoritate_tutelara`).  
+      Built from the cleaned and normalized staging model `stg_indemnizatii`.
+
     columns:
-      - name: id
-        description: Auto-incrementing primary key.
+      - name: autoritate_tutelara
+        description: >
+          Supervising authority (e.g., MINISTERUL SĂNĂTĂȚII, MINISTERUL ENERGIEI).  
+          Uppercased for consistency across reporting layers.
         tests:
           - not_null
           - unique
 
-      - name: nr_crt
+      - name: avg_total_compensation
         description: >
-          The 'nr_crt' column is the sequential row number used to index each entry in the document. 
-          It serves only as an internal ordering reference. 
-          The 'nr_crt' field is a fixed ordinal index that maps one-to-one to a specific 'cui'.
-        tests:
-          - not_null
-
-      - name: autoritate_tutelara
-        description: Supervising authority (e.g., Ministerul Sănătății, Ministerul Energiei)
-        tests:
-          - not_null
-
-      - name: intreprindere
-        description: Name of the public enterprise.
-        tests:
-          - not_null
-
-      - name: cui
-        description: Romanian Unique Registration Code assigned to businesses and legal entities.
-        tests:
-          - not_null
-
-      - name: personal
-        description: Full name of the person associated with the compensation record.
-
-      - name: calitate_membru
-        description: Role within the company (e.g., Director, Membru CA/CS).
-
-      - name: suma
-        description: Raw compensation amount as text (e.g., "12,820").
-
-      - name: indemnizatie_variabila
-        description: Raw text field for variable or performance-related compensation.
-
-      - name: suma_base_num
-        description: Extracted numeric base salary (monthly base).
-        tests:
-          - accepted_range:
-              arguments:
-                min_value: 0
-                max_value: 999999
-
-      - name: suma_extra_num
-        description: Extracted numeric extra component (bonuses, incentives).
+          Average of the total monthly compensation amounts for all individuals
+          associated with the same supervising authority.
         tests:
           - not_null
           - accepted_range:
               arguments:
                 min_value: 0
                 max_value: 999999
-
-      - name: suma_total_num
-        description: Computed total compensation (base + extra).
-        tests:  
-          - not_null
-          - accepted_range:
-              arguments:
-                min_value: 0
-                max_value: 999999
-
-      - name: created_at
-        description: Timestamp when the record was loaded into PostgreSQL.
