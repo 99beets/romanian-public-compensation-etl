@@ -58,16 +58,3 @@ tests:
   - dbt_expectations.expect_column_values_to_be_between:
       min_value: 0
       max_value: 999999
-
-
-Other examples include:
-
-expect_column_values_to_not_be_null
-
-expect_table_row_count_to_be_between
-
-expect_column_values_to_match_regex
-
-expect_row_values_to_have_recent_timestamp
-
-This makes dbt projects far more self-documenting and data-quality–driven.
