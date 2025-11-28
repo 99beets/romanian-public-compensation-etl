@@ -9,41 +9,32 @@ The dataset represents nominal compensation payments for Romanian public institu
 ## Project Structure
 
 ```
+data/
+│   indemnizatii.csv               # Raw input data
+│   indemnizatii_clean.csv         # Cleaned output (generated)
+
 scripts/
-│
-├── clean/                             # Stage 1 — Data Cleaning & Validation
-│   ├── data_clean.py                  # Normalizes, de-duplicates, fixes column names
-│   ├── data_enrich.py                 # Infers missing 'nr_crt' values from 'cui'
-│   ├── validate_and_export.py         # Checks consistency, prepares CSV for PostgreSQL
-│   ├── reload_indemnizatii_clean.py   # Reloads clean data into Postgres (TRUNCATE + COPY)
-│   └── run_pipeline_clean.py          # Orchestrates entire cleaning workflow
-│
-├── enriched/                          # Stage 2 — Enrichment and inferring
-│   ├── comp_normalize_base.py         # Extracts base/extra/total compensation fields
-│   ├── reload_indemnizatii_enriched.py# Loads enriched dataset into Postgres
-│   └── run_pipeline_enriched.py       # Full pipeline
-│
-└── tools/
-    └── column_count_script.py         # (Legacy helper, kept for debugging)
+└── clean/
+    ├── data_clean.py              # Core cleaning and normalization logic
+    ├── validate_and_export.py     # CSV structure validation
+    ├── reload_indemnizatii_clean.py   # Load cleaned data into PostgreSQL
+    └── run_pipeline_clean.py      # Orchestrates the pipeline
+
+tools/
+    debug_nrcrt_inference.py
+    find_missing_fields.py
+    find_null_rows.py
 
 sql/
+├── schema/
+│     create_table_indemnizatii_clean.sql
 │
-├── schema/                            # Database structure definitions
-│   ├── create_table_indemnizatii_clean.sql
-│   └── create_table_indemnizatii_enriched.sql
-│
-└── queries/                           # Analytical & reporting SQL scripts
-    ├── clean/
-    │   ├── avg_compensation_by_role.sql
-    │   ├── personnel_total_comp.sql
-    │   ├── top_10_directors_by_total_compensation.sql
-    │   └── top_companies_by_total_compensation.sql
-    │
-    └── enriched/
-        ├── avg_compensation_by_role_enriched.sql
-        ├── personnel_total_comp_enriched.sql
-        ├── top_10_directors_by_total_compensation.sql
-        └── top_companies_by_total_compensation.sql
+└── queries/
+      clean/
+        avg_compensation_by_role.sql
+        personnel_total_comp.sql
+        top_10_directors_by_total_compensation.sql
+        top_companies_by_total_compensation.sql
 
 README.md
 .gitignore
@@ -52,113 +43,63 @@ README.md
 ## Pipeline Overview
 
 ### 1. Extract
-Raw data exported from a government PDF (indemnizații nominale).
-The ETL workflow is now split into **two modular pipelines** for flexibility:
-```
-| **Clean** | `scripts/clean/` | Standardizes raw data, normalizes text, validates structure, and produces `ind-nom-table-clean.csv`. |
-| **Enriched** | `scripts/enriched/` | Builds on the clean output, deriving new columns like `suma_base_num`, `suma_extra_num`, and `suma_total_num`, producing `ind-nom-table-enriched.csv`. |
-```
-Each pipeline can run independently
+Data is exported manually from the official AMEPIP PDF into indemnizatii.csv.
 
 ### 2. Transform (Python)
-- Removed malformed rows using `pandas.read_csv(..., on_bad_lines='skip')`
-- Normalized column names (lowercase, underscores)
-- Replaced invalid placeholders (`-`, `N/A`, `null`) with `NaN`
-- Converted numeric fields to `NUMERIC`
-- Saved UTF-8 cleaned CSV ready for PostgreSQL
+The cleaning pipeline performs:
+
+Column normalization
+- remove diacritics
+- lowercases
+- replaces spaces with underscores
+- collapses repeated underscores
+
+Text cleanup
+- remove PDF-artifact line breaks
+- strips whitespace
+- replaces placeholders (-, null, N/A) with empty string
+
+Salary normalization
+    Handles all irregular compensation formats:
+    - 31 530 -> 31530
+    - 23316/46632 -> 46632 (take max)
+    - 71000+71000 -> 142000 (sum)
+    - 5000 - 2000 -> splits into base + variable
+    - preserves readable text fields (suma, indemnizatie_variabila)
+    - generates safe integer columns:
+        - suma_num
+        - indemnizatie_variabila_num
+
+Missing nr_crt auto-inferrence
+    If a row lacks nr_crt, the pipeline fills it using satble cui -> nr_crt mapping.
 
 ### 3. Load (PostgreSQL)
-Created a normalized table:
+Schema:
+    sql/schema/create_table_indemnizatii_clean.sql
 
-```
-CREATE TABLE indemnizatii (
-    id SERIAL PRIMARY KEY,
-    nr_crt TEXT,
-    autoritate_tutelara TEXT,
-    intreprindere TEXT,
-    cui TEXT,
-    personal TEXT,
-    calitate_membru TEXT,
-    suma NUMERIC,
-    indemnizatie_variabila NUMERIC
-);
-```
+Load cleaned data:
+    python scripts/clean/reload_indemnizatii_clean.py
 
-Loaded data using:
+    Performs:
+        - TRUNCATE TABLE ... RESTART IDENTITY to reset primary key
+        - fast COPY import
+        - safe connection handling
+
+How to Run:
 ```
-\copy indemnizatii(nr_crt, autoritate_tutelar, intreprindere, cui, personal, calitate_membru, suma, indemnizatie_variabila)
-FROM 'data/ind-nom-table-clean.csv'
-DELIMITER ',' CSV HEADER ENCODING 'UTF8';
+python scripts/clean/run_pipeline_clean.py
+python scripts/clean/reload_indemnizatii_clean.py
 ```
 
-## Data Cleaning Pipeline Update
+### 4. SQL Queries Included
 
-This update refactors the **data_clean.py** script to improve consistency and safety in data ingestion:
+Inside sql/queries/clean/ you will find useful analytical test queries, such as:
+    - average compensation by role
+    - personnel total compensation
+    - top directors by total compensation
+    - top companies ranked by aggregate compensation
 
-- All columns are now loaded as **strings (`dtype=str`)**, ensuring blank cells are preserved.
-Using `dtype=str` ensures that Pandas does not automatically infer numeric types, which previously converted missing integers (e.g., `1 → 1.0`).  
-This preserves original formatting and avoids downstream COPY errors in PostgreSQL.
-- Removed the need for `.astype(str)` conversions and `.0` cleanup.
-- Added defensive normalization for column names and empty placeholders.
-- Introduced `run_pipeline.py` to execute all ETL steps sequentially.
-- Added `reload_indemnizatii.py` for automated reloading into PostgreSQL.
-- Cleaned formatting in compensation fields to remove spacing artifacts from PDF extraction
-- Kept commas in the display columns ('suma', 'indemnizatie_variabila') for readability.
-- Converted numeric fields ('suma_num', 'indemnizatie_variabila_num') to integers.
-Both `reload_indemnizatii_clean.py` and `reload_indemnizatii_enriched.py` now include:
-- A **safe reload mechanism** that uses `TRUNCATE TABLE ... RESTART IDENTITY;` to reset the auto-incrementing primary key each time the table is refreshed.
-- Clean exception handling and automatic connection closure.
-- A consistent `copy_expert()` pattern for high-volume CSV imports.
-
-    ## How to run
-    ```bash
-    python scripts/run_pipeline.py
-    python scripts/reload_indemnizatii.py
-    ```
-    or
-    ```bash
-    python scripts/run_pipeline_enriched.py
-    python scripts/reload_indemnizatii_enriched.py
-    ```
-
-### 4. Data Enrichment
-
-Added a new script data_enrich.py for data consistency.
-
-- Identifies rows with missing nr_crt values.
-
-- Uses the cui (unique company identifier) to infer and fill missing sequence numbers.
-
-- Keeps both nr_crt (original) and nr_crt_inferred (filled) columns side-by-side for transparency.
-
-File: scripts/data_clean.py
-
-    Run:
-    ```bash
-    python scripts/data_enrich.py
-    ```
-### 4.1 Monthly Base Salary Extraction (`suma_base_num`)
-
-Some salary entries contain multiple numbers, such as `23316/46632` or '71000+71000 62,560'.  
-In these cases, the **first number** represents the base monthly compensation.
-
-A new script ('comp_normalize_base.py') has been added to extract this information and create a new column:
-
-This script creates a new column:
-
-| Column             | Meaning                                        |
-|--------------------|------------------------------------------------|
-| `suma_base_num`    | Monthly base salary interpreted from `suma`    |
-
-    Run:
-    ```bash
-    python scripts/comp_normalize_base.py
-    ```
-
-### 5. Analysis (PostgreSQL SQL Queries)
-
-A new 'sql/queries/' directory has been created, to provide several analytical views on the dataset.
-These SQL scripts calculate totals, rankings, and averages across insitutions, personnel, and companies.
+These scripts are intentionally kept simple and are useful for validating the cleaned dataset before moving transformations into dbt.
 
 ### Data Source and Use Disclaimer
 

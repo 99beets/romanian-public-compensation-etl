@@ -11,7 +11,7 @@ conn_params = {
 }
 
 # File path
-csv_path = r"C:/data-eng-practice/postgresql/sql-indemnizatii-nominale/data/ind-nom-table-clean.csv"
+csv_path = r"C:/data-eng-practice/postgresql/sql-indemnizatii-nominale/data/indemnizatii_clean.csv"
 
 # SQL commands
 truncate_sql = "TRUNCATE TABLE indemnizatii RESTART IDENTITY;"

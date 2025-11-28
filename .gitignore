@@ -1,14 +1,28 @@
-# Ignore intermediate and large CSV outputs
-data/ind-nom-table-clean.csv
-data/ind-nom-table-enriched.csv
-
-# Ignore local environment and config
-*.pyc
+# Python cache
 __pycache__/
+*.pyc
+
+# Environments & editor settings
 .env
 .vscode/
 *.log
 
-# Ignore OS metadata
+# OS metadata
 .DS_Store
 Thumbs.db
+
+# Generated CSVs (outputs)
+data/indemnizatii_enriched.csv
+data/*.bak
+data/*.tmp
+
+# Legacy folders
+scripts/legacy/
+data/legacy/
+scripts/enriched/
+
+# dbt artifacts
+dbt_project/target/
+dbt_project/logs/
+dbt_project/dbt_packages/
+
