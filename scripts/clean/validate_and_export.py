@@ -1,7 +1,7 @@
 import pandas as pd
 import csv
 
-path = r'C:/data-eng-practice/postgresql/sql-indemnizatii-nominale/data/ind-nom-table-clean.csv'
+path = r'C:/data-eng-practice/postgresql/sql-indemnizatii-nominale/data/indemnizatii_clean.csv'
 df = pd.read_csv(path, dtype=str, on_bad_lines='skip', encoding='utf-8')
 
 print(f"Loaded {len(df)} rows and {len(df.columns)} columns.\n")
@@ -20,7 +20,7 @@ invalid_rows = df[df.apply(lambda x: len(x) != expected_cols, axis=1)]
 print(f"\n Invalid rows found in DataFrame: {len(invalid_rows)}")
 
 # Export safely with quoting and normalized newlines
-output_path = r'C:/data-eng-practice/postgresql/sql-indemnizatii-nominale/data/ind-nom-table-clean.csv'
+output_path = r'C:/data-eng-practice/postgresql/sql-indemnizatii-nominale/data/indemnizatii_clean.csv'
 
 df.to_csv(
     output_path,

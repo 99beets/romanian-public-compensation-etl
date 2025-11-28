@@ -5,6 +5,7 @@ from pathlib import Path
 SCRIPTS = [
     "data_clean.py",
     "validate_and_export.py",
+    "reload_indemnizatii_clean.py"
 ]
 
 base = Path(__file__).parent

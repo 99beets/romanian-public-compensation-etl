@@ -8,8 +8,7 @@ CREATE TABLE indemnizatii (
     calitate_membru TEXT,
     suma TEXT,
     indemnizatie_variabila TEXT,
-    suma_base_num INT,
-    suma_extra_num INT,
-    suma_total_num INT,
+    suma_num INT,
+    indemnizatie_variabila_num INT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
