@@ -14,10 +14,10 @@ conn_params = {
 csv_path = r"C:/data-eng-practice/postgresql/sql-indemnizatii-nominale/data/indemnizatii_clean.csv"
 
 # SQL commands
-truncate_sql = "TRUNCATE TABLE indemnizatii RESTART IDENTITY;"
+truncate_sql = "TRUNCATE TABLE indemnizatii_clean RESTART IDENTITY;"
 
 copy_sql = f"""
-COPY indemnizatii (
+COPY indemnizatii_clean (
     nr_crt,
     autoritate_tutelara,
     intreprindere,
@@ -40,12 +40,12 @@ def get_connection():
     return psycopg2.connect(**conn_params)
 
 def truncate_table(cur):
-    # Truncate the indemnizatii table and reset its ID sequence
+    # Truncate the indemnizatii_clean table and reset its ID sequence
     cur.execute(truncate_sql)
     print("Table truncated successfully.")
 
 def load_csv_to_table(cur, path):
-    # Load data from local CSV into the indemnizatii table
+    # Load data from local CSV into the indemnizatii_clean table
     with open(path, "r", encoding="utf-8") as f:
         cur.copy_expert(copy_sql, f)
     print("Data reloaded successfully from CSV.")
