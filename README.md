@@ -101,6 +101,30 @@ Inside sql/queries/clean/ you will find useful analytical test queries, such as:
 
 These scripts are intentionally kept simple and are useful for validating the cleaned dataset before moving transformations into dbt.
 
+### 5. DBT Integration
+
+This project now includes a dedicated dbt transformation layer located in the dbt_project/ directory.
+
+## DBT Features Implemented
+
+   - Postgres source definition (indemnizatii_clean)
+   - Staging model (stg_indemnizatii_clean)
+   - Synthetic primary key and renaming ambiguous fields
+   - Type-safe numeric columns (suma_clean, variabila_clean)
+   - Data tests:
+        unique and not_null on PK
+        not_null on key numeric fields
+   - Integration with dbt_utils
+
+Run DBT
+```
+cd dbt_project
+dbt build
+```
+
+## Pipeline Architecture
+Raw CSV → Python ETL → Postgres (indemnizatii_clean) → DBT staging → Analytics layer
+
 ### Data Source and Use Disclaimer
 
 This project uses publicly available data published by the Autoritatea pentru Monitorizarea și Evaluarea Performanțelor Întreprinderilor Publice (AMEPIP), Romania.

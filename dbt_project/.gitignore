@@ -1,0 +1,12 @@
+# DBT generated folders
+target/
+dbt_packages/
+logs/
+
+# Python cache (if any macros or hooks use Python)
+__pycache__/
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+

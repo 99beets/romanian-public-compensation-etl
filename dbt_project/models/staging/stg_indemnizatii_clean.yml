@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: stg_indemnizatii_clean
+    description: "Staging model for the indemnizatii_clean table. Renames fields, maps numeric salary values, and exposes a stable primary key."
+
+    columns:
+      - name: pk
+        description: "Primary key from the source table (id)."
+        tests:
+          - not_null
+          - unique
+
+      - name: nr_crt
+        description: "Row order within the enterprise, from source file."
+
+      - name: autoritate_tutelara
+        description: "Supervising authority."
+
+      - name: intreprindere
+        description: "Institution or enterprise name."
+
+      - name: cui
+        description: "Enterprise identifier (CUI)."
+        tests:
+          - not_null
+
+      - name: nume
+        description: "Full name of the person."
+
+      - name: functie
+        description: "Role or job title."
+
+      - name: suma_raw
+        description: "Raw base compensation string."
+
+      - name: variabila_raw
+        description: "Raw variable compensation string."
+
+      - name: suma_clean
+        description: "Cleaned numeric base compensation."
+        tests:
+          - not_null
+
+      - name: variabila_clean
+        description: "Cleaned numeric variable compensation."
+        tests:
+          - not_null
+
+      - name: created_at
+        description: "Timestamp when the row was loaded into the database."

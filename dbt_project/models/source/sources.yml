@@ -1,0 +1,42 @@
+version: 2
+
+sources:
+  - name: indemnizatii_source
+    description: "Source PostgreSQL tables containing cleaned compensation data."
+    database: "{{ var('indemnizatii') }}"
+    schema: "{{ var('public') }}"
+    
+    tables:
+      - name: indemnizatii_clean
+        identifier: indemnizatii_clean
+        description: "Cleaned compensation dataset loaded from Python ETL."
+        columns:
+          - name: nr_crt
+            description: "Original row index from the AMEPIP file. Not globally unique. Each 'intreprindere' and 'cui' corresponds to a unique nr_crt."
+
+          - name: autoritate_tutealara
+            description: "Supervising authority (autoritate tutelară) that oversees the enterprise."
+
+          - name: intreprindere
+            description: "State-owned enterprise or institution name."
+
+          - name: cui
+            description: "Enterprise tax identifier (Cod Unic de Inregistrare - CUI)."
+
+          - name: personal
+            description: "Full name of the person (employee, director, board member, etc.)."
+
+          - name: calitate_membru
+            description: "Role / position / function held by the person."
+
+          - name: suma
+            description: "Base compensation amount as string, usually with comma as thousands separator."
+
+          - name: indemnizatie_variabila
+            description: "Variable compensation component as string (may be empty, '-', or a numeric value)."
+
+          - name: suma_num
+            description: "Cleaned numeric base compensation (integer)."
+            
+          - name: indemnizatie_variabila_num
+            description: "Cleaned numeric variable compensation (integer)."
