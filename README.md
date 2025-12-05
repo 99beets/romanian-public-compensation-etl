@@ -105,21 +105,31 @@ These scripts are intentionally kept simple and are useful for validating the cl
 
 This project now includes a dedicated dbt transformation layer located in the dbt_project/ directory.
 
-## DBT Features Implemented
+## DBT Transformation Layer
 
-   - Postgres source definition (indemnizatii_clean)
-   - Staging model (stg_indemnizatii_clean)
-   - Synthetic primary key and renaming ambiguous fields
-   - Type-safe numeric columns (suma_clean, variabila_clean)
-   - Data tests:
-        unique and not_null on PK
-        not_null on key numeric fields
-   - Integration with dbt_utils
+The `/dbt_project` directory contains the transformation logic that converts raw loaded data into an analytics-ready format.
 
-Run DBT
+The dbt layer produces:
+- fact_indemnizatii: annual compensation dataset
+- dim_persoane: normalized people dimension
+- dim_companii: normalized company dimension
+
+Execution steps:
 ```
 cd dbt_project
 dbt build
+```
+
+To generate documentation and lineage view:
+```
+dbt docs generate
+dbt docs serve
+```
+
+The transformation is parameterized using an annual reporting variable:
+```
+vars:
+  indemnizatii_year: 2025
 ```
 
 ## Pipeline Architecture
