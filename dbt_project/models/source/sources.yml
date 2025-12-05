@@ -3,8 +3,8 @@ version: 2
 sources:
   - name: indemnizatii_source
     description: "Source PostgreSQL tables containing cleaned compensation data."
-    database: "{{ var('indemnizatii') }}"
-    schema: "{{ var('public') }}"
+    database: "{{ var('db_name', 'indemnizatii') }}"
+    schema: "{{ var('db_schema', 'public') }}"
     
     tables:
       - name: indemnizatii_clean
@@ -34,7 +34,7 @@ sources:
 
           - name: indemnizatie_variabila
             description: "Variable compensation component as string (may be empty, '-', or a numeric value)."
-
+            
           - name: suma_num
             description: "Cleaned numeric base compensation (integer)."
             
