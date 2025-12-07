@@ -10,24 +10,24 @@ The dataset represents nominal compensation payments for Romanian public institu
 
 ```
 data/
-│   indemnizatii.csv               # Raw input data
-│   indemnizatii_clean.csv         # Cleaned output (generated)
+│   indemnizatii.csv                   # Raw input data from PDF export
+│   indemnizatii_clean.csv             # Cleaned output generated from ETL
 
 scripts/
 └── clean/
-    ├── data_clean.py              # Core cleaning and normalization logic
-    ├── validate_and_export.py     # CSV structure validation
-    ├── reload_indemnizatii_clean.py   # Load cleaned data into PostgreSQL
-    └── run_pipeline_clean.py      # Orchestrates the pipeline
+    data_clean.py                      # Core cleaning and normalization logic
+    validate_and_export.py             # Structural validation of raw CSV
+    reload_indemnizatii_clean.py       # Bulk load into PostgreSQL
+    run_pipeline_clean.py              # Orchestrates cleaning + loading process
 
 tools/
-    debug_nrcrt_inference.py
-    find_missing_fields.py
-    find_null_rows.py
+    debug_nrcrt_inference.py           # NR_CRT inference utility
+    find_missing_fields.py             # Identifies undocumented column gaps
+    find_null_rows.py                  # Surface unexpected null patterns
 
 sql/
 ├── schema/
-│     create_table_indemnizatii_clean.sql
+│     create_table_indemnizatii_clean.sql   # DDL for PostgreSQL loading table
 │
 └── queries/
       clean/
@@ -35,6 +35,32 @@ sql/
         personnel_total_comp.sql
         top_10_directors_by_total_compensation.sql
         top_companies_by_total_compensation.sql
+
+dbt_project/
+└── models/
+    staging/
+      stg_indemnizatii_clean.sql              # Source standardization model
+      stg_indemnizatii_clean.yml              # Source-level tests
+
+    intermediate/
+      int_indemnizatii_base.sql               # Normalized salary data
+      int_persoane_clean.sql                  # Deduplicated identities
+      int_companii_clean.sql                  # Company mapping layer
+      schema.yml                              # Tests for base/intermediate layer
+
+    marts/
+      fact_indemnizatii.sql                   # Annual compensation fact table
+      dim_persoane.sql                        # Person dimension
+      dim_companii.sql                        # Company dimension
+      schema.yml                              
+      analytics/
+        distribution_companii.sql
+        organization_pay_spread.sql
+        top_companii_by_spend.sql
+        top_earners.sql
+        yearly_salary_evolution.sql
+      quality/
+        duplicate_person_contracts.sql
 
 README.md
 .gitignore
@@ -131,6 +157,28 @@ The transformation is parameterized using an annual reporting variable:
 vars:
   indemnizatii_year: 2025
 ```
+
+### Analytics Models
+
+The dbt analytics layer now includes derived models designed for reporting, ranking, and quality validation:
+
+- distribution_companii  
+  Salary distribution per institution: min, median, max, and spending totals.
+
+- top_companii_by_spend  
+  Ranks institutions by total remuneration expenditure.
+
+- top_earners  
+  Top earning individuals, based on aggregated annual compensation.
+
+- yearly_salary_evolution  
+  Year-level financial summary to support multiple-year comparisons.
+
+- duplicate_person_contracts  
+  Highlights data inconsistencies where repeated records exist for the same individual within an institution.
+
+- organization_pay_spread  
+  Computes compensation spread per organization, useful for inequality analysis.
 
 ## Pipeline Architecture
 Raw CSV → Python ETL → Postgres (indemnizatii_clean) → DBT staging → Analytics layer

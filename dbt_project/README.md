@@ -24,6 +24,16 @@ This dbt project represents the analytical transformation layer of the Romanian 
 - dim_companii  
   Canonical list of companies.
 
+### Analytics Models
+The analytics layer extends the fact and dimension models by providing aggregated business metrics:
+
+- distribution_companii – Salary distribution metrics per institution
+- top_companii_by_spend – Total spend ranking of public companies
+- top_earners – Highest paid individuals by aggregated annual compensation
+- yearly_salary_evolution – Aggregated yearly salary metrics for temporal comparison
+- organization_pay_spread – Pay disparity by institution
+- duplicate_person_contracts – Quality check exposing potential duplicated assignments
+
 ## Configuration
 Reporting year is configured in dbt_project.yml:
 
