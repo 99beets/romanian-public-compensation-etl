@@ -8,7 +8,7 @@ SELECT
     SUM(f.total_plata) AS total_spend,
     COUNT(*) AS num_people
 FROM {{ ref('fact_indemnizatii') }} f
-JOIN {{ ref('dum_companii') }} c
+JOIN {{ ref('dim_companii') }} c
     ON f.company_id = c.company_id
 GROUP BY 1, 2
 ORDER BY total_spend DESC
