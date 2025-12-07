@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: int_indemnizatii_base
+    description: Intermediate layer for enriched renumeration data
+    columns:
+      - name: pk
+        tests:
+         - unique
+          - not_null
+
+      - name: total_plata
+        tests:
+          - not_null
+      
+  - name: int_persoane_clean
+    columns:
+      - name: person_id
+        tests:
+          - unique
+          - not_null
+  
+  - name: int_companii_clean
+    columns:
+      - name: company_id
+        tests:
+          - unique
+          - not_null
