@@ -1,0 +1,10 @@
+SELECT
+    f.an_raportare,
+    p.nume as persoana,
+    SUM(f.total_plata) AS total_salary
+FROM {{ ref('fact_indemnizatii') }} f
+JOIN {{ ref('dim_persoane') }} p
+    ON f.person_id = p.person_id
+GROUP BY 1, 2
+ORDER BY total_salary DESC
+LIMIT 50
