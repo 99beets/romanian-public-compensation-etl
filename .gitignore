@@ -26,3 +26,23 @@ dbt_project/target/
 dbt_project/logs/
 dbt_project/dbt_packages/
 
+# Terraform state
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*
+terraform.tfstate.backup
+
+# Terraform vars (secrets)
+terraform.tfvars
+*.auto.tfvars
+
+# Terraform working dirs
+.terraform/
+.terraform.lock.hcl
+
+# AWS credentials (if any)
+.aws/
+
+# Build artifacts
+infra/terraform/lambda_package.zip
