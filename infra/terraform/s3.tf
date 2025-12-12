@@ -42,10 +42,11 @@ resource "aws_s3_bucket_logging" "artifacts" {
 }
 
 resource "aws_s3_bucket_lifecycle_configuration" "artifacts" {
-  bucket = aws_s3_bucket.logs.id
+  bucket = aws_s3_bucket.artifacts.id
   rule {
     id     = "move-to-ia"
     status = "Enabled"
+    filter {}
     transition {
       days          = 30
       storage_class = "INTELLIGENT_TIERING"
