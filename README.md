@@ -183,6 +183,47 @@ The dbt analytics layer now includes derived models designed for reporting, rank
 ## Pipeline Architecture
 Raw CSV → Python ETL → Postgres (indemnizatii_clean) → DBT staging → Analytics layer
 
+## Cloud Infrastructure (Terraform)
+
+This project includes a complete AWS deployment of the ETL pipeline using Terraform.
+The infrastructure layer provides:
+
+### S3 Storage
+- `artifacts` bucket for ETL packages, metadata, and intermediate assets  
+- `logs` bucket for centralized access logging  
+- Versioning, encryption, and lifecycle policies
+
+### Lambda Execution Scaffold
+A deployable ETL entrypoint for future automation (e.g., EventBridge scheduled runs).
+
+### PostgreSQL (Amazon RDS)
+A managed Postgres instance used as the target for the cleaned ETL data.
+Terraform provisions:
+- DB subnet group
+- Security group with IP-restricted inbound rules  
+- Parameterized DB name, username, password  
+- Outputs exposing the connection endpoint
+
+Connect using:
+```
+psql -h <rds_endpoint> -U <username> -d romanian_comp
+```
+
+### IAM Roles
+Least-privilege role + inline policy for Lambda to interact with S3.
+
+### Deployment Commands
+```
+cd infra/terraform
+terraform init
+terraform apply -var-file="dev.auto.tfvars"
+```
+
+This infrastructure is intentionally minimal, focusing on:
+- platform readiness  
+- reproducibility  
+- clean separation between compute, storage, and orchestration  
+
 ### Data Source and Use Disclaimer
 
 This project uses publicly available data published by the Autoritatea pentru Monitorizarea și Evaluarea Performanțelor Întreprinderilor Publice (AMEPIP), Romania.
