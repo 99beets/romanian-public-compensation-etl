@@ -1,11 +1,9 @@
 version: 2
 
 sources:
-  - name: indemnizatii_source
+  - name: raw
+    schema: raw
     description: "Source PostgreSQL tables containing cleaned compensation data."
-    database: "{{ var('db_name', 'indemnizatii') }}"
-    schema: "{{ var('db_schema', 'public') }}"
-    
     tables:
       - name: indemnizatii_clean
         identifier: indemnizatii_clean
