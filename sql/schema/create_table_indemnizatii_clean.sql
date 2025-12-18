@@ -1,4 +1,4 @@
-CREATE TABLE indemnizatii_clean (
+CREATE TABLE raw.indemnizatii_clean (
     id SERIAL PRIMARY KEY,
     nr_crt INT,
     autoritate_tutelara TEXT,

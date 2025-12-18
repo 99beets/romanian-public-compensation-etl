@@ -14,10 +14,10 @@ conn_params = {
 csv_path = r"C:/data-eng-practice/postgresql/sql-indemnizatii-nominale/data/indemnizatii_clean.csv"
 
 # SQL commands
-truncate_sql = "TRUNCATE TABLE indemnizatii_clean RESTART IDENTITY;"
+truncate_sql = "TRUNCATE TABLE raw.indemnizatii_clean RESTART IDENTITY;"
 
 copy_sql = f"""
-COPY indemnizatii_clean (
+COPY raw.indemnizatii_clean (
     nr_crt,
     autoritate_tutelara,
     intreprindere,
