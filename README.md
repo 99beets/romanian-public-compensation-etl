@@ -18,6 +18,7 @@ scripts/
     data_clean.py                      # Core cleaning and normalization logic
     validate_and_export.py             # Structural validation of raw CSV
     reload_indemnizatii_clean.py       # Bulk load into PostgreSQL
+    upload_to_s3.py                    # Upload cleaned dataset to S3 (ingestion boundary)
     run_pipeline_clean.py              # Orchestrates cleaning + loading process
 
 tools/
@@ -28,7 +29,6 @@ tools/
 sql/
 ├── schema/
 │     create_table_indemnizatii_clean.sql   # DDL for PostgreSQL loading table
-│
 └── queries/
       clean/
         avg_compensation_by_role.sql
@@ -117,6 +117,27 @@ python scripts/clean/run_pipeline_clean.py
 python scripts/clean/reload_indemnizatii_clean.py
 ```
 
+### 3.1 Upload (S3 – Ingestion Boundary)
+
+After local cleaning and validation, the finalized dataset
+(`indemnizatii_clean.csv`) is uploaded to Amazon S3.
+
+This establishes S3 as a clear ingestion boundary between data preparation and downstream consumers.
+
+Script:
+```
+python scripts/clean/upload_to_s3.py
+```
+
+The upload step:
+- persists a versioned artifact of the cleaned dataset
+- decouples Python ETL from database loading
+- enables future orchestration via Lambda or scheduled jobs
+- aligns with cloud-native ingestion patterns
+
+The S3 object path follows a stable convention:
+s3://<artifacts-bucket>/indemnizatii/indemnizatii_clean.csv
+
 ### 4. SQL Queries Included
 
 Inside sql/queries/clean/ you will find useful analytical test queries, such as:
@@ -181,7 +202,7 @@ The dbt analytics layer now includes derived models designed for reporting, rank
   Computes compensation spread per organization, useful for inequality analysis.
 
 ## Pipeline Architecture
-Raw CSV → Python ETL → Postgres (indemnizatii_clean) → DBT staging → Analytics layer
+Raw CSV → Python ETL → S3 (artifacts) → PostgreSQL (RDS) → dbt → Analytics layer
 
 ## Cloud Infrastructure (Terraform)
 
