@@ -5,6 +5,7 @@ from pathlib import Path
 SCRIPTS = [
     "data_clean.py",
     "validate_and_export.py",
+    "upload_to_s3.py",
     "reload_indemnizatii_clean.py"
 ]
 
