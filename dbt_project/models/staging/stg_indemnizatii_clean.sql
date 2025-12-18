@@ -1,8 +1,8 @@
 WITH src AS (
 
     SELECT *
-    FROM {{ source('indemnizatii_source', 'indemnizatii_clean') }}
-
+    FROM {{ source('raw', 'indemnizatii_clean') }}
+    
 ),
 
 cleaned AS (

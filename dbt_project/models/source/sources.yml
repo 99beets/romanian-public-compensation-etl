@@ -3,16 +3,19 @@ version: 2
 sources:
   - name: raw
     schema: raw
-    description: "Source PostgreSQL tables containing cleaned compensation data."
+    description: "Source PostgreSQL tables containing ingested, cleaned compensation data."
     tables:
       - name: indemnizatii_clean
         identifier: indemnizatii_clean
         description: "Cleaned compensation dataset loaded from Python ETL."
         columns:
+          - name: id
+            description: "Surrogate primary key generated at ingestion time."
+
           - name: nr_crt
             description: "Original row index from the AMEPIP file. Not globally unique. Each 'intreprindere' and 'cui' corresponds to a unique nr_crt."
 
-          - name: autoritate_tutealara
+          - name: autoritate_tutelara
             description: "Supervising authority (autoritate tutelară) that oversees the enterprise."
 
           - name: intreprindere
@@ -38,3 +41,6 @@ sources:
             
           - name: indemnizatie_variabila_num
             description: "Cleaned numeric variable compensation (integer)."
+
+          - name: created_at
+            description: "Timestamp when the row was ingested."
