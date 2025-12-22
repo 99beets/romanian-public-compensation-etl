@@ -4,6 +4,74 @@ This project demonstrates an **end-to-end ETL (Extract, Transform, Load)** workf
 
 The dataset represents nominal compensation payments for Romanian public institutions, extracted from an official PDF source and transformed for structured storage and analysis.
 
+## Running the pipeline locally
+
+This project is designed to be runnable end-to-end in a local development environment using PostgreSQL and Python.
+
+### Prerequisites
+
+- Python 3.10+
+- PostgreSQL (local instance)
+- Git
+- Virtual environment tool (venv, conda, etc.)
+
+### Environment variables
+
+Set the following environment variables before running the pipeline:
+
+- `PGHOST`
+- `PGPORT`
+- `PGDATABASE`
+- `PGUSER`
+- `PGPASSWORD`
+
+(Example for Git Bash / Linux/macOS:)
+
+```bash
+export PGHOST=localhost
+export PGPORT=5432
+export PGDATABASE=your_database
+export PGUSER=you_user
+export PGPASSWORD=your_password
+```
+## Pipeline Execution Flow
+
+The clean ETL pipeline executes in a deterministic, linear order to ensure data quality and reproducibility.
+
+Execution steps:
+
+1. Validate raw CSV structure  
+   Ensures column presence, ordering, and detects structural anomalies from PDF export.
+
+2. Clean and normalize compensation data  
+   Applies text cleanup, salary normalization, numeric inference, and missing key resolution.
+
+3. Export cleaned dataset  
+   Persists a stable, versionable artifact (`indemnizatii_clean.csv`) for downstream use.
+
+4. Load cleaned data into PostgreSQL  
+   Performs a full reload using TRUNCATE + COPY to guarantee idempotent runs.
+
+Primary orchestration entrypoint:
+
+```bash
+python scripts/clean/run_pipeline_clean.py
+```
+
+Optional database reload only:
+```bash
+python scripts/clean/reload_indemnizatii_clean.py
+```
+
+Pipeline outputs:
+- `data/indemnizatii_clean.csv` (cleaned dataset)
+- PostgreSQL table `raw.indemnizatii_clean` (loaded data)
+
+Design notes:
+- The pipeline is intentionally modular to support future orchestration via AWS Lambda or scheduled jobs.
+- S3 acts as the ingestion boundary between Python ETL and downstream consumers.
+- dbt models are built on top of the cleaned relational layer.
+
 ---
 
 ## Project Structure
