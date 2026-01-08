@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: top_earners
+    description: "Top 50 earners by total compensation per reporting year."
+    columns:
+      - name: an_raportare
+        description: "Reporting year."
+        tests:
+          - not_null
+
+      - name: person_id
+        description: "Surrogate key for a person (from dim_persoane)."
+        tests:
+          - not_null
+
+      - name: persoana
+        description: "Person name (display field) from dim_persoane."
+        tests:
+          - not_null
+        
+      - name: total_salary
+        description: "Sum of total_plata for the person in the reporting year."
+        tests:
+          - not_null
