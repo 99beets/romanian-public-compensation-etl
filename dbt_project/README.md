@@ -1,12 +1,29 @@
-# DBT Project: indemnizatii
+# dbt Project — Romanian Public Compensation Analytics
 
-This dbt project represents the analytical transformation layer of the Romanian Public Compensation ETL pipeline. It refines cleaned PostgreSQL records into business-ready models.
+This dbt project represents the **analytical transformation layer** of the Romanian Public Compensation ETL pipeline.
+It transforms cleaned PostgreSQL ingestion tables into **analytics-ready fact, dimension, and reporting models**.
+
+This project demonstrates production-style data modeling, testing, and documentation using dbt on real public-sector compensation data.
+
+The pipeline follows a layered warehouse design:
+
+```
+raw (PostgreSQL ingestion)
+→ staging (standardization & typing)
+→ intermediate (business logic)
+→ marts (facts & dimensions)
+→ analytics (aggregated insights)
+```
+
+---
 
 ## Model Layers
 
 ### Staging
 - stg_indemnizatii  
   Standardizes naming and exposes numeric salary fields.
+
+---
 
 ### Intermediate
 - int_indemnizatii_base  
@@ -16,6 +33,8 @@ This dbt project represents the analytical transformation layer of the Romanian 
 - int_companii_clean  
   Normalizes company names and exposes CUI as company_id.
 
+---
+
 ### Marts (Fact & Dimensions)
 - fact_indemnizatii  
   Annual compensation fact table. One record = person × company × year.
@@ -23,6 +42,8 @@ This dbt project represents the analytical transformation layer of the Romanian 
   Canonical list of persons.
 - dim_companii  
   Canonical list of companies.
+
+---
 
 ### Analytics Models
 The analytics layer extends the fact and dimension models by providing aggregated business metrics:
@@ -33,6 +54,14 @@ The analytics layer extends the fact and dimension models by providing aggregate
 - yearly_salary_evolution – Aggregated yearly salary metrics for temporal comparison
 - organization_pay_spread – Pay disparity by institution
 - duplicate_person_contracts – Quality check exposing potential duplicated assignments
+
+---
+
+## Data Quality
+
+Models include column-level tests (not null, uniqueness) and custom data tests to enforce referential integrity between facts and dimensions.
+
+---
 
 ## Configuration
 Reporting year is configured in dbt_project.yml:
