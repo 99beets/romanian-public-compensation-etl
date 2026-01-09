@@ -21,7 +21,7 @@ SELECT
     b.suma_clean,
     b.variabila_clean,
 
-    {{ var('indemnizatii_var') }} AS an_raportare
+    {{ var('indemnizatii_year') }} AS an_raportare
 FROM b
 LEFT JOIN p
     ON trim(upper(p.nume_normalizat)) = trim(upper(b.nume))
