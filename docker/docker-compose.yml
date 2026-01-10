@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: indemnizatii_postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: indemnizatii
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgres/data
+
+volumes:
+  pgdata:
