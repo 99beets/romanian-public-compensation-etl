@@ -1,0 +1,16 @@
+# Normalize text files to LF in the repo
+* text=auto eol=lf
+
+# Common text formats
+*.sh text eol=lf
+*.sql text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.tf text eol=lf
+*.tfvars text eol=lf
+
+# Windows scripts (if you ever add them)
+*.bat text eol=crlf
+*.ps1 text eol=crlf
