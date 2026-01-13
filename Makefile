@@ -17,6 +17,7 @@ help:
 	@echo "  make logs      - Tail Postgres logs"
 	@echo "  make psql      - Open psql into Postgres"
 	@echo "  make etl       - Run Python ETL to load data"
+	@echo "	 make etl-cloud - Run Python ETL against cloud Postgres (uses .env.cloud)"
 	@echo "  make dbt-run   - Run dbt models"
 	@echo "  make dbt-test  - Run dbt tests"
 	@echo "  make run       - End-to-end: up -> etl -> dbt-run -> dbt-test"
@@ -39,7 +40,7 @@ status:
 wait-db:
 	@echo "Waiting for Postgres to be ready..."
 	@for i in {1..30}; do \
-		if $(COMPOSE) exec -T postgres pg_isready -U postgres -d $${PGDATABASE:-indemnizatii} >/dev/null 2>&1; then \
+		if $(COMPOSE) exec -T postgres pg_isready -U $${PGUSER:-postgres} -d $${PGDATABASE:-indemnizatii} >/dev/null 2>&1; then \
 			echo "Postgres is ready."; exit 0; \
 		fi; \
 		sleep 2; \
@@ -47,7 +48,7 @@ wait-db:
 	echo "Postgres did not become ready in time."; exit 1
 
 psql:
-	$(COMPOSE) exec postgres psql -U postgres -d $${PGDATABASE:-indemnizatii}
+	$(COMPOSE) exec postgres psql -U $${PGUSER:-postgres} -d $${PGDATABASE:-indemnizatii}
 
 # ---- Project-specific commands ----
 
@@ -58,7 +59,7 @@ etl:
 
 etl-cloud:
 	@echo "Running ETL (cloud)..."
-	@source .venv/bin/activate && source tools/set_pg_env.sh && python3 scripts/clean/run_pipeline_clean.py
+	@bash -lc 'source .venv/bin/activate && source tools/set_pg_env.sh cloud && python3 scripts/clean/run_pipeline_clean.py'
 
 dbt-deps:
 	cd dbt_project && dbt deps

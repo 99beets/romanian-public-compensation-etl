@@ -1,20 +1,27 @@
 from dotenv import load_dotenv
+from pathlib import Path
+import os
+import psycopg2
+
 load_dotenv()
 
-import psycopg2
-import os
-
-# Connection configuration
+# Connection configuration (libpq standard variables)
 conn_params = {
-    "host": os.getenv("PG_HOST", "localhost"),
-    "port": os.getenv("PG_PORT", "5432"),
-    "dbname": os.getenv("PG_DB"),
-    "user": os.getenv("PG_USER"),
-    "password": os.getenv("PG_PWD")
+    "host": os.getenv("PGHOST", "localhost"),
+    "port": os.getenv("PGPORT", "5432"),
+    "dbname": os.getenv("PGDATABASE"),
+    "user": os.getenv("PGUSER"),
+    "password": os.getenv("PGPASSWORD")
 }
 
-# File path
-csv_path = r"C:/data-eng-practice/postgresql/sql-indemnizatii-nominale/data/indemnizatii_clean.csv"
+missing = [k for k, v in conn_params.items() if v is None]
+if missing:
+    raise RuntimeError(f"Missing required DB env vars: {missing}")
+
+# File path (portable, repo-relative)
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+csv_path = PROJECT_ROOT / "data" / "indemnizatii_clean.csv"
+
 
 # SQL commands
 truncate_sql = "TRUNCATE TABLE raw.indemnizatii_clean RESTART IDENTITY;"

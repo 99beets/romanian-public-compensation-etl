@@ -2,8 +2,9 @@ import pandas as pd
 import re
 from pathlib import Path
 
-RAW_PATH = Path("data/indemnizatii.csv")
-CLEAN_PATH = Path("data/indemnizatii_clean.csv")
+BASE_DIR = Path(__file__).resolve().parents[2]  # repo root
+RAW_PATH = BASE_DIR / "data" / "indemnizatii.csv"
+CLEAN_PATH = BASE_DIR / "data" / "indemnizatii_clean.csv"
 
 # 1. Read CSV with forgiving parser
 df = pd.read_csv(
