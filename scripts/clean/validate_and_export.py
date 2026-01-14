@@ -37,4 +37,4 @@ df.to_csv(
 )
 
 print("\n CSV exported safely with full quoting and normalized line endings.")
-print("Ready for PostgreSQL impot using the \\copy command.\n")
+print("Ready for PostgreSQL import using the \\copy command.\n")

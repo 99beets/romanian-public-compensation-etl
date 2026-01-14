@@ -1,6 +1,6 @@
 CREATE SCHEMA IF NOT EXISTS raw;
 
-CREATE TABLE raw.indemnizatii_clean (
+CREATE TABLE IF NOT EXISTS raw.indemnizatii_clean (
     id SERIAL PRIMARY KEY,
     nr_crt INT,
     autoritate_tutelara TEXT,

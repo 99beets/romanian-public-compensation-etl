@@ -54,8 +54,7 @@ psql:
 
 etl:
 	@echo "Running ETL (local)..."
-	@source .venv/bin/activate && python3 scripts/clean/data_clean.py
-	@source .venv/bin/activate && python3 scripts/clean/validate_and_export.py
+	@bash -lc 'source .venv/bin/activate && source tools/set_pg_env.sh local && python3 scripts/clean/run_pipeline_clean.py'
 
 etl-cloud:
 	@echo "Running ETL (cloud)..."
@@ -70,7 +69,7 @@ dbt-run:
 dbt-test:
 	cd dbt_project && dbt test
 
-run: up etl
+run: up etl dbt-run dbt-test
 	@echo "Local quickstart complete."
 
 reset:
