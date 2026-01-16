@@ -1,12 +1,12 @@
 # Romanian Public Compensation Data (ETL Pipeline)
 
-This project demonstrates an **end-to-end ETL (Extract, Transform, Load)** workflow using **Python (pandas)** and **PostgreSQL**.
+This project demonstrates an **end-to-end ETL (Extract, Transform, Load)** workflow using **Python (pandas)** and **PostgreSQL**, **Docker**, and **dbt**.
 
 The dataset represents nominal compensation payments for Romanian public institutions, extracted from an official PDF source and transformed for structured storage and analysis.
 
 ## Running the pipeline locally
 
-This project is designed to be runnable end-to-end in a local development environment using PostgreSQL and Python.
+This project is designed to be runnable end-to-end in a local development environment using Docker (for local PostgreSQL via Docker Compose) and Python.
 
 ### Prerequisites
 
@@ -15,9 +15,36 @@ This project is designed to be runnable end-to-end in a local development enviro
 - Git
 - Virtual environment tool (venv, conda, etc.)
 
-### Environment variables
+## Quickstart (Local)
+
+Prereqs: Docker + Python (venv)
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+cp dbt_project/profiles/profiles.yml.example dbt_project/profiles/profiles.yml
+
+make up
+python -m scripts.ingest.run_ingest
+
+cd dbt_project
+dbt run --profiles-dir profiles
+dbt test --profiles-dir profiles
+```
+Expected:
+
+- raw.indemnizatii_clean loaded (786 rows in current sample)
+
+- dbt creates analytics models and all tests pass
+
+### Environment variables (Cloud/RDS only)
 
 Set the following environment variables before running the pipeline:
+
+For local development using Docker Compose, no manual database environment variables are required.
+These variables are only needed when connecting to cloud PostgreSQL (RDS).
 
 - `PGHOST`
 - `PGPORT`
@@ -55,10 +82,10 @@ Execution steps:
 Primary orchestration entrypoint:
 
 ```bash
-python scripts/clean/run_pipeline_clean.py
+python -m scripts.ingest.run_ingest
 ```
 
-Optional database reload only:
+Optional: run only PDF cleaning and database load:
 ```bash
 python scripts/clean/reload_indemnizatii_clean.py
 ```
@@ -68,8 +95,9 @@ Pipeline outputs:
 - PostgreSQL table `raw.indemnizatii_clean` (loaded data)
 
 Design notes:
-- The pipeline is intentionally modular to support future orchestration via AWS Lambda or scheduled jobs.
-- S3 acts as the ingestion boundary between Python ETL and downstream consumers.
+- Modular stage-based ingestion runner supports multiple data sources (API + PDF).
+- Local development uses Dockerized PostgreSQL for reproducibility.
+- S3 is used as an optional ingestion boundary for cloud workflows.
 - dbt models are built on top of the cleaned relational layer.
 
 ---
@@ -82,10 +110,15 @@ data/
 │   indemnizatii_clean.csv             # Cleaned output generated from ETL
 
 scripts/
+├── ingest/
+|   retry.py                          # Generic retry with exponential backoff
+|   ingest_api.py                     # Sample API ingestion stage
+|   run_ingest.py                     # Unified ingestion orchestrator
+|
 └── clean/
     data_clean.py                      # Core cleaning and normalization logic
     validate_and_export.py             # Structural validation of raw CSV
-    reload_indemnizatii_clean.py       # Bulk load into PostgreSQL
+    load_indemnizatii_clean_to_pg.py   # Bulk load into PostgreSQL
     upload_to_s3.py                    # Upload cleaned dataset to S3 (ingestion boundary)
     run_pipeline_clean.py              # Orchestrates cleaning + loading process
 
@@ -167,6 +200,12 @@ Salary normalization
 Missing nr_crt auto-inferrence
     If a row lacks nr_crt, the pipeline fills it using satble cui -> nr_crt mapping.
 
+The ingestion framework is designed to support:
+- OCR-based extraction for scanned documents (fallback path)
+- NLP-based entity normalization across inconsistent formats
+
+These capabilities are progressively integrated as separate pipeline stages.
+
 ### 3. Load (PostgreSQL)
 Schema:
     sql/schema/create_table_indemnizatii_clean.sql
@@ -182,7 +221,7 @@ Load cleaned data:
 How to Run:
 ```
 python scripts/clean/run_pipeline_clean.py
-python scripts/clean/reload_indemnizatii_clean.py
+python scripts/clean/load_indemnizatii_clean_to_pg.py
 ```
 
 ### 3.1 Upload (S3 – Ingestion Boundary)
@@ -232,7 +271,8 @@ The dbt layer produces:
 Execution steps:
 ```
 cd dbt_project
-dbt build
+dbt run --profiles-dir profiles
+dbt test --profiles-dir profiles
 ```
 
 To generate documentation and lineage view:
@@ -270,7 +310,9 @@ The dbt analytics layer now includes derived models designed for reporting, rank
   Computes compensation spread per organization, useful for inequality analysis.
 
 ## Pipeline Architecture
-Raw CSV → Python ETL → S3 (artifacts) → PostgreSQL (RDS) → dbt → Analytics layer
+API + PDF → Python ingestion → PostgreSQL (raw) → dbt (staging → marts → analytics)
+
+Optional cloud path: Python ETL → S3 (artifacts) → RDS PostgreSQL → dbt
 
 ## Cloud Infrastructure (Terraform)
 

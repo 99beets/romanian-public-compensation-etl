@@ -48,3 +48,6 @@ terraform.tfvars
 
 # Build artifacts
 infra/terraform/lambda_package.zip
+
+# dbt profiles
+dbt_project/profiles/profiles.yml
