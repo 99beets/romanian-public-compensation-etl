@@ -22,6 +22,10 @@ else
     echo "Warning: $ENV_FILE not found. Using existing environment variables only."
 fi
 
+if [[ "$MODE" == "cloud" ]]; then
+    echo "CLOUD MODE ENABLED — destructive operations will affect production DB"
+fi
+
 # Ensure libpq-style vars exist (defaults are LOCAL-friendly)
 export PGHOST="${PGHOST:-localhost}"
 export PGPORT="${PGPORT:-5432}"
