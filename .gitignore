@@ -51,3 +51,4 @@ infra/terraform/lambda_package.zip
 
 # dbt profiles
 dbt_project/profiles/profiles.yml
+dbt_project/profiles/.user.yml
