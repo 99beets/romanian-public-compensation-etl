@@ -1,7 +1,7 @@
 name: 'dbt_project'
 version: '1.0.0'
 
-profile: 'dbt_project'
+profile: 'romanian_compensation'
 
 model-paths: ["models"]
 analysis-paths: ["analyses"]

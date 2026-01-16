@@ -7,6 +7,24 @@ models:
         tests:
           - not_null
           - unique
+
+      - name: person_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_persoane')
+              field: person_id
+      
+      - name: company_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_companii')
+              field: company_id
+        
+      - name: an_raportare
+        tests:
+          - not_null
         
   - name: dim_persoane
     columns:
