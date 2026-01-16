@@ -2,24 +2,40 @@ import subprocess
 import sys
 from pathlib import Path
 
-BASE = Path(__file__).parent
+REPO_ROOT = Path(__file__).resolve().parents[2]
 
-PIPELINE = [
-    "ingest_api.py",
+STAGES = [
+    ("API ingest", "scripts.ingest.ingest_api"),
+    ("PDF/clean pipeline", "scripts.clean.run_pipeline_clean"),
 ]
 
-def run(script):
-    print(f"\n=== Running {script} ===")
+def run_stage(name: str, module: str) -> None:
+    print(f"\n=== Stage: {name} ===")
+    print(f"Running: {module}")
+
     result = subprocess.run(
-        [sys.executable, str(BASE / script)],
+        [sys.executable, "-m", module],
+        cwd=str(REPO_ROOT),
         capture_output=True,
         text=True,
     )
-    print(result.stdout)
+
+    if result.stdout:
+        print(result.stdout)
+    
     if result.stderr:
-        print("STDERR:\n, result.stderr")
+        print("STDERR:", result.stderr)
 
-for s in PIPELINE:
-    run(s)
+    if result.returncode != 0:
+        raise RuntimeError(f"Stage '{name}' failed with exit code {result.returncode}")
 
-print("\nIngestion pipeline complete.")
+    print(f"=== Completed: {name} ===")
+
+def main():
+    for name, script in STAGES:
+        run_stage(name, script)
+    
+    print("\nAll ingestion stages complete.")
+
+if __name__ == "__main__":
+    main()

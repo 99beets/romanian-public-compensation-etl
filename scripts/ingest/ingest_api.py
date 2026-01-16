@@ -1,5 +1,6 @@
 import requests
 import time
+from .retry import retry
 
 URL = "https://jsonplaceholder.typicode.com/posts"  # placeholder public API
 
@@ -10,7 +11,7 @@ def fetch_posts():
 
 def main():
     print("Fetching sample API data...")
-    data = fetch_posts()
+    data = retry(fetch_posts, attempts=3, base_delay_s=1.0)
     print(f"Fetched {len(data)} records from API")
     print("First record:", data[0])
 
