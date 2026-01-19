@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
-set -euo pipefail
+# If the script is executed (not sourced), enable strict mode
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    set -euo pipefail
+fi
 
 # Usage:
 #   source tools/set_pg_env.sh            # loads .env if present
