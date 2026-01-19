@@ -36,7 +36,6 @@ dbt test --profiles-dir profiles
 Expected:
 
 - raw.indemnizatii_clean loaded (786 rows in current sample)
-
 - dbt creates analytics models and all tests pass
 
 ### Environment variables (Cloud/RDS only)
@@ -61,6 +60,7 @@ export PGDATABASE=your_database
 export PGUSER=you_user
 export PGPASSWORD=your_password
 ```
+
 ## Pipeline Execution Flow
 
 The clean ETL pipeline executes in a deterministic, linear order to ensure data quality and reproducibility.
@@ -100,6 +100,40 @@ Design notes:
 - S3 is used as an optional ingestion boundary for cloud workflows.
 - dbt models are built on top of the cleaned relational layer.
 
+## Anomaly Review (Data Quality Triage)
+
+The project includes an anomaly detection and review workflow used to surface
+potential data quality issues in compensation records.
+
+This stage runs **after dbt transformations** and operates on the analytics fact table.
+
+What it flags:
+- zero or missing compensation values
+- implausibly high totals
+- inconsistencies between base and variable compensation components
+- unusual values relative to company peer groups (year + company)
+
+Outputs:
+- CSV review queue for manual inspection
+- optional audit tables for persistent review tracking
+
+Files:
+- `scripts/ai/anomaly_review.py` — anomaly scoring and review classification
+- `sql/schema/create_table_anomaly_review.sql` — audit tables for review workflow
+
+Run example:
+
+```bash
+python scripts/ai/anomaly_review.py \
+  --source analytics.fact_indemnizatii \
+  --year 2025 \
+  --limit 1000 \
+  --min-score 0.5 \
+  --out artifacts/anomaly_candidates_2025.csv
+```
+
+> Note: `fact_indemnizatii` is usually materialized for a single reporting year based on the dbt variable `indemnizatii_year`.
+
 ---
 
 ## Project Structure
@@ -115,17 +149,15 @@ scripts/
 |   ingest_api.py                     # Sample API ingestion stage
 |   run_ingest.py                     # Unified ingestion orchestrator
 |
-└── clean/
-    data_clean.py                      # Core cleaning and normalization logic
-    validate_and_export.py             # Structural validation of raw CSV
-    load_indemnizatii_clean_to_pg.py   # Bulk load into PostgreSQL
-    upload_to_s3.py                    # Upload cleaned dataset to S3 (ingestion boundary)
-    run_pipeline_clean.py              # Orchestrates cleaning + loading process
-
-tools/
-    debug_nrcrt_inference.py           # NR_CRT inference utility
-    find_missing_fields.py             # Identifies undocumented column gaps
-    find_null_rows.py                  # Surface unexpected null patterns
+├── clean/
+|   data_clean.py                      # Core cleaning and normalization logic
+|   validate_and_export.py             # Structural validation of raw CSV
+|   load_indemnizatii_clean_to_pg.py   # Bulk load into PostgreSQL
+|   upload_to_s3.py                    # Upload cleaned dataset to S3 (ingestion boundary)
+|   run_pipeline_clean.py              # Orchestrates cleaning + loading process
+|
+└── ai/
+    anomaly_review.py                  # Anomaly detection and review queue generator
 
 sql/
 ├── schema/
@@ -162,6 +194,11 @@ dbt_project/
         yearly_salary_evolution.sql
       quality/
         duplicate_person_contracts.sql
+
+tools/
+    debug_nrcrt_inference.py           # NR_CRT inference utility
+    find_missing_fields.py             # Identifies undocumented column gaps
+    find_null_rows.py                  # Surface unexpected null patterns
 
 README.md
 .gitignore
@@ -292,22 +329,11 @@ vars:
 The dbt analytics layer now includes derived models designed for reporting, ranking, and quality validation:
 
 - distribution_companii  
-  Salary distribution per institution: min, median, max, and spending totals.
-
 - top_companii_by_spend  
-  Ranks institutions by total remuneration expenditure.
-
 - top_earners  
-  Top earning individuals, based on aggregated annual compensation.
-
 - yearly_salary_evolution  
-  Year-level financial summary to support multiple-year comparisons.
-
 - duplicate_person_contracts  
-  Highlights data inconsistencies where repeated records exist for the same individual within an institution.
-
-- organization_pay_spread  
-  Computes compensation spread per organization, useful for inequality analysis.
+- organization_pay_spread
 
 ## Pipeline Architecture
 API + PDF → Python ingestion → PostgreSQL (raw) → dbt (staging → marts → analytics)

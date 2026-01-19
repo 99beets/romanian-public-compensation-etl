@@ -17,6 +17,7 @@ Thumbs.db
 data/indemnizatii_enriched.csv
 data/*.bak
 data/*.tmp
+artifacts/*.csv
 
 # Legacy folders
 scripts/legacy/
