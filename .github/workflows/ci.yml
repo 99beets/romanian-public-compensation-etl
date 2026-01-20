@@ -26,10 +26,14 @@ jobs:
         run: |
           python -m compileall scripts
         
+      - name: Prepare dbt profile (CI)
+        working-directory: dbt_project
+        run: cp profiles/profiles.yml.example profiles/profiles.yml
+
       - name: dbt deps
         working-directory: dbt_project
-        run: dbt deps
+        run: dbt deps --profiles-dir profiles
       
       - name: dbt compile
         working-directory: dbt_project
-        run: dbt compile
+        run: dbt compile --profiles-dir profiles

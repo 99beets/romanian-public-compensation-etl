@@ -1,5 +1,5 @@
 romanian_compensation:
-  target: local
+  target: ci
   outputs:
     local:
       type: postgres
