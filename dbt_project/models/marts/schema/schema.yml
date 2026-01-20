@@ -12,15 +12,17 @@ models:
         tests:
           - not_null
           - relationships:
-              to: ref('dim_persoane')
-              field: person_id
+              arguments:
+                to: ref('dim_persoane')
+                field: person_id
       
       - name: company_id
         tests:
           - not_null
           - relationships:
-              to: ref('dim_companii')
-              field: company_id
+              arguments:
+                to: ref('dim_companii')
+                field: company_id
         
       - name: an_raportare
         tests:
