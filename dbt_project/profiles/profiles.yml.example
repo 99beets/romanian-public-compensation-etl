@@ -10,3 +10,13 @@ romanian_compensation:
       dbname: indemnizatii
       schema: analytics
       threads: 2
+
+    ci:
+      type: postgres
+      host: localhost
+      user: your_user
+      password: your_password
+      port: 5432
+      dbname: indemnizatii
+      schema: analytics
+      threads: 2
