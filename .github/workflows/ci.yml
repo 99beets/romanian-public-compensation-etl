@@ -9,6 +9,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_USER: your_user
+          POSTGRES_PASSWORD: your_password
+          POSTGRES_DB: indemnizatii
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready" -U your_user -d indemnizatii
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
     steps:
       - uses: actions/checkout@v4
 
@@ -30,6 +45,14 @@ jobs:
         working-directory: dbt_project
         run: cp profiles/profiles.yml.example profiles/profiles.yml
 
+      - name: Wait for Postgres
+        run: |
+          for i in {1..30}; do
+            pg_isready -h localhost -p 5432 -U your_user -d indemnizatii && exit
+            sleep 1
+          done
+          echo "Postgres did not become ready in time" && exit 1
+
       - name: dbt deps
         working-directory: dbt_project
         run: dbt deps --profiles-dir profiles
@@ -37,3 +60,4 @@ jobs:
       - name: dbt compile
         working-directory: dbt_project
         run: dbt compile --profiles-dir profiles
+        
