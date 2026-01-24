@@ -102,6 +102,11 @@ Design notes:
 
 ---
 
+## Architecture decisions (ADRs)
+See `docs/decisions/` for short records explaining key design choices (e.g., S3 ingestion boundary).
+
+---
+
 ## Project Structure
 
 ```
