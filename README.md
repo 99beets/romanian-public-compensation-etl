@@ -4,6 +4,34 @@ This project demonstrates an **end-to-end ETL (Extract, Transform, Load)** workf
 
 The dataset represents nominal compensation payments for Romanian public institutions, extracted from an official PDF source and transformed for structured storage and analysis.
 
+---
+
+## Data Lineage (High-level)
+
+```text
+AMEPIP PDFs
+    │
+    ▼
+Python Ingestion
+    │
+    ▼
+Cleaning & Normalisation
+    │
+    ▼
+PostgreSQL (raw)
+    │
+    ▼
+dbt (staging → intermediate → marts)
+    │
+    ▼
+Analytics & Anomaly Detection
+```
+
+For a detailed architectural breakdown, see  
+[`docs/architecture/data-lineage.md`](docs/architecture/data-lineage.md)
+
+---
+
 ## Running the pipeline locally
 
 This project is designed to be runnable end-to-end in a local development environment using Docker (for local PostgreSQL via Docker Compose) and Python.
