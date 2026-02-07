@@ -1,8 +1,12 @@
 # Romanian Public Compensation Data (ETL Pipeline)
 
-This project demonstrates an **end-to-end ETL (Extract, Transform, Load)** workflow using **Python (pandas)** and **PostgreSQL**, **Docker**, and **dbt**.
+## What this project demonstrates
 
-The dataset represents nominal compensation payments for Romanian public institutions, extracted from an official PDF source and transformed for structured storage and analysis.
+- End-to-end ETL design
+- Data cleaning of messy real-world public datasets
+- PostgreSQL and dbt dimensional modelling
+- Infrastructure-as-Code with Terraform
+- Reproducible local and cloud environments
 
 ---
 
@@ -29,6 +33,19 @@ Analytics & Anomaly Detection
 
 For a detailed architectural breakdown, see  
 [`docs/architecture/data-lineage.md`](docs/architecture/data-lineage.md)
+
+---
+
+## Repository Overview
+
+Key directories:
+
+- `scripts/` – ETL ingestion, cleaning, and orchestration logic  
+- `dbt_project/` – transformation models, tests, and analytics layer  
+- `infra/terraform/` – Cloud infrastructure definitions  
+- `docs/` – architecture notes, ADRs, and runbooks  
+- `sql/` – validation and analytical queries  
+- `data/` – sample raw and cleaned datasets  
 
 ---
 
