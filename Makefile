@@ -76,3 +76,11 @@ reset:
 	@echo "!!! This will destroy the database volume. Continue? (Ctrl+C to cancel) !!!"
 	@sleep 2
 	$(COMPOSE) down -v
+
+bootstrap:
+	python3 -m venv .venv
+	. .venv/bin/activate && pip install -r requirements.txt
+
+clean:
+	rm -f data/*_clean.csv
+	rm -rf __pychache__
