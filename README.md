@@ -34,6 +34,10 @@ Analytics & Anomaly Detection
 For a detailed architectural breakdown, see  
 [`docs/architecture/data-lineage.md`](docs/architecture/data-lineage.md)
 
+## Data Lineage (dbt)
+
+![dbt lineage](docs/images/dbt_lineage.png)
+
 ---
 
 ## Repository Overview
