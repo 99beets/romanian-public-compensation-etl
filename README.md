@@ -34,6 +34,12 @@ Analytics & Anomaly Detection
 For a detailed architectural breakdown, see  
 [`docs/architecture/data-lineage.md`](docs/architecture/data-lineage.md)
 
+```markdown
+## Architecture Overview
+
+See detailed diagram: [Pipeline Architecture](docs/architecture/pipeline-architecture.md)
+```
+
 ## Data Lineage (dbt)
 
 ![dbt lineage](docs/images/dbt_lineage.png)
