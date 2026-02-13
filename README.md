@@ -10,7 +10,7 @@
 
 ---
 
-## Data Lineage (High-level)
+## Pipeline Overview (High-level)
 
 ```text
 AMEPIP PDFs
@@ -34,11 +34,10 @@ Analytics & Anomaly Detection
 For a detailed architectural breakdown, see  
 [`docs/architecture/data-lineage.md`](docs/architecture/data-lineage.md)
 
-```markdown
 ## Architecture Overview
 
 See detailed diagram: [Pipeline Architecture](docs/architecture/pipeline-architecture.md)
-```
+
 
 ## Data Lineage (dbt)
 
@@ -46,7 +45,40 @@ See detailed diagram: [Pipeline Architecture](docs/architecture/pipeline-archite
 
 ---
 
+## Example Analytics Output
+
+Example query:
+
+```
+reporting_year |        person         | total_salary_ron 
+----------------+-----------------------+------------------
+           2025 | JUDE ARISTOTEL MARIUS | 2,141,100
+           2025 | POPESCU RĂZVAN        | 2,141,100
+           2025 | GHIȚĂ COSMIN          | 1,667,118
+           2025 | CONSTANTIN RADU IOAN  | 1,636,757
+           2025 | BADEA BOGDAN NICOLAE  | 1,636,757
+           2025 | BORBELY KAROLY        | 1,636,757
+           2025 | RADOI IANAS           | 1,636,757
+           2025 | FETITA MARIAN         | 1,636,757
+           2025 | ADAM DANIEL           | 1,519,800
+           2025 | TRÂMBIȚAȘ GABRIELA    | 927,810
+```
+
+```sql
+SELECT 
+    an_raportare AS reporting_year,
+    persoana AS person,
+    to_char(total_salary, 'FM9,999,999,999') AS total_salary_ron
+FROM analytics.top_earners
+ORDER BY total_salary DESC
+LIMIT 10;
+```
+
+---
+
 ## Repository Overview
+
+The repository is structured to mirror a production data platform, separating ingestion, transformation, infrastructure, and analytics layers.
 
 Key directories:
 
