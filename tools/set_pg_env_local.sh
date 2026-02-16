@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-set -euo pipefail
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+  set -euo pipefail
+fi
 
 # Local Docker Postgres defaults
 export PGHOST="${PGHOST:-localhost}"
