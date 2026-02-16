@@ -19,23 +19,27 @@ if not csv_path.exists():
 
 # Connection configuration (libpq standard variables)
 conn_params = {
-    "host": os.getenv("PGHOST", "localhost"),
-    "port": os.getenv("PGPORT", "5432"),
-    "dbname": os.getenv("PGDATABASE"),
-    "user": os.getenv("PGUSER"),
-    "password": os.getenv("PGPASSWORD")
+    "host": os.getenv("PGHOST") or os.getenv("DB_HOST") or "localhost",
+    "port": os.getenv("PGPORT") or os.getenv("DB_PORT") or os.getenv("port") or "5432",
+    "dbname": os.getenv("PGDATABASE") or os.getenv("DB_NAME"),
+    "user": os.getenv("PGUSER") or os.getenv("DB_USER"),
+    "password": os.getenv("PGPASSWORD") or os.getenv("DB_PASSWORD")
 }
 
-missing = [k for k, v in conn_params.items() if not v]
+required = ["host", "port", "dbname", "user"]
+missing = [k for k in required if not conn_params.get(k)]
 if missing:
-    raise RuntimeError(f"Missing required DB env vars: {missing}")
+    raise RuntimeError(f"Missing required DB connection params: {missing}")
 
 LOCAL_HOSTS = {"localhost", "127.0.0.1", "postgres", "host.docker.internal"}
-pghost = (os.getenv("PGHOST") or "").strip()
+host = (conn_params["host"] or "").strip()
 allow_cloud = (os.getenv("ALLOW_CLOUD_TRUNCATE") or "").strip().lower() == "true"
 
-if pghost not in LOCAL_HOSTS and not allow_cloud:
-    raise RuntimeError(f"Refusing destructive operations. PGHOST={pghost!r}")
+if host not in LOCAL_HOSTS and not allow_cloud:
+    raise RuntimeError(f"Refusing destructive operations. host={host!r}")
+
+if host not in LOCAL_HOSTS and allow_cloud:
+    print("WARNING: cloud truncate enabled via ALLOW_CLOUD_TRUNCATE=true", file=sys.stderr)
 
 truncate_sql = "TRUNCATE TABLE raw.indemnizatii_clean RESTART IDENTITY;"
 
