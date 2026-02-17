@@ -76,6 +76,34 @@ LIMIT 10;
 
 ---
 
+## Pipeline execution
+
+Run the pipeline:
+
+    python scripts/run_pipeline.py
+
+### What happens during a run
+The pipeline executes the following stages in order:
+
+1. Data cleaning and normalization  
+2. Validation and export  
+3. Loading cleaned data into PostgreSQL  
+
+### Run summary
+After execution, a summary file is written to:
+
+    logs/run_summary.md
+
+This file records:
+- execution timestamp (UTC)
+- steps executed
+- runtime duration
+- failure stage (if any)
+
+This helps with debugging and reproducibility of ETL runs.
+
+---
+
 ## Repository Overview
 
 The repository is structured to mirror a production data platform, separating ingestion, transformation, infrastructure, and analytics layers.
