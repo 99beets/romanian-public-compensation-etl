@@ -3,6 +3,7 @@ import platform
 import subprocess
 import sys
 import time
+import argparse
 from pathlib import Path
 from datetime import datetime, timezone
 
@@ -26,7 +27,7 @@ def has_aws_creds() -> bool:
     )
 
 # Pipeline stage selection
-def build_scripts() -> list[str]:
+def build_scripts() -> list[Path]:
     # Note: adjust these paths if stage scripts are moved.
     stages = [
         SCRIPTS_DIR / "clean" / "data_clean.py",
@@ -118,7 +119,7 @@ def write_run_summary(
 - User: {user}
 
 ## Steps executed
-{chr(10).join([f"- {s}" for s in steps])}
+{steps_lines}
 
 ## Failure
 - Failed step: {failed_line}
@@ -160,6 +161,14 @@ def run(script_path: Path) -> tuple[bool, float]:
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Run ETL pipeline")
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Show which stages would run without executing them",
+    )
+    args = parser.parse_args()
+
     print_environment_once()
 
     scripts_to_run = build_scripts()
@@ -174,9 +183,15 @@ def main():
         )
         sys.exit(2)
 
+    # Dry-run mode
+    if args.dry_run:
+        print("\nDRY RUN MODE - No stages will be executed.\n")
+        for s in scripts_to_run:
+            print(f"Would run: {s.relative_to(REPO_ROOT)}")
+        return
+
     steps_executed: list[Path] = []
-    failed_step: str | None = None
-    overall_start = time.time()
+    failed_step: Path | None = None
     status = "Success"
     overall_start = time.time()
 
