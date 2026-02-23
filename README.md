@@ -89,18 +89,32 @@ The pipeline executes the following stages in order:
 2. Validation and export  
 3. Loading cleaned data into PostgreSQL  
 
-### Run summary
-After execution, a summary file is written to:
+### Run artifacts (logging & summary)
 
-    logs/run_summary.md
+Each pipeline execution generates structured artifacts under:
 
-This file records:
+```
+logs/pipeline/
+```
+
+Artifacts include:
+
+- `pipeline_<timestamp>.log` – full structured log (UTC timestamps, stage start/end, captured stdout/stderr)
+- `run_summary.md` – high-level execution summary
+
+The summary records:
+
 - execution timestamp (UTC)
-- steps executed
+- Git commit SHA
 - runtime duration
+- resolved database configuration
+- steps executed
 - failure stage (if any)
+- link to the corresponding log file
 
-This helps with debugging and reproducibility of ETL runs.
+A retention policy automatically keeps the most recent 20 pipeline logs to prevent unbounded growth.
+
+This design mirrors production ETL systems where each run produces durable, auditable artifacts.
 
 ---
 
