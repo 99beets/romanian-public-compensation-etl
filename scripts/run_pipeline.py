@@ -5,6 +5,8 @@ import sys
 import time
 import argparse
 import logging
+import json
+import socket
 from pathlib import Path
 from datetime import datetime, timezone
 
@@ -51,23 +53,22 @@ def build_scripts() -> list[Path]:
     return stages
 
 # Logging
-def setup_logging() -> tuple[logging.Logger, Path]:
+def setup_logging(run_id: str) -> tuple[logging.Logger, Path]:
     PIPELINE_LOGS_DIR.mkdir(exist_ok=True)
 
     prune_logs(keep_last=20)
 
-    run_id = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
     log_path = PIPELINE_LOGS_DIR / f"pipeline_{run_id}.log"
 
     logger = logging.getLogger("pipeline")
     logger.setLevel(logging.INFO)
-    logger.propagate = False # avoid duplicate logs if root handlers exist
+    logger.propagate = False  # avoid duplicate logs if root handlers exist
 
     if logger.handlers:
         logger.handlers.clear()
-    
+
     formatter = logging.Formatter("%(asctime)sZ [%(levelname)s] %(message)s")
-    formatter.converter = time.gmtime # force UTC timestamps
+    formatter.converter = time.gmtime  # force UTC timestamps
 
     fh = logging.FileHandler(log_path, encoding="utf-8")
     fh.setLevel(logging.INFO)
@@ -88,6 +89,22 @@ def pretty_path(p: Path) -> str:
     except Exception:
         return str(p)
 
+def prune_logs(*, keep_last: int = 20, pattern: str = "pipeline_*.log") -> None:
+    LOGS_DIR.mkdir(exist_ok=True)
+    PIPELINE_LOGS_DIR.mkdir(exist_ok=True)
+
+    logs = sorted(
+        PIPELINE_LOGS_DIR.glob(pattern),
+        key=lambda p: p.stat().st_mtime,
+        reverse=True,
+    )
+    for old in logs[keep_last:]:
+        try:
+            old.unlink()
+        except Exception:
+            pass
+
+# Logging
 def log_environment_once(logger: logging.Logger) -> None:
     host = os.getenv("PGHOST") or os.getenv("DB_HOST") or "localhost"
     port = os.getenv("PGPORT") or os.getenv("DB_PORT") or "5432"
@@ -98,17 +115,14 @@ def log_environment_once(logger: logging.Logger) -> None:
     logger.info("Python version: %s", platform.python_version())
     logger.info("Executable    : %s", sys.executable)
     logger.info("OS            : %s %s", platform.system(), platform.release())
-    logger.info("Database (resolved) host=%s port=%s db=%s user=%s", host, port, dbname, user)
+    logger.info(
+        "Database (resolved) host=%s port=%s db=%s user=%s", 
+        host, 
+        port, 
+        dbname, 
+        user,
+        )
     logger.info("===========================")
-
-def prune_logs(*, keep_last: int = 20, pattern: str = "pipeline_*.log") -> None:
-    LOGS_DIR.mkdir(exist_ok=True)
-    logs = sorted(PIPELINE_LOGS_DIR.glob(pattern), key=lambda p: p.stat().st_mtime, reverse=True)
-    for old in logs[keep_last:]:
-        try:
-            old.unlink()
-        except Exception:
-            pass
 
 def get_git_sha(logger: logging.Logger) -> str:
     try:
@@ -170,6 +184,13 @@ def write_run_summary(
     path.write_text(content, encoding="utf-8")
     return path
 
+def append_run_record(*, record: dict) -> Path:
+    PIPELINE_LOGS_DIR.mkdir(exist_ok=True)
+    path = PIPELINE_LOGS_DIR / "pipeline_runs.jsonl"
+    with path.open("a", encoding="utf-8") as f:
+        f.write(json.dumps(record, ensure_ascii=False) + "\n")
+    return path
+
 # Runner
 def run_stage(logger: logging.Logger, script_path: Path) -> tuple[bool, float]:
     stage_name = pretty_path(script_path)
@@ -192,7 +213,12 @@ def run_stage(logger: logging.Logger, script_path: Path) -> tuple[bool, float]:
         logger.warning("[stderr] %s\n%s", stage_name, result.stderr.rstrip())
 
     if result.returncode != 0:
-        logger.error("Stage failed: %s (exit=%s, elapsed=%.1fs)", stage_name, result.returncode, elapsed)
+        logger.error(
+            "Stage failed: %s (exit=%s, elapsed=%.1fs)",
+            stage_name,
+            result.returncode,
+            elapsed,
+        )
         return False, elapsed
 
     logger.info("=== Stage success: %s (elapsed=%.1fs) ===", stage_name, elapsed)
@@ -208,7 +234,8 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    logger, log_path = setup_logging()
+    run_id = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+    logger, log_path = setup_logging(run_id)
     sha = get_git_sha(logger)
 
     logger.info("Pipeline run start (git=%s)", sha)
@@ -239,7 +266,24 @@ def main() -> None:
         logger.info("DRY RUN MODE - No stages will be executed.")
         for s in scripts_to_run:
             logger.info("Would run: %s", pretty_path(s))
+        record = {
+            "run_id": run_id,
+            "completed_at_utc": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
+            "status": "dry_run",
+            "duration_seconds": 0.0,
+            "git_sha": sha,
+            "log_file": pretty_path(log_path),
+            "summary_file": None,
+            "steps_executed": [pretty_path(p) for p in scripts_to_run],
+            "failed_step": None,
+            "upload_enabled": upload_enabled,
+            "host": socket.gethostname(),
+            "python_version": platform.python_version(),
+        }
+        runs_path = append_run_record(record=record)
+        logger.info("Run record appended to: %s", pretty_path(runs_path))
         logger.info("Pipeline run end (dry-run). Log: %s", pretty_path(log_path))
+        return
 
     steps_executed: list[Path] = []
     failed_step: Path | None = None
@@ -263,9 +307,31 @@ def main() -> None:
         log_path=log_path,
         sha=sha,
     )
-    
+
+    record = {
+        "run_id": run_id,
+        "completed_at_utc": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
+        "status": status.lower(),  # success/failed
+        "duration_seconds": round(duration, 2),
+        "git_sha": sha,
+        "log_file": pretty_path(log_path),
+        "summary_file": pretty_path(summary_path),
+        "steps_executed": [pretty_path(p) for p in steps_executed],
+        "failed_step": pretty_path(failed_step) if failed_step else None,
+        "upload_enabled": upload_enabled,
+        "host": socket.gethostname(),
+        "python_version": platform.python_version(),
+    }
+    runs_path = append_run_record(record=record)
+    logger.info("Run record appended to: %s", pretty_path(runs_path))
+
     logger.info("Run summary written to: %s", pretty_path(summary_path))
-    logger.info("Pipeline run end (status=%s, duration=%.1fs). Log: %s", status, duration, pretty_path(log_path))
+    logger.info(
+        "Pipeline run end (status=%s, duration=%.1fs). Log: %s",
+        status,
+        duration,
+        pretty_path(log_path),
+    )
 
     if status == "Failed":
         sys.exit(1)
