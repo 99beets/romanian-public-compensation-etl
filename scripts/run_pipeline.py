@@ -31,19 +31,38 @@ def has_aws_creds() -> bool:
     )
 
 # Pipeline stage selection
-def build_scripts() -> list[Path]:
-    # Note: adjust these paths if stage scripts are moved.
+STAGE_SCRIPTS = {
+    "clean": SCRIPTS_DIR / "clean" / "data_clean.py",
+    "validate": SCRIPTS_DIR / "clean" / "validate_and_export.py",
+    "load": SCRIPTS_DIR / "clean" / "load_indemnizatii_clean_to_pg.py",
+    "upload": SCRIPTS_DIR / "clean" / "upload_to_s3.py"
+}
+
+def build_scripts(selected_stage: str | None = None) -> list[Path]:
+    upload_enabled = os.getenv("PIPELINE_UPLOAD") == "1"
+
+    if selected_stage:
+        if selected_stage == "upload":
+            if not upload_enabled:
+                raise ValueError(
+                    "Upload stage requested but PIPELINE_UPLOAD is not enabled."
+                )
+            if not has_aws_creds():
+                raise ValueError(
+                    "Upload stage requested but AWS credentials were not found."
+                )
+            return [STAGE_SCRIPTS["upload"]]
+        
+        return [STAGE_SCRIPTS[selected_stage]]
+
     stages = [
-        SCRIPTS_DIR / "clean" / "data_clean.py",
-        SCRIPTS_DIR / "clean" / "validate_and_export.py",
-        SCRIPTS_DIR / "clean" / "load_indemnizatii_clean_to_pg.py",
+        STAGE_SCRIPTS["clean"],
+        STAGE_SCRIPTS["validate"],
+        STAGE_SCRIPTS["load"],
     ]
 
-    upload_enabled = os.getenv("PIPELINE_UPLOAD") == "1"
-    upload_stage = SCRIPTS_DIR / "clean" / "upload_to_s3.py"
-
     if upload_enabled and has_aws_creds():
-        stages.append(upload_stage)
+        stages.append(STAGE_SCRIPTS["upload"])
     elif upload_enabled and not has_aws_creds():
         print(
             "!!! PIPELINE_UPLOAD=1 but AWS credentials not found. Skipping upload.",
@@ -232,6 +251,11 @@ def main() -> None:
         action="store_true",
         help="Show which stages would run without executing them",
     )
+    parser.add_argument(
+        "--stage",
+        choices=["clean", "validate", "load", "upload"],
+        help="Run only a specific pipeline stage",
+    )
     args = parser.parse_args()
 
     run_id = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
@@ -239,9 +263,16 @@ def main() -> None:
     sha = get_git_sha(logger)
 
     logger.info("Pipeline run start (git=%s)", sha)
+    if args.stage:
+        logger.info("Selected stage: %s", args.stage)
+        
     log_environment_once(logger)
 
-    scripts_to_run = build_scripts()
+    try:
+        scripts_to_run = build_scripts(args.stage)
+    except ValueError as e:
+        logger.error(str(e))
+        sys.exit(2)
 
     if sys.prefix == sys.base_prefix:
         logger.error("You are not running inside a virtualenv. Activate .venv first.")
@@ -253,7 +284,7 @@ def main() -> None:
         logger.warning("PIPELINE_UPLOAD=1 but AWS credentials not found. Skipping upload stage.")
 
     # Fail fast if loading to PG without DB config
-    load_stage = SCRIPTS_DIR / "clean" / "load_indemnizatii_clean_to_pg.py"
+    load_stage = STAGE_SCRIPTS["load"]
     needs_db = load_stage in scripts_to_run
     if needs_db and not has_db_config():
         logger.error(
