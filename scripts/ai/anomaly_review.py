@@ -25,11 +25,11 @@ def load_db_config_from_env() -> DbConfig:
     Reuses existing set_pg_env.sh / .env workflow.
     """
     return DbConfig(
-        host=os.environ.get("PHGOST", "localhost"),
+        host=os.environ.get("PGHOST", "localhost"),
         port=int(os.environ.get("PGPORT", "5432")),
         dbname=os.environ.get("PGDATABASE", "postgres"),
         user=os.environ.get("PGUSER", "postgres"),
-        password=os.environ.get("PGUSER", "postgres"),
+        password=os.environ.get("PGPASSWORD", "postgres"),
     )
 
 def safe_float(x: Any) -> Optional[float]:
@@ -129,7 +129,7 @@ def compute_anomaly_score(df: pd.DataFrame) -> pd.DataFrame:
                         score += 1.5
                         reasons.append(f"zscore_year_{z:.1f}")
             
-            return score, reasons
+        return score, reasons
         
     for _, r in out.iterrows():
         s, rs = row_score(r)
@@ -188,13 +188,13 @@ def classify_with_llm_or_offline(record: Dict[str, Any]) -> Tuple[Dict[str, Any]
         reasons = record.get("anomaly_reasons", [])
 
         if score >= 6 or any ("negative" in str(x) for x in reasons):
-            result = {"label": "LIKELY_ERROR", "condifdence:": 0.75, "rationale": "High anomaly score / strong rule trigger"}
+            result = {"label": "LIKELY_ERROR", "confidence": 0.75, "rationale": "High anomaly score / strong rule trigger"}
         elif score >= 3:
             result = {"label": "NEEDS_REVIEW", "confidence": 0.6, "rationale": "Moderate anomaly"}
         else:
             result = {"label": "OK", "confidence": 0.55, "rationale": "Weak signal; probably legitimate variation."}
 
-        return {**result, "prompt_sha256": promp_hash, "raw_response_json": None}, "offline", "offline-heuristic"
+        return {**result, "prompt_sha256": prompt_hash, "raw_response_json": None}, "offline", "offline-heuristic"
 
     raise RuntimeError("OPENAI_API_KEY is set but online LLM call is not implemented yet.")
 
@@ -281,12 +281,13 @@ def write_reviews(conn, candidate_ids: List[int], results: List[Dict[str, Any]],
     Writes LLM/offline decision with audit data.
     """
     rows = []
-    for cid, res in zip(candidate_ids, results):
+    for cid, res in zip(candidate_id, results):
         rows.append((
             cid,
             reviewer_type,
             model,
             res["prompt_sha256"],
+            res["label"],
             float(res.get("confidence", 0.0)) if res.get("confidence") is not None else None,
             res["rationale"],
             json.dumps(res.get("raw_response_json")) if res.get("raw_response_json") is not None else None,
@@ -294,7 +295,7 @@ def write_reviews(conn, candidate_ids: List[int], results: List[Dict[str, Any]],
     
     sql = """
       insert into audit.anomaly_reviews
-        (candidate_ids, reviewer_type, model, prompt_sha256, label, confidence, rationale, raw_response_json)
+        (candidate_id, reviewer_type, model, prompt_sha256, label, confidence, rationale, raw_response_json)
       values %s
     """
     with conn.cursor() as cur:
