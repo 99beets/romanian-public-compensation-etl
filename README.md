@@ -130,7 +130,7 @@ Key directories:
 - `docs/` – architecture notes, ADRs, and runbooks  
 - `sql/` – validation and analytical queries  
 - `data/` – sample raw and cleaned datasets  
-
+- `artifacts/` – generated review outputs (ignored by git)
 ---
 
 ## Running the pipeline locally
@@ -194,6 +194,7 @@ export PGPASSWORD=your_password
 
 The clean ETL pipeline executes in a deterministic, linear order to ensure data quality and reproducibility.
 
+
 Execution steps:
 
 1. Validate raw CSV structure  
@@ -231,16 +232,19 @@ Design notes:
 
 ## Anomaly Review (Data Quality Triage)
 
-The project includes an anomaly detection and review workflow used to surface
-potential data quality issues in compensation records.
+The project includes a workflow for identifying suspicious or unusual compensation records.
 
-This stage runs **after dbt transformations** and operates on the analytics fact table.
+This step operates after dbt transformations using the analytical fact table.
 
-What it flags:
+It helps surface potential data quality issues that require manual inspection.
+
+
+Examples of flagged conditions
+
 - zero or missing compensation values
-- implausibly high totals
-- inconsistencies between base and variable compensation components
-- unusual values relative to company peer groups (year + company)
+- implausibly high remuneration totals
+- inconsistent compensation components
+- unusual values relative to peer organizations
 
 Outputs:
 - CSV review queue for manual inspection
@@ -274,28 +278,35 @@ See `docs/decisions/` for short records explaining key design choices (e.g., S3 
 
 ```
 data/
-│   indemnizatii.csv                   # Raw input data from PDF export
-│   indemnizatii_clean.csv             # Cleaned output generated from ETL
+│   indemnizatii.csv                    # Raw input data from PDF export
+│   indemnizatii_clean.csv              # Cleaned output generated from ETL
 
 scripts/
-├── ingest/
-|   retry.py                          # Generic retry with exponential backoff
-|   ingest_api.py                     # Sample API ingestion stage
-|   run_ingest.py                     # Unified ingestion orchestrator
-|
-├── clean/
-|   data_clean.py                      # Core cleaning and normalization logic
-|   validate_and_export.py             # Structural validation of raw CSV
-|   load_indemnizatii_clean_to_pg.py   # Bulk load into PostgreSQL
-|   upload_to_s3.py                    # Upload cleaned dataset to S3 (ingestion boundary)
 |   run_pipeline_clean.py              # Orchestrates cleaning + loading process
 |
+├── ingest/
+|   retry.py                            # Generic retry with exponential backoff
+|   ingest_api.py                       # Sample API ingestion stage
+|   run_ingest.py                       # Unified ingestion orchestrator
+|
+├── clean/
+|   data_clean.py                       # Core cleaning and normalization logic
+|   validate_and_export.py              # Structural validation of raw CSV
+|   load_indemnizatii_clean_to_pg.py    # Bulk load into PostgreSQL
+|   upload_to_s3.py                     # Upload cleaned dataset to S3 (ingestion boundary)
+|
 └── ai/
-    anomaly_review.py                  # Anomaly detection and review queue generator
+    anomaly_review.py                   # Anomaly detection and review queue generator
+
+tools/
+    debug_nrcrt_inference.py            # NR_CRT inference utility
+    find_missing_fields.py              # Identifies undocumented column gaps
+    find_null_rows.py                   # Surface unexpected null patterns
 
 sql/
 ├── schema/
 │     create_table_indemnizatii_clean.sql   # DDL for PostgreSQL loading table
+|     create_table_anomaly_review.sql
 └── queries/
       clean/
         avg_compensation_by_role.sql
@@ -329,14 +340,17 @@ dbt_project/
       quality/
         duplicate_person_contracts.sql
 
-tools/
-    debug_nrcrt_inference.py           # NR_CRT inference utility
-    find_missing_fields.py             # Identifies undocumented column gaps
-    find_null_rows.py                  # Surface unexpected null patterns
-
 README.md
 .gitignore
 ```
+
+## Pipeline Architecture
+
+API + PDF → Python ingestion → PostgreSQL (raw) → dbt (staging → marts → analytics)
+
+Optional cloud path:
+
+Python ETL → S3 (artifacts) → RDS PostgreSQL → dbt
 
 ## Pipeline Overview
 
