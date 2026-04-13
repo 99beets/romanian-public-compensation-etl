@@ -288,7 +288,8 @@ def main() -> None:
     needs_db = load_stage in scripts_to_run
     if needs_db and not has_db_config():
         logger.error(
-            "!!! DB config missing (PGHOST/PGDATABASE/PGUSER or DB_HOST/DB_NAME/DB_USER). Aborting."
+            "Database configuration missing. Expected PGHOST/PGDATABASE/PGUSER "
+            "or DB_HOST/DB_NAME/DB_USER. Aborting."
         )
         sys.exit(2)
 
@@ -365,9 +366,10 @@ def main() -> None:
     )
 
     if status == "Failed":
+        logger.error("Pipeline failed. Exiting with status code 1.")
         sys.exit(1)
 
-    logger.info("\nAll stages complete.")
+    logger.info("All stages complete. Exiting with status code 0.")
 
 if __name__ == "__main__":
     main()

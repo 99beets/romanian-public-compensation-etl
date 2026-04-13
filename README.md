@@ -269,6 +269,18 @@ python scripts/ai/anomaly_review.py \
 
 ---
 
+### Failure handling
+
+The pipeline exits with a non-zero status code when a stage fails or when
+required configuration is missing, making it safer to use in CI/CD workflows.
+
+Each run also generates:
+- a structured pipeline log
+- a markdown run summary
+- a JSONL run record for execution tracking
+
+---
+
 ## Architecture decisions (ADRs)
 See `docs/decisions/` for short records explaining key design choices (e.g., S3 ingestion boundary).
 
