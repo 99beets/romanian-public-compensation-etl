@@ -30,7 +30,8 @@ def has_aws_creds() -> bool:
         or os.getenv("AWS_PROFILE")
     )
 
-# Pipeline stage selection
+# Canonical mapping of pipeline stage names to executable scripts.
+# Used by CLI stage selection and by the default full-run path.
 STAGE_SCRIPTS = {
     "clean": SCRIPTS_DIR / "clean" / "data_clean.py",
     "validate": SCRIPTS_DIR / "clean" / "validate_and_export.py",
@@ -39,6 +40,8 @@ STAGE_SCRIPTS = {
 }
 
 def build_scripts(selected_stage: str | None = None) -> list[Path]:
+    # Upload is optional and only included when explicitly enabled
+    # and credentials are available.
     upload_enabled = os.getenv("PIPELINE_UPLOAD") == "1"
 
     if selected_stage:
@@ -55,6 +58,7 @@ def build_scripts(selected_stage: str | None = None) -> list[Path]:
         
         return [STAGE_SCRIPTS[selected_stage]]
 
+    # Default pipeline order: local ETL first, optional cloud upload last.
     stages = [
         STAGE_SCRIPTS["clean"],
         STAGE_SCRIPTS["validate"],
@@ -71,7 +75,8 @@ def build_scripts(selected_stage: str | None = None) -> list[Path]:
 
     return stages
 
-# Logging
+# Configure per-run file + console logging in UTC and enforce simple
+# retention so pipeline logs do not grow without bound.
 def setup_logging(run_id: str) -> tuple[logging.Logger, Path]:
     PIPELINE_LOGS_DIR.mkdir(exist_ok=True)
 
@@ -108,6 +113,7 @@ def pretty_path(p: Path) -> str:
     except Exception:
         return str(p)
 
+# Keep only the most recent pipeline logs to avoid unbounded local growth.
 def prune_logs(*, keep_last: int = 20, pattern: str = "pipeline_*.log") -> None:
     LOGS_DIR.mkdir(exist_ok=True)
     PIPELINE_LOGS_DIR.mkdir(exist_ok=True)
@@ -123,7 +129,8 @@ def prune_logs(*, keep_last: int = 20, pattern: str = "pipeline_*.log") -> None:
         except Exception:
             pass
 
-# Logging
+# Log resolved runtime and database settings once at startup to make
+# troubleshooting easier when reviewing historical runs.
 def log_environment_once(logger: logging.Logger) -> None:
     host = os.getenv("PGHOST") or os.getenv("DB_HOST") or "localhost"
     port = os.getenv("PGPORT") or os.getenv("DB_PORT") or "5432"
@@ -156,7 +163,8 @@ def get_git_sha(logger: logging.Logger) -> str:
         logger.warning("Could not resolve git SHA: %s", e)
         return "n/a"
 
-# Summary report
+# Write a readable Markdown summary for the latest run so failures
+# can be inspected quickly without opening the full log file.
 def write_run_summary(
     *,
     status: str,
@@ -203,6 +211,8 @@ def write_run_summary(
     path.write_text(content, encoding="utf-8")
     return path
 
+# Append a machine-readable execution record to a JSONL audit trail.
+# This makes pipeline runs easy to inspect or analyse later.
 def append_run_record(*, record: dict) -> Path:
     PIPELINE_LOGS_DIR.mkdir(exist_ok=True)
     path = PIPELINE_LOGS_DIR / "pipeline_runs.jsonl"
@@ -210,7 +220,8 @@ def append_run_record(*, record: dict) -> Path:
         f.write(json.dumps(record, ensure_ascii=False) + "\n")
     return path
 
-# Runner
+# Execute a single pipeline stage as a subprocess, capture stdout/stderr,
+# and return success status plus elapsed runtime.
 def run_stage(logger: logging.Logger, script_path: Path) -> tuple[bool, float]:
     stage_name = pretty_path(script_path)
     logger.info("=== Stage start: %s ===", stage_name)
@@ -293,7 +304,8 @@ def main() -> None:
         )
         sys.exit(2)
 
-    # Dry-run mode
+    # Dry-run validates stage selection and records intent without executing
+    # any pipeline scripts. Useful for debugging and CI verification.
     if args.dry_run:
         logger.info("DRY RUN MODE - No stages will be executed.")
         for s in scripts_to_run:
@@ -322,6 +334,7 @@ def main() -> None:
     status = "Success"
     overall_start = time.time()
 
+    # Execute stages sequentially and stop on first failure.
     for s in scripts_to_run:
         steps_executed.append(s)
         ok, _ = run_stage(logger, s)
