@@ -27,6 +27,8 @@ def retry(
     Raises:
         The last exception raised by the function if all attempts fail.
     """
+
+    # Store last exception so it can be re-raised after all attempts fail
     last_err: Exception | None = None
 
     for attempt in range(1, attempts + 1):
@@ -34,15 +36,19 @@ def retry(
             return fn()
         except retry_on as e:
             last_err = e
+
+            # Stop retrying if this was the final attempt
             if attempt == attempts:
                 break
                 
-            # Exponential backoff with jitter
+            # Exponential backoff: delay grows as 2^(attempt-1)
             delay = min(max_delay_s, base_delay_s * (2 ** (attempt - 1)))
+
+            # Add jitter to avoid synchronized retries (thundering herd problem)
             delay = delay + random.uniform(0, 0.25 * delay)
 
             print(f"[retry] attempt {attempt}/{attempts} failed: {e}. retrying in {delay:.1f}s...")
             time.sleep(delay)
     
-    # If we get here, all attempts failed
+    # If we get here, all attempts failed — re-raise the last exception
     raise last_err
