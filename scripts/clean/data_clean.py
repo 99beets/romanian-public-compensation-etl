@@ -1,12 +1,18 @@
+# Data cleaning pipeline for messy PDF-extracted public salary data.
+# Handles inconsistent formatting, text artifacts, and irregular numeric patterns
+# to produce a normalized dataset suitable for loading into PostgreSQL and dbt.
+
 import pandas as pd
 import re
 from pathlib import Path
 
+# Resolve repository root to ensure consistent file paths across environments
 BASE_DIR = Path(__file__).resolve().parents[2]  # repo root
 RAW_PATH = BASE_DIR / "data" / "indemnizatii.csv"
 CLEAN_PATH = BASE_DIR / "data" / "indemnizatii_clean.csv"
 
-# 1. Read CSV with forgiving parser
+# Use a forgiving CSV parser to handle inconsistent PDF-exported structure
+# (irregular delimiters, malformed rows, unexpected line breaks).
 df = pd.read_csv(
     RAW_PATH,
     dtype=str,
@@ -18,7 +24,8 @@ df = pd.read_csv(
 
 print("After read_csv:", len(df))
 
-# 2. Clean column names: remove diacritics, lowercase, replace spaces and line breaks
+# Normalize column names to ASCII-safe, snake_case format for downstream systems
+# (PostgreSQL/dbt compatibility and easier querying).
 df.columns = [
     re.sub(
         r'_+', '_',  # collapse repeated underscores
@@ -35,10 +42,9 @@ df.columns = [
 
 print("Columns after cleaning:", df.columns)
 
-# 3. Drop empty rows
+# Drop fully empty rows introduced by malformed PDF extraction
 df = df.dropna(how='all')
 
-# 4. Rename columns to shorter names
 df = df.rename(columns={
     'nr.crt': 'nr_crt',
     'autoritate_public_tutelar_(apt)': 'autoritate_tutelara',
@@ -50,7 +56,8 @@ df = df.rename(columns={
     'valoare_indemnizaie_variabila_anual_conform_contract_(brut-lei)*': 'indemnizatie_variabila'
 })
 
-# 5. Clean text cells from embedded line breaks
+# Remove embedded line breaks and whitespace artifacts from PDF extraction
+# to ensure consistent text fields.
 for col in df.select_dtypes(include=["object"]).columns:
     df[col] = (
         df[col]
@@ -59,10 +66,13 @@ for col in df.select_dtypes(include=["object"]).columns:
         .str.strip()
     )
 
-# 6. Replace placeholders with empty strings
+# Replace common placeholder values with empty strings for consistent downstream handling
 df = df.replace(['-', 'N/A', 'n/a', 'null', 'NULL'], '')
 
-# 7. Normalize edge cases
+# Handles multiple irregular salary formats from source data:
+# - sums ("5000+2000")
+# - ranges ("2000/4000")
+# - mixed formatting with spaces and symbols
 def clean_numeric_text(value: str):
     """Extract the numeric monthly base salary from text like '4,455' or '31 530'."""
     if not value or str(value).strip() == '':
@@ -73,13 +83,13 @@ def clean_numeric_text(value: str):
     if text.lower() in {'-', 'n/a', 'nu a fost stabilită'}:
         return ''
 
-    # normalize Unicode spacing
+    # Normalize Unicode spacing
     text = text.replace('\xa0', '').replace('\u202f', ' ')
 
     # Remove unwanted character but keep + - . , /
     cleaned = re.sub(r'[^\d,./+\-]', '', text)
 
-    # Case 1: '+' pattern -> SUM all parts
+    # Case 1: '+' pattern -> sum all numeric components
     if '+' in cleaned:
         parts = cleaned.split("+")
         nums =[]
@@ -92,10 +102,9 @@ def clean_numeric_text(value: str):
         if len(nums) >= 2:
             return str(sum(nums))
         
-        # fallback
         return cleaned
         
-    # Case 2: '/' pattern -> LARGER NUMBER
+    # Case 2: '/' pattern -> choose the larger value (assumed max compensation)
     if '/' in cleaned:
         parts = cleaned.split("/")
         nums = []
@@ -110,6 +119,8 @@ def clean_numeric_text(value: str):
 
     return cleaned
 
+# Split combined "base - variable" salary fields into separate columns.
+# Overwrites indemnizatie_variabila when this pattern is detected.
 def split_dash_into_variable(row):
     """If 'suma' looks like 'base - variable', put the part after '-'
     into 'indemnizatie_variabila' and keep the left part in 'suma'.
@@ -140,7 +151,7 @@ for col in numeric_cols:
     if col in df.columns:
         df[col] = df[col].apply(clean_numeric_text)
 
-# 8. Create suma_num column
+# Convert cleaned salary text into integer-safe numeric columns for downstream analysis
 df["suma_num"] = (
     df["suma"]
     .apply(lambda x: re.sub(r"[^\d]", "", x) if isinstance(x, str) else "")
@@ -148,7 +159,7 @@ df["suma_num"] = (
     .astype(int)
 )
 
-# 8. Create indemnizatie_variabila_num column
+# Create indemnizatie_variabila_num column
 if "indemnizatie_variabila" in df.columns:
     df["indemnizatie_variabila_num"] = (
         df["indemnizatie_variabila"]
@@ -157,10 +168,10 @@ if "indemnizatie_variabila" in df.columns:
         .astype(int)
     )
 
-# 8. Drop empty rows
 df = df.dropna(how='all')
 
-# 9. Ensure nr_crt is string-safe
+# Ensure identifier column is consistently formatted as a string
+# and remove Excel-style ".0" artifacts.
 if 'nr_crt' in df.columns:
     df['nr_crt'] = (
         df['nr_crt']
@@ -170,7 +181,8 @@ if 'nr_crt' in df.columns:
         .replace({'nan': '', 'None': ''})
     )
 
-# 10. Fill missing nr_crt using CUI mapping
+# Infer missing nr_crt values using stable CUI -> nr_crt mapping
+# based on rows where the identifier is already present.
 if 'nr_crt' in df.columns and 'cui' in df.columns:
     # build mapping of cui -> nr_crt from rows that already have nr_crt
     cui_to_nrcrt = (
@@ -186,12 +198,11 @@ if 'nr_crt' in df.columns and 'cui' in df.columns:
         axis=1
     )
 else:
-    print("Warning: Missing 'nr_crt' or 'cui' column - cannot infer values.")
+    print("Warning: Missing 'nr_crt' or 'cui' column — skipping identifier inference.")
 
-# 11. Preview cleaned data
 print(f"Final cleaned row count: {len(df)}")
 print(f"Final columns: {list(df.columns)}")
 
-# 12. Save cleaned file
+# Persist cleaned dataset as a stable, versionable artifact for downstream processing
 df.to_csv(CLEAN_PATH, index=False, encoding='utf-8')
 print(f"Cleaned CSV saved to {CLEAN_PATH}")
