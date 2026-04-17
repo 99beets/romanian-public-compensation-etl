@@ -1,6 +1,8 @@
+# Quick diagnostic script to inspect nr_crt inference inputs and mappings.
+# Helps verify whether missing identifiers can be recovered from existing CUI -> nr_crt pairs.
 import pandas as pd
 
-# 1. Load the same clean file your enrichment script uses
+# Load the same enriched file used in the identifier inference workflow
 path = "data/ind-nom-table-enriched.csv"
 df = pd.read_csv(path, dtype=str, keep_default_na=False)
 
@@ -9,7 +11,7 @@ print(f"Rows: {len(df)}, Columns: {len(df.columns)}")
 print("Columns:", list(df.columns))
 print()
 
-# 2. Check for missing nr_crt values
+# Check whether nr_crt exists and how many values are blank
 if "nr_crt" in df.columns:
     blanks = (df["nr_crt"].astype(str).str.strip() == "").sum()
     print(f"Blank nr_crt count: {blanks}")
@@ -17,7 +19,7 @@ else:
     print(" No column named 'nr_crt' found.")
 print()
 
-# 3. Check for missing CUIs
+# Check whether CUI exists and how many values are blank
 if "cui" in df.columns:
     blanks_cui = (df["cui"].astype(str).str.strip() == "").sum()
     print(f"Blank CUI count: {blanks_cui}")
@@ -25,7 +27,7 @@ else:
     print(" No column named 'cui' found.")
 print()
 
-# 4. Build the mapping dictionary to see how many valid CUI -> nr_crt pairs exist
+# Rebuild the CUI -> nr_crt mapping to inspect how many usable lookup pairs exist
 if "nr_crt" in df.columns and "cui" in df.columns:
     df["cui"] = df["cui"].astype(str).str.strip()
     cui_to_nrcrt = (
@@ -37,7 +39,7 @@ if "nr_crt" in df.columns and "cui" in df.columns:
     print(f"CUI -> nr_crt mapping size: {len(cui_to_nrcrt)} entries")
     print()
 
-    # Show 5 random sample pairs
+    # Show a few sample mappings for quick inspection
     sample = list(cui_to_nrcrt.items())[:5]
     print("Sample mappings:", sample)
 else:
