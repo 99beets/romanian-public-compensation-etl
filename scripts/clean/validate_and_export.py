@@ -29,6 +29,24 @@ expected_cols = len(df.columns)
 invalid_rows = df[df.apply(lambda x: len(x) != expected_cols, axis=1)]
 print(f"\nInvalid rows found in DataFrame: {len(invalid_rows)}")
 
+# Emit a small data quality summary before exporting the validated CSV
+print("\n=== Data Quality Summary ===")
+print(f"Total rows: {len(df)}")
+
+critical_cols = ["autoritate_tutelara", "intreprindere", "cui", "personal", "calitate_membru"]
+rows_with_missing_fields = df[df[critical_cols].apply(lambda x: x.eq("").any(), axis=1)]
+print(f"Rows with missing critical fields: {len(rows_with_missing_fields)}")
+
+if "cui" in df.columns:
+    duplicate_cui_rows = df[
+        df.duplicated(subset=["cui"], keep=False) & df["cui"].str.strip().ne("")
+    ]
+    print(f"Duplicate CUI rows: {len(duplicate_cui_rows)}")
+
+if "nr_crt" in df.columns:
+    blank_nr_crt = (df["nr_crt"].astype(str).str.strip() == "").sum()
+    print(f"Blank nr_crt values: {blank_nr_crt}")
+
 # Re-export CSV with strict quoting and normalized line endings
 # to ensure compatibility with PostgreSQL COPY ingestion
 output_path = BASE_DIR / "data" / "indemnizatii_clean.csv"
@@ -41,5 +59,5 @@ df.to_csv(
     lineterminator='\n'     # enforce consistent newline format across environments
 )
 
-print("\n CSV exported safely with full quoting and normalized line endings.")
+print("\nCSV exported safely with full quoting and normalized line endings.")
 print("Ready for PostgreSQL import using the \\copy command.\n")
