@@ -34,8 +34,13 @@ print("\n=== Data Quality Summary ===")
 print(f"Total rows: {len(df)}")
 
 critical_cols = ["autoritate_tutelara", "intreprindere", "cui", "personal", "calitate_membru"]
-rows_with_missing_fields = df[df[critical_cols].apply(lambda x: x.eq("").any(), axis=1)]
-print(f"Rows with missing critical fields: {len(rows_with_missing_fields)}")
+missing_critical_cols = [col for col in critical_cols if col not in df.columns]
+
+if missing_critical_cols:
+    print(f"Missing critical columns: {missing_critical_cols}")
+else:
+    rows_with_missing_fields = df[df[critical_cols].apply(lambda x: x.eq("").any(), axis=1)]
+    print(f"Rows with missing critical fields: {len(rows_with_missing_fields)}")
 
 if "cui" in df.columns:
     duplicate_cui_rows = df[
