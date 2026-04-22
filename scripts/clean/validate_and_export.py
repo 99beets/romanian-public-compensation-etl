@@ -4,30 +4,33 @@
 import pandas as pd
 import csv
 from pathlib import Path
+import sys
 
 # Resolve repo root (scripts/clean/... -> project root)
 BASE_DIR = Path(__file__).resolve().parents[2]
 
-path = BASE_DIR / "data" / "indemnizatii_clean.csv"
+input_path = BASE_DIR / "data" / "indemnizatii_clean.csv"
+output_path = BASE_DIR / "data" / "indemnizatii_clean_validated.csv"
 
 # Load CSV with a forgiving parser to avoid breaking on minor formatting issues
-df = pd.read_csv(path, dtype=str, on_bad_lines='skip', encoding='utf-8')
+df = pd.read_csv(input_path, dtype=str, on_bad_lines="skip", encoding="utf-8").fillna("")
 
 print(f"Loaded {len(df)} rows and {len(df.columns)} columns.\n")
 
 # Validate raw file structure using csv.reader to detect inconsistent row lengths
 # that pandas may silently tolerate or skip
 print("Checking for inconsistent row lengths in raw CSV")
-with open(path, encoding='utf-8', newline="") as f:
+expected_cols = len(df.columns)
+bad_line_count = 0
+
+with open(input_path, encoding="utf-8", newline="") as f:
     reader = csv.reader(f)
     for i, row in enumerate(reader, start=1):
-        if len(row) != len(df.columns):
-            print(f"Line {i} has {len(row)} columns instead of {len(df.columns)}: {row}")
+        if len(row) != expected_cols:
+            bad_line_count += 1
+            print(f"Line {i} has {len(row)} columns instead of {expected_cols}: {row}")
 
-# Secondary validation inside pandas (defensive check; main structural validation is done on raw CSV)
-expected_cols = len(df.columns)
-invalid_rows = df[df.apply(lambda x: len(x) != expected_cols, axis=1)]
-print(f"\nInvalid rows found in DataFrame: {len(invalid_rows)}")
+print(f"\nRaw CSV rows with inconsistent column counts: {bad_line_count}")
 
 # Emit a small data quality summary before exporting the validated CSV
 print("\n=== Data Quality Summary ===")
@@ -38,31 +41,33 @@ missing_critical_cols = [col for col in critical_cols if col not in df.columns]
 
 if missing_critical_cols:
     print(f"Missing critical columns: {missing_critical_cols}")
-else:
-    rows_with_missing_fields = df[df[critical_cols].apply(lambda x: x.eq("").any(), axis=1)]
-    print(f"Rows with missing critical fields: {len(rows_with_missing_fields)}")
+    sys.exit(1)
 
+rows_with_missing_fields = df[df[critical_cols].apply(lambda x: x.str.strip().eq("").any(), axis=1)]
+print(f"Rows with missing critical fields: {len(rows_with_missing_fields)}")
+
+duplicate_cui_rows = 0
 if "cui" in df.columns:
-    duplicate_cui_rows = df[
-        df.duplicated(subset=["cui"], keep=False) & df["cui"].str.strip().ne("")
-    ]
-    print(f"Duplicate CUI rows: {len(duplicate_cui_rows)}")
+    duplicate_cui_rows = len(
+        df[df.duplicated(subset=["cui"], keep=False) & df["cui"].str.strip().ne("")]
+    )
+    print(f"Duplicate CUI rows: {duplicate_cui_rows}")
 
+blank_nr_crt = 0
 if "nr_crt" in df.columns:
-    blank_nr_crt = (df["nr_crt"].astype(str).str.strip() == "").sum()
+    blank_nr_crt = (df["nr_crt"].str.strip() == "").sum()
     print(f"Blank nr_crt values: {blank_nr_crt}")
 
 # Re-export CSV with strict quoting and normalized line endings
 # to ensure compatibility with PostgreSQL COPY ingestion
-output_path = BASE_DIR / "data" / "indemnizatii_clean.csv"
-
 df.to_csv(
     output_path,
     index=False,
-    encoding='utf-8',
-    quoting=csv.QUOTE_ALL,  # quote all fields to avoid delimiter/formatting issues
-    lineterminator='\n'     # enforce consistent newline format across environments
+    encoding="utf-8",
+    quoting=csv.QUOTE_ALL,
+    lineterminator="\n"
 )
 
 print("\nCSV exported safely with full quoting and normalized line endings.")
+print(f"Validated file written to: {output_path}")
 print("Ready for PostgreSQL import using the \\copy command.\n")
