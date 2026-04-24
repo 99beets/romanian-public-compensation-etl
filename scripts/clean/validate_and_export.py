@@ -1,10 +1,13 @@
 # Validate cleaned CSV output and re-export it in a safe, database-friendly format.
 # Ensures structural consistency and prevents issues during PostgreSQL COPY ingestion.
 
-import pandas as pd
 import csv
-from pathlib import Path
 import sys
+import json
+import pandas as pd
+from pathlib import Path
+from datetime import datetime, timezone
+
 
 # Resolve repo root (scripts/clean/... -> project root)
 BASE_DIR = Path(__file__).resolve().parents[2]
@@ -46,16 +49,25 @@ if missing_critical_cols:
 rows_with_missing_fields = df[df[critical_cols].apply(lambda x: x.str.strip().eq("").any(), axis=1)]
 print(f"Rows with missing critical fields: {len(rows_with_missing_fields)}")
 
-duplicate_cui_rows = 0
-if "cui" in df.columns:
-    duplicate_cui_rows = len(
-        df[df.duplicated(subset=["cui"], keep=False) & df["cui"].str.strip().ne("")]
+names_with_multiple_cui = 0
+
+if {"personal", "cui"}.issubset(df.columns):
+    person_cui_counts = (
+        df.assign(
+            personal_clean=df["personal"].str.strip().str.lower(),
+            cui_clean=df["cui"].str.strip()
+        )
+        .query("personal_clean != '' and cui_clean != ''")
+        .groupby("personal_clean")["cui_clean"]
+        .nunique()
     )
-    print(f"Duplicate CUI rows: {duplicate_cui_rows}")
+
+    names_with_multiple_cui = int((person_cui_counts > 1).sum())
+    print(f"Names appearing under multiple CUI values: {names_with_multiple_cui}")
 
 blank_nr_crt = 0
 if "nr_crt" in df.columns:
-    blank_nr_crt = (df["nr_crt"].str.strip() == "").sum()
+    blank_nr_crt = int((df["nr_crt"].str.strip() == "").sum())
     print(f"Blank nr_crt values: {blank_nr_crt}")
 
 # Re-export CSV with strict quoting and normalized line endings
@@ -67,6 +79,35 @@ df.to_csv(
     quoting=csv.QUOTE_ALL,
     lineterminator="\n"
 )
+
+quality_dir = BASE_DIR / "logs" / "quality"
+quality_dir.mkdir(parents=True, exist_ok=True)
+
+timestamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+
+quality_report = {
+    "run_timestamp_utc": datetime.now(timezone.utc)
+        .replace(microsecond=0)
+        .isoformat()
+        .replace("+00:00", "Z"),
+    "input_file": str(input_path.relative_to(BASE_DIR)),
+    "output_file": str(output_path.relative_to(BASE_DIR)),
+    "row_count": int(len(df)),
+    "column_count": int(len(df.columns)),
+    "bad_line_count": int(bad_line_count),
+    "missing_critical_columns": missing_critical_cols,
+    "rows_with_missing_fields": int(len(rows_with_missing_fields)),
+    "names_with_multiple_cui_review_count": int(names_with_multiple_cui),
+    "blank_nr_crt": int(blank_nr_crt),
+    "status": "success",    
+}
+
+report_path = quality_dir / f"quality_report_{timestamp}.json"
+
+with report_path.open("w", encoding="utf-8") as f:
+    json.dump(quality_report, f, indent=2, ensure_ascii=False)
+
+print(f"Quality report written to: {report_path}")
 
 print("\nCSV exported safely with full quoting and normalized line endings.")
 print(f"Validated file written to: {output_path}")
