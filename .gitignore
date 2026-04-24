@@ -18,6 +18,7 @@ data/indemnizatii_enriched.csv
 data/*.bak
 data/*.tmp
 artifacts/*.csv
+data/*.csv
 
 # Legacy folders
 scripts/legacy/
@@ -47,8 +48,11 @@ terraform.tfvars
 .terraform/
 .terraform.lock.hcl
 
-# AWS credentials (if any)
+# AWS
 .aws/
+aws/*
+awscliv2.zip
+
 
 # Build artifacts
 infra/terraform/lambda_package.zip
@@ -56,3 +60,5 @@ infra/terraform/lambda_package.zip
 # dbt profiles
 dbt_project/profiles/profiles.yml
 dbt_project/profiles/.user.yml
+
+
