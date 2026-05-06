@@ -10,7 +10,7 @@ endif
 COMPOSE := docker compose -f docker/docker-compose.yml
 
 # Declare phony targets (not file-based)
-.PHONY: help up down logs psql wait-db dbt-deps dbt-run dbt-test etl etl-cloud run reset status
+.PHONY: help up down logs psql wait-db dbt-deps dbt-run dbt-test etl etl-cloud run reset status bootstrap clean healthcheck
 
 help:
 	@echo "Targets:"
@@ -25,6 +25,7 @@ help:
 	@echo "  make run       - End-to-end: up -> etl -> dbt-run -> dbt-test"
 	@echo "  make reset     - Reset DB volume (DESTROYS DATA)"
 	@echo "  make status    - Show docker compose status"
+	@echo "  make healthcheck - Check PostgreSQL connectivity"
 
 # Start local Postgres and wait until it's ready to accept connections
 up:
@@ -39,9 +40,13 @@ down:
 logs:
 	$(COMPOSE) logs -f postgres
 
-# Show container status
+# Show container and database connectivity status
 status:
-	$(COMPOSE) ps
+	@echo "=== Docker Compose Services ==="
+	@$(COMPOSE) ps
+	@echo ""
+	@echo "=== PostgreSQL Connectivity ==="
+	@pg_isready -h $(PGHOST) -p $(PGPORT) -U $(PGUSER)
 
 # Wait for Postgres readiness using pg_isready (retry loop with timeout)
 wait-db:
@@ -101,3 +106,8 @@ bootstrap:
 clean:
 	rm -f data/*_clean.csv
 	rm -rf __pychache__
+
+healthcheck:
+	@echo "Checking PostgreSQL connection..."
+	@pg_isready -h $(PGHOST) -p $(PGPORT) -U $(PGUSER)
+
