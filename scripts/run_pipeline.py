@@ -7,6 +7,7 @@ import argparse
 import logging
 import json
 import socket
+import psycopg2
 from pathlib import Path
 from datetime import datetime, timezone
 
@@ -215,10 +216,28 @@ def write_run_summary(
 # This makes pipeline runs easy to inspect or analyse later.
 def append_run_record(*, record: dict) -> Path:
     PIPELINE_LOGS_DIR.mkdir(exist_ok=True)
+
+    # JSONL chosen intentionally over a single JSON document:
+    # append-only, easy to stream, grep, parse, and ingest later.
     path = PIPELINE_LOGS_DIR / "pipeline_runs.jsonl"
     with path.open("a", encoding="utf-8") as f:
         f.write(json.dumps(record, ensure_ascii=False) + "\n")
     return path
+
+def check_db_connection(logger: logging.Logger) -> None:
+    try:
+        conn = psycopg2.connect(
+            host=os.getenv("PGHOST") or os.getenv("DB_HOST"),
+            port=os.getenv("PGPORT") or os.getenv("DB_PORT") or "5432",
+            dbname=os.getenv("PGDATABASE") or os.getenv("DB_NAME"),
+            user=os.getenv("PGUSER") or os.getenv("DB_USER"),
+            password=os.getenv("PGPASSWORD") or os.getenv("DB_PASSWORD"),
+        )
+        conn.close()
+        logger.info("Database connection successful.")
+    except Exception as e:
+        logger.error("Database connection failed: %s", e)
+        sys.exit(1)
 
 # Execute a single pipeline stage as a subprocess, capture stdout/stderr,
 # and return success status plus elapsed runtime.
@@ -236,6 +255,8 @@ def run_stage(logger: logging.Logger, script_path: Path) -> tuple[bool, float]:
 
     elapsed = time.time() - start
 
+    # Run each stage in an isolated subprocess so failures,
+    # stdout/stderr, and execution timing are independently observable.
     if result.stdout:
         logger.info("[stdout] %s\n%s", stage_name, result.stdout.rstrip())
 
@@ -285,6 +306,8 @@ def main() -> None:
         logger.error(str(e))
         sys.exit(2)
 
+    # Prevent accidental execution outside the project virtualenv.
+    # Ensures dependency consistency across local and CI environments.
     if sys.prefix == sys.base_prefix:
         logger.error("You are not running inside a virtualenv. Activate .venv first.")
         sys.exit(2)
@@ -303,6 +326,9 @@ def main() -> None:
             "or DB_HOST/DB_NAME/DB_USER. Aborting."
         )
         sys.exit(2)
+    
+    if needs_db and not args.dry_run:
+        check_db_connection(logger)
 
     # Dry-run validates stage selection and records intent without executing
     # any pipeline scripts. Useful for debugging and CI verification.
